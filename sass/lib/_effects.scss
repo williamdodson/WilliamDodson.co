@@ -1,0 +1,11 @@
+// Transitions, Animations, and other visual effects
+@mixin transition_color {
+	@include transition-property(color);
+	@include transition-duration(0.2s);
+}
+
+@mixin hide {
+	position:absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}

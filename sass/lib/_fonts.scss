@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('/a/f/fontello.eot?61556206');
+  src: url('/a/f/fontello.eot?61556206#iefix') format('embedded-opentype'),
+       url('/a/f/fontello.woff?61556206') format('woff'),
+       url('/a/f/fontello.ttf?61556206') format('truetype'),
+       url('/a/f/fontello.svg?61556206#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('/a/f/fontello.svg?61556206#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  margin-right: 0.5em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  font-size: 150%;
+  
+  vertical-align: middle;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-doc-text:before { content: '\e806'; } /* '' */
+.icon-phone:before { content: '\e805'; } /* '' */
+.icon-github:before { content: '\e800'; } /* '' */
+.icon-linkedin:before { content: '\e801'; } /* '' */
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-forrst:before { content: '\e803'; } /* '' */
+.icon-meetup:before { content: '\e804'; } /* '' */

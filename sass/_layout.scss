@@ -1,0 +1,92 @@
+/* main/mobile layout */
+
+// containers
+.container {
+	background: $color-white;
+	padding: 1.5em 2.5%;
+}
+.top {
+	@include background(
+		url('/a/i/wd-top-bg.png') no-repeat 0 100%,
+		linear-gradient(left top, $color-purple, darken($color-purple, 10))
+	);
+	a {
+		color: $color-white;
+		text-decoration: none;
+	}
+}
+
+.intro {
+	@include background(
+		linear-gradient(left top, lighten($color-black, 10), $color-black)
+	);
+	border-top: 0.75em solid lighten($color-black, 10);
+	border-bottom: 0.75em solid $color-black;
+}
+
+.masthead,
+.content,
+.copyright {
+	@include outer-container;
+	@include clearfix;
+}
+
+.title,
+.menu-main,
+.main,
+.ancillary {
+	@include span-columns(12);
+}
+body#home .ancillary {
+	margin-top: 1.5em;
+	padding-bottom: 1.5em;
+}
+
+.bottom {
+	background: $color-dark-green;
+}
+
+// classes
+.callout {
+	@include background(
+		linear-gradient(left top, $color-white, $color-pale-gray)
+	);
+	@include long-shadow(box, darken($color-pale-gray, 7), 14, false, true, right);
+	@include pad(0.75em default);
+	margin-bottom: 1.5em;
+	@include span-columns(12);
+}
+
+// projects
+.projects {
+	@include span-columns(8 of 8);
+	margin-bottom: 0;
+	li {
+		@include span-columns(2 of 8);
+		margin-bottom: 1.5em;
+		&:nth-child(4n+4) {
+			margin-right: 0;
+		}
+		a {
+			margin: 0;
+			padding: 0.25em;
+		}
+	}// end li
+}
+
+// recent projects
+.recent {
+	@include span-columns(12 of 12);
+	margin-bottom: 0;
+	li {
+		@include span-columns(2 of 12);
+		margin-bottom: 0;
+		a {
+			margin: 0;
+			padding: 0.25em;
+		}
+		&:nth-child(6n+6) {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+name: William Dodson
+markdown: redcarpet
+pygments: true
+destination: public
+relative_permalinks: true
+encoding: UTF-8
+exclude: [sass, config.rb]

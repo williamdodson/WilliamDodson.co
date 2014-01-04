@@ -1,0 +1,30 @@
+// medium screen layout
+
+.title {
+	@include span-columns(6);
+}
+
+.menu-main {
+	@include span-columns(6);
+}
+
+.main {
+	@include span-columns(8);
+}
+body#home .main {
+	@include span-columns(12);
+}
+.ancillary {
+	@include span-columns(4);
+}
+body#home .ancillary {
+	@include span-columns(12);
+}
+
+// classes
+.callout {
+	@include span-columns(4);
+	&:last-child {
+		@include omega;
+	}
+}
