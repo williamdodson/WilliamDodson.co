@@ -7,11 +7,10 @@
 }
 .top {
 	@include background(
-		url('/a/i/wd-top-bg.png') no-repeat 0 100%,
-		linear-gradient(left top, $color-purple, darken($color-purple, 10))
+		linear-gradient(left top, $color-white, darken($color-white, 10))
 	);
 	a {
-		color: $color-white;
+		color: $color-gray;
 		text-decoration: none;
 	}
 }
@@ -43,7 +42,7 @@ body#home .ancillary {
 }
 
 .bottom {
-	background: $color-dark-green;
+	background: $color-dark-gray;
 }
 
 // classes

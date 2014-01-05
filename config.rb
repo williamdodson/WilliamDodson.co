@@ -6,7 +6,7 @@ sass_dir = "sass"
 images_dir = "/a/i/"
 javascripts_dir = "/a/j/"
 
-output_style = :compressed
+output_style = :expanded
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false

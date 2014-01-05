@@ -1,3 +1,10 @@
+// Bourbon
+$prefix-for-webkit:    true;
+$prefix-for-mozilla:   true;
+$prefix-for-microsoft: true;
+$prefix-for-opera:     true;
+$prefix-for-spec:      true;
+
 // variables
 $bp-med: "min-width: 40em";//640px
 $bp-lg: "min-width: 55em";//880px

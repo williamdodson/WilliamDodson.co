@@ -28,7 +28,7 @@
   @if $fallback-color {
     background-color: $fallback-color;
   }
-  background: _background-add-prefix($backgrounds, webkit);
+  background: _background-add-prefix($backgrounds, webkit moz o ms spec);
   background: _background-add-prefix($backgrounds);
 }
 
