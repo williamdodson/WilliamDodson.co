@@ -11,13 +11,15 @@
 .main {
 	@include span-columns(8);
 }
-body#home .main {
+body#home .main,
+body#portfolio .main {
 	@include span-columns(12);
 }
 .ancillary {
 	@include span-columns(4);
 }
-body#home .ancillary {
+body#home .ancillary,
+body#portfolio .ancillary {
 	@include span-columns(12);
 }
 

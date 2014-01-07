@@ -61,6 +61,7 @@ img, object, iframe {
 }
 
 // classes
+a.button,
 .button {
   @include background(linear-gradient(left top, $color-purple, $color-dark-purple));
 	border: 1px solid lighten($color-dark-purple, 3);
@@ -73,6 +74,7 @@ img, object, iframe {
 	line-height: 1;
 	padding: 0.5em 1em;
 	text-align: center;
+	text-decoration: none;
 	text-shadow: 0 0 0 transparent;
 	@include transition-property(all);
 	@include transition-duration(0.2s);
@@ -147,7 +149,6 @@ img, object, iframe {
 	li {
 		a {
 			background: $color-pale-gray;
-			@include long-shadow(box, darken($color-pale-gray, 7), 14, false, true, right);
 			display: block;
 			line-height: 0.8;
 			@include transition-property(all);
@@ -156,7 +157,6 @@ img, object, iframe {
 			&:hover,
 			&:active {
 				background: darken($color-pale-gray, 7);
-				@include long-shadow(box, darken($color-pale-gray, 14), 14, false, true, right);
 			}
 			img {
 				border: 1px solid $color-light-gray;
@@ -169,7 +169,6 @@ img, object, iframe {
 	li {
 		a {
 			background: $color-pale-gray;
-			@include long-shadow(box, darken($color-pale-gray, 7), 14, false, true, right);
 			display: block;
 			line-height: 0.8;
 			@include transition-property(all);
@@ -178,7 +177,6 @@ img, object, iframe {
 			&:hover,
 			&:active {
 				background: darken($color-pale-gray, 7);
-				@include long-shadow(box, darken($color-pale-gray, 14), 14, false, true, right);
 			}
 			img {
 				border: 1px solid $color-light-gray;

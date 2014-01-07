@@ -63,7 +63,9 @@
 				{% if page.slug == 'home' %}
 					{% include _sidebar-home.html %}
 				{% else %}
-					{% include _sidebar.html %}
+					{% if page.slug != 'portfolio' %}
+						{% include _sidebar.html %}
+					{% endif %}
 				{% endif %}
 			</div>
 			<!-- /.content -->

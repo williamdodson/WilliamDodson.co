@@ -48,22 +48,36 @@ body#home .ancillary {
 // classes
 .callout {
 	@include background(
-		linear-gradient(left top, $color-white, $color-pale-gray)
+		linear-gradient(left top, $color-pale-gray, $color-white)
 	);
-	@include long-shadow(box, darken($color-pale-gray, 7), 14, false, true, right);
+	//@include long-shadow(box, darken($color-pale-gray, 7), 14, false, true, right);
 	@include pad(0.75em default);
 	margin-bottom: 1.5em;
 	@include span-columns(12);
 }
 
+.hero {
+	background: $color-white;
+	border-top: 0.75em solid $color-pale-gray;
+	overflow: hidden;
+	padding-bottom: 33%;
+	position: relative;
+	img {
+		left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120%;
+	}
+}
+
 // projects
 .projects {
-	@include span-columns(8 of 8);
-	margin-bottom: 0;
+	@include span-columns(12 of 12);
 	li {
-		@include span-columns(2 of 8);
+		@include span-columns(4 of 12);
 		margin-bottom: 1.5em;
-		&:nth-child(4n+4) {
+		&:nth-child(3n+3) {
 			margin-right: 0;
 		}
 		a {
@@ -78,13 +92,13 @@ body#home .ancillary {
 	@include span-columns(12 of 12);
 	margin-bottom: 0;
 	li {
-		@include span-columns(2 of 12);
+		@include span-columns(3 of 12);
 		margin-bottom: 0;
 		a {
 			margin: 0;
 			padding: 0.25em;
 		}
-		&:nth-child(6n+6) {
+		&:nth-child(4n+4) {
 			margin-right: 0;
 		}
 	}

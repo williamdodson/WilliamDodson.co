@@ -1,0 +1,20 @@
+<section class="ancillary">
+	<h2>Project Toolkit:</h2>
+	<p class="separate">
+		{% for tool in page.tools %}{{ tool }}{% if forloop.last == false %}, {% endif %}{% endfor %}
+	</p>
+	
+	<h2>Roles:</h2>
+	<p class="separate">
+		{% for role in page.roles %}{{ role }}{% if forloop.last == false %}, {% endif %}{% endfor %}
+	</p>
+	
+	{% if page.contract && page.contract != '' %}
+	<h2>Contracted by:</h2>
+	<p class="separate">{{ page.contract }}</p>
+	{% endif %}
+	
+	{% if page.ext-url && page.ext-url != '' %}
+	<p><a class="button" href="{{ page.ext-url }}">Visit Website</a></p>
+	{% endif %}
+</section>
