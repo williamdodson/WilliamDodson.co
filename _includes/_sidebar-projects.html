@@ -1,4 +1,13 @@
 <section class="ancillary">
+	<h2>Project Images:</h2>
+	<ul class="thumbs separate">
+		{% for img in page.images %}
+		<li>
+			<a href="#"><img alt="" src="{{ img }}"></a>
+		</li>
+		{% endfor %}
+	</ul>
+	
 	<h2>Project Toolkit:</h2>
 	<p class="separate">
 		{% for tool in page.tools %}{{ tool }}{% if forloop.last == false %}, {% endif %}{% endfor %}
