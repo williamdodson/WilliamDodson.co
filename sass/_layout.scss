@@ -60,7 +60,7 @@ body#home .ancillary {
 	background: $color-white;
 	border-top: 0.75em solid $color-pale-gray;
 	overflow: hidden;
-	padding-bottom: 33%;
+	padding-bottom: 38%;
 	position: relative;
 	img {
 		left: 0;
@@ -80,10 +80,6 @@ body#home .ancillary {
 		&:nth-child(3n+3) {
 			margin-right: 0;
 		}
-		a {
-			margin: 0;
-			padding: 0.25em;
-		}
 	}// end li
 }
 
@@ -94,12 +90,27 @@ body#home .ancillary {
 	li {
 		@include span-columns(3 of 12);
 		margin-bottom: 0;
-		a {
-			margin: 0;
-			padding: 0.25em;
-		}
 		&:nth-child(4n+4) {
 			margin-right: 0;
+		}
+	}
+}
+
+// project thumbnails
+.thumbs {
+	@include span-columns(12 of 12);
+	margin-top: 1.5em;
+	margin-bottom: 0;
+	@include media($bp-med-val) {
+		@include span-columns(4 of 4);
+	}
+	li {
+		@include span-columns(4 of 12);
+		@include omega(4n);
+		margin-bottom: 1.5em;
+		@include media($bp-med-val) {
+			@include span-columns(2 of 4);
+			@include omega(2n);
 		}
 	}
 }

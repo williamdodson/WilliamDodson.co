@@ -144,44 +144,40 @@ a.button,
 	}
 }
 
-// projects
-.projects {
+// projects, recent, thumbs
+.projects,
+.recent,
+.thumbs {
 	li {
 		a {
 			background: $color-pale-gray;
 			display: block;
 			line-height: 0.8;
+			margin: 0;
+			padding: 0.25em;
 			@include transition-property(all);
 			@include transition-duration(0.2s);
 			&:focus,
 			&:hover,
 			&:active {
 				background: darken($color-pale-gray, 7);
+				img {
+					opacity: 1;
+				}
 			}
 			img {
 				border: 1px solid $color-light-gray;
+				opacity: 0.8;
+				@include transition-property(opacity);
+				@include transition-duration(0.2s);
 			}
 		}
 	}// end li
 }
-// recent projects
-.recent {
-	li {
-		a {
-			background: $color-pale-gray;
-			display: block;
-			line-height: 0.8;
-			@include transition-property(all);
-			@include transition-duration(0.2s);
-			&:focus,
-			&:hover,
-			&:active {
-				background: darken($color-pale-gray, 7);
-			}
-			img {
-				border: 1px solid $color-light-gray;
-			}
-		}
+// result
+.result {
+	img {
+		border: 1px solid $color-light-gray;
 	}
 }
 

@@ -10,6 +10,10 @@ ext-url: http://sciencefestivals.org/
 hero: /a/i/portfolio/web/sfa-website/sfa-website-hero.jpg
 images: 
 - /a/i/portfolio/web/sfa-website/sfa-website-0.png
+shots:
+- {thumb: '/a/i/portfolio/web/sfa-website/sfa-website-thumb-0.jpg', full: '/a/i/portfolio/web/sfa-website/sfa-website-shot-0.jpg'}
+- {thumb: '/a/i/portfolio/web/sfa-website/sfa-website-thumb-1.jpg', full: '/a/i/portfolio/web/sfa-website/sfa-website-shot-1.jpg'}
+- {thumb: '/a/i/portfolio/web/sfa-website/sfa-website-thumb-2.jpg', full: '/a/i/portfolio/web/sfa-website/sfa-website-shot-2.jpg'}
 tools: 
 - Sass
 - Compass
@@ -24,6 +28,8 @@ categories: [projects, web]
 ---
 
 <section class="main">
+  {% include _project-images.html %}
+  <h2>Description:</h2>
   <p>The Science Festival Alliance is an MIT initiative whose goal is to foster a professional community dedicated to provide better science and technology festivals. I was contracted by <a href="http://pixelslam.com/">PixelSlam</a> to to create a custom site design powered by WordPress. The site features a custom events calendar to help people find science festivals all over the country.</p>
-  <p>The site uses <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a> to handle CSS preprocessing for the custom WordPress theme. The site uses WordPress Custom Post Types to help make organizing content easy. I also developed a custom Events widget which can be easily embedded on any external site to allow SFA to easily share their events anywhere.</p>
+  <p>The site uses <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a> to handle CSS preprocessing for the custom WordPress theme. The site uses WordPress Custom Post Types to help make organizing content easy. I also developed a custom Events widget which can be easily embedded on any external site to allow SFA to share their events anywhere.</p>
 </section>
