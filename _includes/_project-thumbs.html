@@ -1,6 +1,6 @@
 {% if page.shots.size > 1 %}
 <h2>Project Images:</h2>
-<ul class="thumbs">
+<ul class="separate thumbs">
 	{% for shot in page.shots %}
 	<li>
 		<a href="{{ shot['full'] }}"><img alt="" src="{{ shot['thumb'] }}"></a>

@@ -89,24 +89,21 @@ body#home .ancillary {
 	margin-bottom: 0;
 	li {
 		@include span-columns(3 of 12);
+		@include omega(4n);
 		margin-bottom: 0;
-		&:nth-child(4n+4) {
-			margin-right: 0;
-		}
 	}
 }
 
 // project thumbnails
 .thumbs {
 	@include span-columns(12 of 12);
-	margin-top: 1.5em;
-	margin-bottom: 0;
+	padding-bottom: 0;
 	@include media($bp-med-val) {
 		@include span-columns(4 of 4);
 	}
 	li {
 		@include span-columns(4 of 12);
-		@include omega(4n);
+		@include omega(3n);
 		margin-bottom: 1.5em;
 		@include media($bp-med-val) {
 			@include span-columns(2 of 4);

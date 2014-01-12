@@ -242,7 +242,7 @@ a.button,
 					@include background(linear-gradient(left top, $color-white, $color-light-gray));
 					border-bottom: 1px solid $color-light-gray;
 					color: $color-black;
-					text-shadow: 3px 3px 0 $color-pale-gray;
+					text-shadow: 0.0625em 0.0625em 0 $color-pale-gray;
 				}
 			}
 		}
@@ -264,7 +264,7 @@ a.button,
 			&:hover {
 				@include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0.12));
 				color: $color-black;
-				text-shadow: 3px 3px 0 $color-white;
+				text-shadow: 0.0625em 0.0625em 0 $color-white;
 			}
 		}
 	}
