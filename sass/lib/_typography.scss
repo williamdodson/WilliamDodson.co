@@ -179,15 +179,19 @@ a.button,
 		a {
 			overflow: hidden;
 			position: relative;
+			img {
+				border: 1px solid $color-white;
+			}
 			span {
-				background: rgba(55, 51, 47, 0.9);
-				color: $color-white;
+				background: $color-pale-gray;
+				bottom: 0;
+				color: $color-dark-gray;
 				left: 0;
-				opacity: 0;
 				padding: 0.75em 0.25em;
 				position: absolute;
+				text-align: center;
 				text-decoration: none;
-				top: 0;
+				text-shadow: 0.0625em 0.0625em 0 $color-white;
 				@include transition-property(all);
 				@include transition-duration(0.2s);
 				width: 100%;
@@ -197,7 +201,8 @@ a.button,
 			&:hover,
 			&:active {
 				span {
-					opacity: 1;
+					background: darken($color-pale-gray, 7);
+					color: $color-black;
 				}
 			}
 		}
