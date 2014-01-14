@@ -1,0 +1,57 @@
+---
+layout: default
+title: Sitemap
+heading: 'All The Pages and Posts'
+leader: 'A list of everything on this site in one easy-to-swallow pill'
+excerpt: 'A list of everything on this site'
+slug: sitemap
+---
+
+<section class="main">
+  <p class="leader">Looking for something in particular? Here is where you can find everything on this site:</p>
+  <!-- pages -->
+  <section class="pages">
+		<h2>Pages</h2>
+		<ul class="separate">
+			{% for page in site.pages %}
+			{% if page.shortname != 'Error 404' %}
+			<li>
+				<a href="{{ page.url }}">
+					{{ page.shortname }}
+				</a>
+			</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</section>
+	
+	<!-- projects -->
+	<section class="project-pages">
+		<h2>Projects</h2>
+		<ul class="separate">
+			{% for post in site.categories['projects'] %}
+			<li>
+				<a href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+	
+	{% if site.categories['articles'] %}
+	<!-- article -->
+	<section class="articles">
+		<h2>Articles</h2>
+		<ul>
+			{% for post in site.categories['articles'] %}
+			<li>
+				<a href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+	{% endif %}
+</section>

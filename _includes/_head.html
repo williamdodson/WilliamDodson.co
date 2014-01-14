@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang='en'> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang='en'> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang='en'> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang='en'> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }} | {{ site.name }}</title>
+		<meta name="description" content="{{ page.excerpt }}">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="/humans.txt">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		
+		<link rel="stylesheet" href="/a/c/style.css">
+		<link rel="stylesheet" href="/a/c/syntax.css">
+		
+		<!-- typekit -->
+		<script type="text/javascript" src="//use.typekit.net/efy5lsk.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		
+		<!--[if lt IE 9]>
+		    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+		<![endif]-->
+	</head>
+	<body id="{{ page.slug }}">
+		<!-- .top -->
+		<div class="container top">
+			<!-- .masthead -->
+			<header class="masthead" role="banner">
+				<h1 class="title">
+					<a href="/">
+						<img alt="{{ site.name }}" src="/a/i/williamdodson-logo-2014.png">
+					</a>
+				</h1>
+				
+				<!-- .menu-main -->
+				<nav class="menu-main" role="navigation">
+					<ul>
+						<li{% if page.slug == 'home' %} class="active"{% endif %}><a href="/">Home</a></li>
+						<li{% if page.slug == 'about' %} class="active"{% endif %}><a href="/about/">About</a></li>
+						<li{% if page.slug == 'project' %} class="active"{% endif %}><a href="/portfolio/">Portfolio</a></li>
+					</ul>
+				</nav>
+				<!-- /.menu-main -->
+			</header>
+			<!-- /.masthead -->
+		</div>
+		<!-- /.top -->
