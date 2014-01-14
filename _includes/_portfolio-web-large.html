@@ -4,7 +4,8 @@
 		{% for post in site.categories['web'] %}
 		<li>
 			<a href="{{ post.url }}">
-				<img alt="{{ post.title }}" src="{{ post.images[0] }}">
+				<img alt="{{ post.title }}" src="{{ post.images[0] }}"> 
+				<span>{{ post.title }}</span>
 			</a>
 		</li>
 		{% endfor %}
