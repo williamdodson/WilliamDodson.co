@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang='en'> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang='en'> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang='en'> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang='en'> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>New Year, New Website | William Dodson</title>
+		<meta name="description" content="Too much time is spent on sweating every detail and herding pixels.">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="/humans.txt">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		
+		<link rel="stylesheet" href="/a/c/style.css">
+		<link rel="stylesheet" href="/a/c/syntax.css">
+		
+		<!-- typekit -->
+		<script type="text/javascript" src="//use.typekit.net/efy5lsk.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		
+		<!--[if lt IE 9]>
+		    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+		<![endif]-->
+	</head>
+	<body id="article">
+		<!-- .top -->
+		<div class="container top">
+			<!-- .masthead -->
+			<header class="masthead" role="banner">
+				<h1 class="title">
+					<a href="/">
+						<img alt="William Dodson" src="/a/i/williamdodson-logo-2014.png">
+					</a>
+				</h1>
+				
+				<!-- .menu-main -->
+				<nav class="menu-main" role="navigation">
+					<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/about/">About</a></li>
+	<li><a href="/portfolio/">Portfolio</a></li>
+	<li class="active"><a href="/articles/">Articles</a></li>
+</ul>
+				</nav>
+				<!-- /.menu-main -->
+			</header>
+			<!-- /.masthead -->
+		</div>
+		<!-- /.top -->
+		
+		<div class="container intro">
+			<header class="content">
+				<h1>New Year, New Website</h1>
+				<h2 class="leader">Too much time is spent on sweating every detail and herding pixels</h2>
+			</header>
+		</div>
+		
+		<div class="container">
+			<!-- .content -->
+			<div class="content">
+				<section class="main">
+  <div class="meta">
+  	<p>
+  		<small>
+  			By: William Dodson <span class="subtle">|</span> Posted on: January 14, 2014 <span class="subtle">|</span> Tags: announcements and code-snips
+  		</small>
+  	</p>
+  </div>
+  <p>Every new year I take time to look back and reflect on my accomplishments, memories, and goals from the previous year. One of those goals was to finally get my butt in gear and create a new website design for myself.</p>
+  
+  <p>The new site took about a month to design, test, iterate, and tweak. I wanted something really simple that focused more on the content than on the design itself. As Greg Storey from Happy Cog noted in his recent article, &#8220;<a href="http://cognition.happycog.com/article/make-do">Make, Do</a>,&#8220; too much time is spent on sweating every detail and herding pixels. I wanted the new site to be good enough to get out the door and still have room for improvement and iteration over time. It is far from perfect, but it is good enough for me to build on.</p>
+  
+  <h2>New Features</h2>
+  
+  <p>Some of the new features of this site include the ability to easily add GitHub Gists right inline with my posts. For example, here is a Sass mixin I created to easily style placeholder text:</p>
+  <script src="https://gist.github.com/5785186.js"> </script>
+  
+  <p>I can also post code examples directly inline:</p>
+  <div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> 	<span class="c1">// javascript function to add extra spaces between letters in a string</span>
+<span class="lineno">2</span> 	<span class="kd">function</span> <span class="nx">spaceText</span><span class="p">(</span><span class="nx">txt</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">3</span> 		<span class="k">return</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span>
+<span class="lineno">4</span> 	<span class="p">}</span>
+<span class="lineno">5</span> 	
+</code></pre></div>
+	
+	<p>This makes it much easier to share my code, especially larger chunks like this password generator function:</p>
+	<div class="highlight"><pre><code class="php"><span class="lineno"> 1</span> <span class="x">	</span><span class="cp">&lt;?php</span>
+<span class="lineno"> 2</span> 	<span class="k">function</span> <span class="nf">generatePassword</span><span class="p">(</span><span class="nv">$length</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="nv">$strength</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 3</span> 		<span class="nv">$vowels</span> <span class="o">=</span> <span class="s1">&#39;aeuy&#39;</span><span class="p">;</span>
+<span class="lineno"> 4</span> 		<span class="nv">$consonants</span> <span class="o">=</span> <span class="s1">&#39;bdghjmnpqrstvz&#39;</span><span class="p">;</span>
+<span class="lineno"> 5</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 6</span> 			<span class="nv">$consonants</span> <span class="o">.=</span> <span class="s1">&#39;BDGHJLMNPQRSTVWXZ&#39;</span><span class="p">;</span>
+<span class="lineno"> 7</span> 		<span class="p">}</span>
+<span class="lineno"> 8</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 9</span> 			<span class="nv">$vowels</span> <span class="o">.=</span> <span class="s2">&quot;AEUY&quot;</span><span class="p">;</span>
+<span class="lineno">10</span> 		<span class="p">}</span>
+<span class="lineno">11</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">12</span> 			<span class="nv">$consonants</span> <span class="o">.=</span> <span class="s1">&#39;23456789&#39;</span><span class="p">;</span>
+<span class="lineno">13</span> 		<span class="p">}</span>
+<span class="lineno">14</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">8</span> <span class="p">)</span> <span class="p">{</span>
+<span class="lineno">15</span> 			<span class="nv">$vowels</span> <span class="o">.=</span> <span class="s1">&#39;@#$%&#39;</span><span class="p">;</span>
+<span class="lineno">16</span> 		<span class="p">}</span>
+<span class="lineno">17</span> 	
+<span class="lineno">18</span> 		<span class="nv">$password</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="lineno">19</span> 		<span class="nv">$alt</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
+<span class="lineno">20</span> 		<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$length</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">21</span> 			<span class="k">if</span> <span class="p">(</span><span class="nv">$alt</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">22</span> 				<span class="nv">$password</span> <span class="o">.=</span> <span class="nv">$consonants</span><span class="p">[(</span><span class="nx">rand</span><span class="p">()</span> <span class="o">%</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$consonants</span><span class="p">))];</span>
+<span class="lineno">23</span> 				<span class="nv">$alt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">24</span> 			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="lineno">25</span> 				<span class="nv">$password</span> <span class="o">.=</span> <span class="nv">$vowels</span><span class="p">[(</span><span class="nx">rand</span><span class="p">()</span> <span class="o">%</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$vowels</span><span class="p">))];</span>
+<span class="lineno">26</span> 				<span class="nv">$alt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="lineno">27</span> 			<span class="p">}</span>
+<span class="lineno">28</span> 		<span class="p">}</span>
+<span class="lineno">29</span> 		<span class="k">return</span> <span class="nv">$password</span><span class="p">;</span>
+<span class="lineno">30</span> 	<span class="p">}</span>
+<span class="lineno">31</span> 	<span class="cp">?&gt;</span><span class="x"></span>
+<span class="lineno">32</span> <span class="x">	</span>
+</code></pre></div>
+	
+	<h2>Closing Thoughts</h2>
+	<p>Like I said, it is far from perfect. But it is simple enough that I can update things and add new features without too much hassle.</p>
+	<p>Hopefully this new setup will encourage me to update the site more frequently and to write more blog posts. :)</p>
+</section>
+				<section class="ancillary">
+	<h2>Recent Articles</h2>
+	<ul class="separate">
+		
+		<li>
+			<a href="/articles/new-year-new-website">
+				New Year, New Website
+			</a>
+		</li>
+		
+	</ul>
+	
+	<h2>Tags</h2>
+	<div class="separate tag-cloud">
+	  <a href="/tag/announcements.html" class="set-5">announcements</a> <a href="/tag/code-snips.html" class="set-5">code-snips</a>
+	</div>
+	
+	<div class="separate">
+		<h2>Recent Links</h2>
+		<script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user=obxdesignworks&count=4"></script>
+		<p class="social"><a class="button" href="https://pinboard.in/u:obxdesignworks"><strong>See all my Pinboard links</strong></a></p>
+	</div>
+</section>
+			</div>
+			<!-- /.content -->
+		</div>
+		
+		<!-- .bottom -->
+		<div class="container bottom">
+			<footer class="copyright">
+				<p>
+					<small>&#169;2014 William Dodson. All Rights Reserved.</small>
+				</p>
+			</footer>
+		</div>
+		<!-- /.bottom -->
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="/a/j/site.min.js"></script>
+	</body>
+</html>

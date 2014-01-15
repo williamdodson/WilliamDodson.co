@@ -1,0 +1,23 @@
+<section class="ancillary">
+	<h2>Recent Articles</h2>
+	<ul class="separate">
+		{% for post in site.categories['articles'] limit: 7 %}
+		<li>
+			<a href="{{ post.url }}">
+				{{ post.title }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	
+	<h2>Tags</h2>
+	<div class="separate tag-cloud">
+	  {{ site | tag_cloud }}
+	</div>
+	
+	<div class="separate">
+		<h2>Recent Links</h2>
+		<script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user=obxdesignworks&count=4"></script>
+		<p class="social"><a class="button" href="https://pinboard.in/u:obxdesignworks"><strong>See all my Pinboard links</strong></a></p>
+	</div>
+</section>

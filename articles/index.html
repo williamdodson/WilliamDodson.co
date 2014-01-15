@@ -1,0 +1,19 @@
+---
+layout: article
+title: Articles
+shortname: Articles
+heading: 'Articles'
+leader: 'Stuff I have written for you to read'
+excerpt: 'Stuff I have written for you to read'
+slug: article
+---
+
+<section class="main">
+  {% for post in site.categories['articles'] %}
+  <section class="separate">
+  	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  	<p>{{ post.date | date: '%B %d, %Y' }} <span class="subtle">|</span> Tags: {{ post | tags }}</p>
+  	<p>{{ post.excerpt }}</p>
+  </section>
+  {% endfor %}
+</section>

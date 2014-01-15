@@ -9,6 +9,7 @@
 	border: 1px solid $color-pale-gray;
 	font-family: 'ubuntu mono', 'anonymous pro', 'andale mono', 'courier new', monospace;
 	margin-bottom: 1.5em;
+	overflow: scroll;
 	@include pad(1.5em default 1.5em default);
 }
 .highlight .lineno {

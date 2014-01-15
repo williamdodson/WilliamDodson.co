@@ -1,0 +1,19 @@
+{% include _head.html %}
+		
+		<div class="container intro">
+			<header class="content">
+				<h1>{{ page.heading }}</h1>
+				{% if page.leader != '' %}<h2 class="leader">{{ page.leader }}</h2>{% endif %}
+			</header>
+		</div>
+		
+		<div class="container">
+			<!-- .content -->
+			<div class="content">
+				{{ content }}
+				{% include _sidebar-articles.html %}
+			</div>
+			<!-- /.content -->
+		</div>
+		
+{% include _foot.html %}

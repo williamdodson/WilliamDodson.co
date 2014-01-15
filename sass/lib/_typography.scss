@@ -54,6 +54,10 @@ abbr[title='and'] {
  font-weight: normal;
 }
 
+code, pre {
+	font-family: 'ubuntu mono', 'anonymous pro', 'andale mono', 'courier new', monospace;
+}
+
 // media
 img, object, iframe {
 	height: auto;
@@ -116,6 +120,20 @@ a.button,
 
 .love {
 	color: $color-red;
+}
+
+.meta {
+	background: $color-pale-gray;
+	border: 0.0625em solid $color-light-gray;
+	margin-bottom: 1.5em;
+	@include pad(0.75em default 0.75em default);
+	p {
+		margin-bottom: 0;
+	}
+	.subtle {
+		color: $color-light-gray;
+		margin: 0 1em;
+	}
 }
 
 .panel {
