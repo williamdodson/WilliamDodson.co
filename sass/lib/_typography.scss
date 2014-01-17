@@ -128,11 +128,16 @@ a.button,
 	border-bottom: 0.0625em solid $color-pale-gray;
 	margin-bottom: 1.5em;
 	@include pad(0.75em default 0.75em default);
+	vertical-align: middle;
 	p {
 		margin-bottom: 0;
 	}
+	span {
+		display: block;
+	}
 	.subtle {
 		color: $color-light-gray;
+		display: none;
 		margin: 0 1em;
 	}
 }
@@ -245,6 +250,18 @@ a.button,
 		margin-bottom: 0;
 		padding-top: 1.5em;
 		padding-bottom: 0;
+	}
+}
+
+.share-links {
+	padding: 0.75em 0;
+}
+.share {
+	display: inline-block;
+	margin-right: 0.375em;
+	vertical-align: middle;
+	&:last-child {
+		margin-right: 0;
 	}
 }
 
@@ -394,5 +411,15 @@ a.button,
 		font-size: 1.875em;
 		line-height: 0.8;
 		margin-bottom: 0.4em;
+	}
+	
+	// classes
+	.meta {
+		span {
+			display: inline;
+		}
+		.subtle {
+			display: inline;
+		}
 	}
 }

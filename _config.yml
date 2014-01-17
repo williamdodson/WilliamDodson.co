@@ -1,4 +1,5 @@
 name: William Dodson
+url: http://williamdodson.co
 markdown: redcarpet
 pygments: true
 destination: public

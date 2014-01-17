@@ -1,0 +1,17 @@
+<div class="meta">
+	<p>
+		<small>
+			<span>By: {{ page.author }}</span> <span class="subtle">|</span> 
+			<span>Posted on: {{ page.date | date: '%B %d, %Y' }}</span> <span class="subtle">|</span> 
+			<span>Tags: {{ page | tags }}</span> <span class="subtle">|</span> 
+			<span class="share-links">
+				<a class="share" href="http://twitter.com/home?status={{ site.url }}{{ page.url }}" title="Share on Twitter"><img alt="Twitter" src="/a/i/icons/icon-twitter.png"></a> 
+				<a class="share" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook"><img alt="Facebook" src="/a/i/icons/icon-facebook.png"></a> 
+				<a class="share" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+"><img alt="Google+" src="/a/i/icons/icon-gplus.png"></a>
+			</span>
+		</small>
+	</p>
+	<div id="share-me">
+		
+	</div>
+</div>
