@@ -64,7 +64,8 @@
   <div class="meta">
   	<p>
   		<small>
-  			By: William Dodson <span class="subtle">|</span> Posted on: January 14, 2014 <span class="subtle">|</span> Tags: announcements and code-snips
+  			By: William Dodson <span class="subtle">|</span> Posted on: January 14, 2014 <span class="subtle">|</span> Tags: <a href="/tag/announcements.html" rel="tag">announcements</a>, <a href="/tag/code-snips.html" rel="tag">code-snips</a> <span class="subtle">|</span> <a href="https://twitter.com/share" class="twitter-share-button" data-via="williamvdodson" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   		</small>
   	</p>
   </div>
@@ -85,40 +86,7 @@
 <span class="lineno">5</span> 	
 </code></pre></div>
 	
-	<p>This makes it much easier to share my code, especially larger chunks like this password generator function:</p>
-	<div class="highlight"><pre><code class="php"><span class="lineno"> 1</span> <span class="x">	</span><span class="cp">&lt;?php</span>
-<span class="lineno"> 2</span> 	<span class="k">function</span> <span class="nf">generatePassword</span><span class="p">(</span><span class="nv">$length</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="nv">$strength</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno"> 3</span> 		<span class="nv">$vowels</span> <span class="o">=</span> <span class="s1">&#39;aeuy&#39;</span><span class="p">;</span>
-<span class="lineno"> 4</span> 		<span class="nv">$consonants</span> <span class="o">=</span> <span class="s1">&#39;bdghjmnpqrstvz&#39;</span><span class="p">;</span>
-<span class="lineno"> 5</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno"> 6</span> 			<span class="nv">$consonants</span> <span class="o">.=</span> <span class="s1">&#39;BDGHJLMNPQRSTVWXZ&#39;</span><span class="p">;</span>
-<span class="lineno"> 7</span> 		<span class="p">}</span>
-<span class="lineno"> 8</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno"> 9</span> 			<span class="nv">$vowels</span> <span class="o">.=</span> <span class="s2">&quot;AEUY&quot;</span><span class="p">;</span>
-<span class="lineno">10</span> 		<span class="p">}</span>
-<span class="lineno">11</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">12</span> 			<span class="nv">$consonants</span> <span class="o">.=</span> <span class="s1">&#39;23456789&#39;</span><span class="p">;</span>
-<span class="lineno">13</span> 		<span class="p">}</span>
-<span class="lineno">14</span> 		<span class="k">if</span> <span class="p">(</span><span class="nv">$strength</span> <span class="o">&gt;=</span> <span class="mi">8</span> <span class="p">)</span> <span class="p">{</span>
-<span class="lineno">15</span> 			<span class="nv">$vowels</span> <span class="o">.=</span> <span class="s1">&#39;@#$%&#39;</span><span class="p">;</span>
-<span class="lineno">16</span> 		<span class="p">}</span>
-<span class="lineno">17</span> 	
-<span class="lineno">18</span> 		<span class="nv">$password</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-<span class="lineno">19</span> 		<span class="nv">$alt</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
-<span class="lineno">20</span> 		<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$length</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">21</span> 			<span class="k">if</span> <span class="p">(</span><span class="nv">$alt</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">22</span> 				<span class="nv">$password</span> <span class="o">.=</span> <span class="nv">$consonants</span><span class="p">[(</span><span class="nx">rand</span><span class="p">()</span> <span class="o">%</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$consonants</span><span class="p">))];</span>
-<span class="lineno">23</span> 				<span class="nv">$alt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="lineno">24</span> 			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="lineno">25</span> 				<span class="nv">$password</span> <span class="o">.=</span> <span class="nv">$vowels</span><span class="p">[(</span><span class="nx">rand</span><span class="p">()</span> <span class="o">%</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$vowels</span><span class="p">))];</span>
-<span class="lineno">26</span> 				<span class="nv">$alt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="lineno">27</span> 			<span class="p">}</span>
-<span class="lineno">28</span> 		<span class="p">}</span>
-<span class="lineno">29</span> 		<span class="k">return</span> <span class="nv">$password</span><span class="p">;</span>
-<span class="lineno">30</span> 	<span class="p">}</span>
-<span class="lineno">31</span> 	<span class="cp">?&gt;</span><span class="x"></span>
-<span class="lineno">32</span> <span class="x">	</span>
-</code></pre></div>
+	<p>This makes it much easier to share bits of code I write and to share sample code in articles. Win!</p>
 	
 	<h2>Closing Thoughts</h2>
 	<p>Like I said, it is far from perfect. But it is simple enough that I can update things and add new features without too much hassle.</p>

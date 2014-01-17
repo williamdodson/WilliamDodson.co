@@ -15,7 +15,8 @@ tags: [announcements, code-snips]
   <div class="meta">
   	<p>
   		<small>
-  			By: {{ page.author }} <span class="subtle">|</span> Posted on: {{ page.date | date: '%B %d, %Y' }} <span class="subtle">|</span> Tags: {{ page.tags | array_to_sentence_string }}
+  			By: {{ page.author }} <span class="subtle">|</span> Posted on: {{ page.date | date: '%B %d, %Y' }} <span class="subtle">|</span> Tags: {{ page | tags }} <span class="subtle">|</span> <a href="https://twitter.com/share" class="twitter-share-button" data-via="williamvdodson" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   		</small>
   	</p>
   </div>
@@ -36,40 +37,7 @@ tags: [announcements, code-snips]
 	}
 	{% endhighlight %}
 	
-	<p>This makes it much easier to share my code, especially larger chunks like this password generator function:</p>
-	{% highlight php linenos %}
-	<?php
-	function generatePassword($length=9, $strength=0) {
-		$vowels = 'aeuy';
-		$consonants = 'bdghjmnpqrstvz';
-		if ($strength >= 1) {
-			$consonants .= 'BDGHJLMNPQRSTVWXZ';
-		}
-		if ($strength >= 2) {
-			$vowels .= "AEUY";
-		}
-		if ($strength >= 4) {
-			$consonants .= '23456789';
-		}
-		if ($strength >= 8 ) {
-			$vowels .= '@#$%';
-		}
-	
-		$password = '';
-		$alt = time() % 2;
-		for ($i = 0; $i < $length; $i++) {
-			if ($alt == 1) {
-				$password .= $consonants[(rand() % strlen($consonants))];
-				$alt = 0;
-			} else {
-				$password .= $vowels[(rand() % strlen($vowels))];
-				$alt = 1;
-			}
-		}
-		return $password;
-	}
-	?>
-	{% endhighlight %}
+	<p>This makes it much easier to share bits of code I write and to share sample code in articles. Win!</p>
 	
 	<h2>Closing Thoughts</h2>
 	<p>Like I said, it is far from perfect. But it is simple enough that I can update things and add new features without too much hassle.</p>

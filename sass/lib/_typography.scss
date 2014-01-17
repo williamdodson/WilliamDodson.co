@@ -124,7 +124,8 @@ a.button,
 
 .meta {
 	background: $color-pale-gray;
-	border: 0.0625em solid $color-light-gray;
+	@include background(linear-gradient(left top, $color-white, $color-pale-gray));
+	border-bottom: 0.0625em solid $color-pale-gray;
 	margin-bottom: 1.5em;
 	@include pad(0.75em default 0.75em default);
 	p {
