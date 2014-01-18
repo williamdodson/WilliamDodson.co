@@ -7,8 +7,9 @@
 @import "bourbon/bourbon-deprecated-upcoming";
 @import "neat/neat";
 
-@import "mixins/longshadow";
+@import "mixins/main";
 
+@import "lib/grid-settings";
 @import "lib/fonts";
 @import "lib/colors";
 @import "lib/effects";

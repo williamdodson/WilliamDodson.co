@@ -203,6 +203,10 @@ a.button,
 		a {
 			overflow: hidden;
 			position: relative;
+			font-size: 0.75em;
+			@include media($bp-lg-val) {
+				font-size: 1em;
+			}
 			img {
 				border: 1px solid $color-white;
 			}
@@ -229,7 +233,7 @@ a.button,
 					color: $color-black;
 				}
 			}
-		}
+		}// end a
 	}
 }
 // result

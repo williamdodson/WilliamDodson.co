@@ -75,10 +75,21 @@ body#home .ancillary {
 .projects {
 	@include span-columns(12 of 12);
 	li {
-		@include span-columns(4 of 12);
+		@include span-columns(6 of 12);
+		@include omega(2n);
 		margin-bottom: 1.5em;
-		&:nth-child(3n+3) {
-			margin-right: 0;
+		@include media($bp-med-val, 12) {
+			@include omega-reset(2n);
+			@include span-columns(4 of 12);
+			@include omega(3n);
+		}
+		a {
+			.caption {
+				margin-left: -100%;
+				@include media($bp-med-val) {
+					margin-left: 0;
+				}
+			}
 		}
 	}// end li
 }
