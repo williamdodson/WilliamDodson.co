@@ -1,12 +1,14 @@
-<section class="print">
-	<h2>Brand Development <abbr title="and">&amp;</abbr> Logos</h2>
+<section class="print" aria-labelledby="section-heading-brand">
+	<h2 id="section-heading-brand">Brand Development <abbr title="and">&amp;</abbr> Logos</h2>
 	<ul class="projects">
 		{% for post in site.categories['brand'] %}
 		<li>
-			<a href="{{ post.url }}">
-				<img alt="{{ post.title }}" src="{{ post.images[0] }}"> 
-				<span>{{ post.title }}</span>
-			</a>
+			<figure>
+				<a href="{{ post.url }}">
+					<img alt="{{ post.title }}" src="{{ post.images[0] }}"> 
+					<figcaption class="caption">{{ post.title }}</figcaption>
+				</a>
+			</figure>
 		</li>
 		{% endfor %}
 	</ul>

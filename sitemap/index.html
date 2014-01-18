@@ -7,11 +7,11 @@ excerpt: 'A list of everything on this site'
 slug: sitemap
 ---
 
-<section class="main">
+<article class="main" role="main">
   <p class="leader">Looking for something in particular? Here is where you can find everything on this site:</p>
   <!-- pages -->
-  <section class="pages">
-		<h2>Pages</h2>
+  <section class="pages" aria-labelledby="section-heading-pages">
+		<h2 id="section-heading-pages">Pages</h2>
 		<ul class="separate">
 			{% for page in site.pages %}
 			{% if page.shortname != 'Error 404' %}
@@ -26,8 +26,8 @@ slug: sitemap
 	</section>
 	
 	<!-- projects -->
-	<section class="project-pages">
-		<h2>Projects</h2>
+	<section class="project-pages" aria-labelledby="section-heading-projects">
+		<h2 id="section-heading-projects">Projects</h2>
 		<ul class="separate">
 			{% for post in site.categories['projects'] %}
 			<li>
@@ -41,8 +41,8 @@ slug: sitemap
 	
 	{% if site.categories['articles'] %}
 	<!-- article -->
-	<section class="articles">
-		<h2>Articles</h2>
+	<section class="articles" aria-labelledby="section-heading-articles">
+		<h2 id="section-heading-articles">Articles</h2>
 		<ul>
 			{% for post in site.categories['articles'] %}
 			<li>
@@ -54,4 +54,4 @@ slug: sitemap
 		</ul>
 	</section>
 	{% endif %}
-</section>
+</article>

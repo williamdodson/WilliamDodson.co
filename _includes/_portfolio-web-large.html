@@ -1,12 +1,14 @@
-<section class="web">
-	<h2>Web Design <abbr title="and">&amp;</abbr> Development</h2>
+<section class="web" aria-labelledby="section-heading-web">
+	<h2 id="section-heading-web">Web Design <abbr title="and">&amp;</abbr> Development</h2>
 	<ul class="separate projects">
 		{% for post in site.categories['web'] %}
 		<li>
-			<a href="{{ post.url }}">
-				<img alt="{{ post.title }}" src="{{ post.images[0] }}"> 
-				<span>{{ post.title }}</span>
-			</a>
+			<figure>
+				<a href="{{ post.url }}">
+					<img alt="{{ post.title }}" src="{{ post.images[0] }}"> 
+					<figcaption class="caption">{{ post.title }}</figcaption>
+				</a>
+			</figure>
 		</li>
 		{% endfor %}
 	</ul>

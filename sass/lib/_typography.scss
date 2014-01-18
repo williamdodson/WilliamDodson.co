@@ -206,7 +206,7 @@ a.button,
 			img {
 				border: 1px solid $color-white;
 			}
-			span {
+			.caption {
 				background: $color-pale-gray;
 				bottom: 0;
 				color: $color-dark-gray;
@@ -224,7 +224,7 @@ a.button,
 			&:focus,
 			&:hover,
 			&:active {
-				span {
+				.caption {
 					background: darken($color-pale-gray, 7);
 					color: $color-black;
 				}

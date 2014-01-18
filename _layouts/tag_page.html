@@ -6,7 +6,7 @@ excerpt: Articles Tagged with !PAGE_TAG!
 
 ---
 
-<section class="main">
+<article class="main" role="main">
 {% for post in page.posts %}
   <section class="separate">
   	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -14,4 +14,4 @@ excerpt: Articles Tagged with !PAGE_TAG!
   	<p>{{ post.excerpt }}</p>
   </section>
 {% endfor %}
-</section>
+</article>
