@@ -10,7 +10,6 @@
 		linear-gradient(left top, $color-white, darken($color-white, 10))
 	);
 	a {
-		color: $color-gray;
 		text-decoration: none;
 	}
 }
@@ -30,6 +29,7 @@
 	@include clearfix;
 }
 
+// .menu-main has issues with responsive nav -- see other layout files for references
 .title,
 .menu-main,
 .main,

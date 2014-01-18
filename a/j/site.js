@@ -1,3 +1,9 @@
+// responsive nav
+var nav = responsiveNav(".nav-collapse", {
+	label: 'Menu'
+});
+
+// jquery ready
 $(function(){
   var url = window.location,
   		path = url.pathname,
