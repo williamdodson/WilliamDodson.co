@@ -5,6 +5,15 @@
 	background: $color-white;
 	padding: 1.5em 5%;
 }
+
+.ie-warning {
+	background: $color-dark-red;
+	color: $color-white;
+	p {
+		@include outer-container;
+	}
+}
+
 .top {
 	background: darken($color-white, 10);
 	@include background(

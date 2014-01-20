@@ -90,6 +90,15 @@ a.button,
 		text-shadow: 3px 3px 0 $color-dark-purple;
 	}
 }
+
+.ie-warning {
+	text-align: center;
+	p {
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+}
+
 .intro {
 	abbr[title='and'] {
 	 color: $color-light-gray;

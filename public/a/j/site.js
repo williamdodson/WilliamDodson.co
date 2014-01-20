@@ -30,5 +30,5 @@ $(function(){
     		//$(shot).attr('src', href);
     	});
     });
-  }
+  }// end if
 });
