@@ -67,6 +67,7 @@ img, object, iframe {
 // classes
 a.button,
 .button {
+	background: $color-dark-purple;
   @include background(linear-gradient(left top, $color-purple, $color-dark-purple));
 	border: 1px solid lighten($color-dark-purple, 3);
 	@include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0));
@@ -312,6 +313,7 @@ a.button,
 			overflow: hidden;
 			&.active {
 				a {
+					background: $color-light-gray;
 					@include background(linear-gradient(left top, $color-white, $color-light-gray));
 					border-bottom: 1px solid $color-light-gray;
 					color: $color-black;

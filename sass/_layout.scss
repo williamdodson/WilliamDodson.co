@@ -3,9 +3,10 @@
 // containers
 .container {
 	background: $color-white;
-	padding: 1.5em 2.5%;
+	padding: 1.5em 5%;
 }
 .top {
+	background: darken($color-white, 10);
 	@include background(
 		linear-gradient(left top, $color-white, darken($color-white, 10))
 	);
@@ -15,6 +16,7 @@
 }
 
 .intro {
+	background: $color-black;
 	@include background(
 		linear-gradient(left top, lighten($color-black, 10), $color-black)
 	);
@@ -47,10 +49,10 @@ body#home .ancillary {
 
 // classes
 .callout {
+	background: $color-white;
 	@include background(
 		linear-gradient(left top, $color-pale-gray, $color-white)
 	);
-	//@include long-shadow(box, darken($color-pale-gray, 7), 14, false, true, right);
 	@include pad(0.75em default);
 	margin-bottom: 1.5em;
 	@include span-columns(12);

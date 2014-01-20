@@ -31,6 +31,7 @@
 }
 
 .nav-toggle {
+	background-color: darken($color-white, 10);
   @include background(
 		linear-gradient(left top, $color-white, darken($color-white, 10))
 	);
