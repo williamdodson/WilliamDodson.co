@@ -1,0 +1,41 @@
+---
+layout: article
+title: 'Alternative to Git Submodules with Git Subtree Merging'
+leader: 'Read up on Subtree Merging to become familiar with this approach'
+heading: 'Alternative to Git Submodules with Git Subtree Merging'
+date: 2014-01-28 7:30
+slug: article
+excerpt: 'We all find ourselves using separately maintained Git projects inside of our own personal projects.'
+author: 'William Dodson'
+categories: [articles]
+tags: [git, git-subtree, git-submodule, code-snips]
+---
+
+<article class="main" role="main">
+  {% include _post-meta.html %}
+  <p>We all find ourselves using separately maintained Git projects inside of our own personal projects. It’s a common situation and most projects I’ve worked on used <a href="http://git-scm.com/book/en/Git-Tools-Submodules">Git Submodules</a> for the task. However, if you’ve worked on enough projects that use submodules you know it’s terribly, well&#8230;terrible.</p>
+  
+  <p>Instead of dealing with submodule headaches I find it’s much easier (and preferable) to use subtree merging. First off, we create/clone our main repository the normal way. From within the main repository we can merge the master or another branch of a separate repository into specified subdirectory of the main repository:</p>
+  
+  {% highlight bash %}
+	$ git remote add -f subtree-repo /path/to/subtree-repo
+	$ git merge -s ours --no-commit subtree-repo/master
+	$ git read-tree --prefix=subtree-repo/ -u subtree-repo/master
+	$ git commit -m "Merge subtree-repo as a subdirectory."
+	{% endhighlight %}
+	
+	<p>Now when the other repository changes we can pull those changes into your main repository by using a subtree merge strategy:</p>
+	
+	{% highlight bash %}
+	$ git pull -s subtree subtree-repo master
+	{% endhighlight %}
+	
+	<p>And here is a GitHub Gist for your reference and bookmarking pleasure:</p>
+	{% gist 8657578 %}
+	
+	<p>There are some caveats to this approach, not least of which would be squashing subtree commit messages to prevent updating our own project’s <code>HEAD</code> reference. I would recommend that you to read up on Subtree Merging to become familiar with this approach and to help avoid any potential merge hiccups that may arise: <a href="http://git-scm.com/book/en/Git-Tools-Subtree-Merging">http://git-scm.com/book/en/Git-Tools-Subtree-Merging</a>.</p>
+	
+	<p>This approach works for me as I’m typically just grabbing external code to include in my own projects. An example would be a client website repository that relies on an external library such as <a href="http://responsive-nav.com/">Responsive Nav</a>. Using this approach has made me nearly forget why I ever used submodules.</p>
+	
+	<p>I am certainly no Git master and I’m always open to better approaches to how I work. If you have any suggestions please leave me a comment on the <a href="https://gist.github.com/obxdesignworks/8657578">GitHub Gist</a> I have posted to accompany this article. Cheers!</p>
+</article>

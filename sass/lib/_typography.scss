@@ -178,6 +178,33 @@ a.button,
 	}
 }
 
+.posts {
+	li {
+		border-bottom: 0.0625em dotted $color-pale-gray;
+		margin-bottom: 0.25em;
+		padding-bottom: 0.25em;
+		&:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+.post-title {
+	font-size: 1.5em;
+	line-height: 1;
+	margin-bottom: 0;
+	a {
+		color: $color-dark-gray;
+		text-decoration: none;
+		&:focus,
+		&:hover,
+		&:active {
+			color: $color-dark-purple;
+		}
+	}
+}
+
 // projects, recent, thumbs
 .projects,
 .recent,
@@ -301,6 +328,24 @@ a.button,
 
 .subtle {
 	color: $color-pale-gray;
+}
+
+.tag-cloud {
+	.set-1 {
+		font-size: 0.75em;
+	}
+	.set-2 {
+		font-size: 0.875em;
+	}
+	.set-3 {
+		font-size: 1em;
+	}
+	.set-4 {
+		font-size: 1.125em;
+	}
+	.set-5 {
+		font-size: 1.25em;
+	}
 }
 
 // specifics

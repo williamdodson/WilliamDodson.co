@@ -5,9 +5,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang='en'> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title>New Year, New Website | William Dodson</title>
+		<title>Alternative to Git Submodules with Git Subtree Merging | William Dodson</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="description" content="Too much time is spent on sweating every detail and herding pixels.">
+		<meta name="description" content="We all find ourselves using separately maintained Git projects inside of our own personal projects.">
 		<meta name="viewport" content="width=device-width">
 		<meta name="author" content="/humans.txt">
 		<link rel="shortcut icon" href="/favicon.ico">
@@ -62,8 +62,8 @@
 		
 		<div class="container intro">
 			<div class="content">
-				<h1>New Year, New Website</h1>
-				<h2 class="leader">Too much time is spent on sweating every detail and herding pixels</h2>
+				<h1>Alternative to Git Submodules with Git Subtree Merging</h1>
+				<h2 class="leader">Read up on Subtree Merging to become familiar with this approach</h2>
 			</div>
 		</div>
 		
@@ -74,12 +74,12 @@
   <div class="meta">
 	<p>
 		<small>
-			<span>Posted on: January 14, 2014</span> <span class="subtle">|</span> 
-			<span>Tags: <a href="/tag/announcements.html" rel="tag">announcements</a>, <a href="/tag/code-snips.html" rel="tag">code-snips</a></span> <span class="subtle">|</span> 
+			<span>Posted on: January 28, 2014</span> <span class="subtle">|</span> 
+			<span>Tags: <a href="/tag/git.html" rel="tag">git</a>, <a href="/tag/git-subtree.html" rel="tag">git-subtree</a>, <a href="/tag/git-submodule.html" rel="tag">git-submodule</a>, <a href="/tag/code-snips.html" rel="tag">code-snips</a></span> <span class="subtle">|</span> 
 			<span class="share-links">
-				<a class="share" href="http://twitter.com/home?status=http://williamdodson.co/articles/new-year-new-website" title="Share on Twitter"><img alt="Twitter" src="/a/i/icons/icon-twitter.png"></a> 
-				<a class="share" href="http://www.facebook.com/sharer.php?u=http://williamdodson.co/articles/new-year-new-website" title="Share on Facebook"><img alt="Facebook" src="/a/i/icons/icon-facebook.png"></a> 
-				<a class="share" href="https://plus.google.com/share?url=http://williamdodson.co/articles/new-year-new-website" title="Share on Google+"><img alt="Google+" src="/a/i/icons/icon-gplus.png"></a>
+				<a class="share" href="http://twitter.com/home?status=http://williamdodson.co/articles/git-subtree" title="Share on Twitter"><img alt="Twitter" src="/a/i/icons/icon-twitter.png"></a> 
+				<a class="share" href="http://www.facebook.com/sharer.php?u=http://williamdodson.co/articles/git-subtree" title="Share on Facebook"><img alt="Facebook" src="/a/i/icons/icon-facebook.png"></a> 
+				<a class="share" href="https://plus.google.com/share?url=http://williamdodson.co/articles/git-subtree" title="Share on Google+"><img alt="Google+" src="/a/i/icons/icon-gplus.png"></a>
 			</span>
 		</small>
 	</p>
@@ -87,28 +87,31 @@
 		
 	</div>
 </div>
-  <p>Every new year I take time to look back and reflect on my accomplishments, memories, and goals from the previous year. One of those goals was to finally get my butt in gear and create a new website design for myself.</p>
+  <p>We all find ourselves using separately maintained Git projects inside of our own personal projects. It’s a common situation and most projects I’ve worked on used <a href="http://git-scm.com/book/en/Git-Tools-Submodules">Git Submodules</a> for the task. However, if you’ve worked on enough projects that use submodules you know it’s terribly, well&#8230;terrible.</p>
   
-  <p>The new site took about a month to design, test, iterate, and tweak. I wanted something really simple that focused more on the content than on the design itself. As Greg Storey from Happy Cog noted in his recent article, &#8220;<a href="http://cognition.happycog.com/article/make-do">Make, Do</a>,&#8220; too much time is spent on sweating every detail and herding pixels. I wanted the new site to be good enough to get out the door and still have room for improvement and iteration over time. It is far from perfect, but it is good enough for me to build on.</p>
+  <p>Instead of dealing with submodule headaches I find it’s much easier (and preferable) to use subtree merging. First off, we create/clone our main repository the normal way. From within the main repository we can merge the master or another branch of a separate repository into specified subdirectory of the main repository:</p>
   
-  <h2>New Features</h2>
-  
-  <p>Some of the new features of this site include the ability to easily add GitHub Gists right inline with my posts. For example, here is a Sass mixin I created to easily style placeholder text:</p>
-  <script src="https://gist.github.com/5785186.js"> </script>
-  
-  <p>I can also post code examples directly inline:</p>
-  <div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> 	<span class="c1">// javascript function to add extra spaces between letters in a string</span>
-<span class="lineno">2</span> 	<span class="kd">function</span> <span class="nx">spaceText</span><span class="p">(</span><span class="nx">txt</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">3</span> 		<span class="k">return</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span>
-<span class="lineno">4</span> 	<span class="p">}</span>
-<span class="lineno">5</span> 	
+  <div class="highlight"><pre><code class="bash">	<span class="nv">$ </span>git remote add -f subtree-repo /path/to/subtree-repo
+	<span class="nv">$ </span>git merge -s ours --no-commit subtree-repo/master
+	<span class="nv">$ </span>git <span class="nb">read</span>-tree --prefix<span class="o">=</span>subtree-repo/ -u subtree-repo/master
+	<span class="nv">$ </span>git commit -m <span class="s2">&quot;Merge subtree-repo as a subdirectory.&quot;</span>
+	
 </code></pre></div>
 	
-	<p>This makes it much easier to share bits of code I write and to share sample code in articles. Win!</p>
+	<p>Now when the other repository changes we can pull those changes into your main repository by using a subtree merge strategy:</p>
 	
-	<h2>And in the end</h2>
-	<p>Like I said, it is far from perfect. But it is simple enough that I can update things and add new features without too much hassle.</p>
-	<p>Hopefully this new setup will encourage me to update the site more frequently and to write more blog posts. :)</p>
+	<div class="highlight"><pre><code class="bash">	<span class="nv">$ </span>git pull -s subtree subtree-repo master
+	
+</code></pre></div>
+	
+	<p>And here is a GitHub Gist for your reference and bookmarking pleasure:</p>
+	<script src="https://gist.github.com/8657578.js"> </script>
+	
+	<p>There are some caveats to this approach, not least of which would be squashing subtree commit messages to prevent updating our own project’s <code>HEAD</code> reference. I would recommend that you to read up on Subtree Merging to become familiar with this approach and to help avoid any potential merge hiccups that may arise: <a href="http://git-scm.com/book/en/Git-Tools-Subtree-Merging">http://git-scm.com/book/en/Git-Tools-Subtree-Merging</a>.</p>
+	
+	<p>This approach works for me as I’m typically just grabbing external code to include in my own projects. An example would be a client website repository that relies on an external library such as <a href="http://responsive-nav.com/">Responsive Nav</a>. Using this approach has made me nearly forget why I ever used submodules.</p>
+	
+	<p>I am certainly no Git master and I’m always open to better approaches to how I work. If you have any suggestions please leave me a comment on the <a href="https://gist.github.com/obxdesignworks/8657578">GitHub Gist</a> I have posted to accompany this article. Cheers!</p>
 </article>
 				<aside class="ancillary" role="complementary">
 	<h2>Recent Articles</h2>
