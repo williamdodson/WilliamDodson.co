@@ -13,8 +13,8 @@
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		
-		<link rel="stylesheet" href="/a/c/style.css?v=201401291143">
-		<link rel="stylesheet" href="/a/c/syntax.css?v=201401291143">
+		<link rel="stylesheet" href="/a/c/style.css?v=201401291128">
+		<link rel="stylesheet" href="/a/c/syntax.css?v=201401291128">
 		
 		<!-- typekit -->
 		<script type="text/javascript" src="//use.typekit.net/efy5lsk.js"></script>
@@ -91,17 +91,15 @@
   
   <p>Instead of dealing with submodule headaches I find it’s much easier (and preferable) to use subtree merging. First off, we create/clone our main repository the normal way. From within the main repository we can merge the master or another branch of a separate repository into specified subdirectory of the main repository:</p>
   
-  <div class="highlight"><pre><code class="bash">	<span class="nv">$ </span>git remote add -f subtree-repo /path/to/subtree-repo
-	<span class="nv">$ </span>git merge -s ours --no-commit subtree-repo/master
-	<span class="nv">$ </span>git <span class="nb">read</span>-tree --prefix<span class="o">=</span>subtree-repo/ -u subtree-repo/master
-	<span class="nv">$ </span>git commit -m <span class="s2">&quot;Merge subtree-repo as a subdirectory.&quot;</span>
-	
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git remote add -f subtree-repo /path/to/subtree-repo
+<span class="nv">$ </span>git merge -s ours --no-commit subtree-repo/master
+<span class="nv">$ </span>git <span class="nb">read</span>-tree --prefix<span class="o">=</span>subtree-repo/ -u subtree-repo/master
+<span class="nv">$ </span>git commit -m <span class="s2">&quot;Merge subtree-repo as a subdirectory.&quot;</span>
 </code></pre></div>
 	
 	<p>Now when the other repository changes we can pull those changes into your main repository by using a subtree merge strategy:</p>
 	
-	<div class="highlight"><pre><code class="bash">	<span class="nv">$ </span>git pull -s subtree subtree-repo master
-	
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git pull -s subtree subtree-repo master
 </code></pre></div>
 	
 	<p>And here is a GitHub Gist for your reference and bookmarking pleasure:</p>

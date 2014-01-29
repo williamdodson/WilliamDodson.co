@@ -17,18 +17,18 @@ tags: [git, git-subtree, git-submodule, code-snips]
   
   <p>Instead of dealing with submodule headaches I find it’s much easier (and preferable) to use subtree merging. First off, we create/clone our main repository the normal way. From within the main repository we can merge the master or another branch of a separate repository into specified subdirectory of the main repository:</p>
   
-  {% highlight bash %}
-	$ git remote add -f subtree-repo /path/to/subtree-repo
-	$ git merge -s ours --no-commit subtree-repo/master
-	$ git read-tree --prefix=subtree-repo/ -u subtree-repo/master
-	$ git commit -m "Merge subtree-repo as a subdirectory."
-	{% endhighlight %}
+{% highlight bash %}
+$ git remote add -f subtree-repo /path/to/subtree-repo
+$ git merge -s ours --no-commit subtree-repo/master
+$ git read-tree --prefix=subtree-repo/ -u subtree-repo/master
+$ git commit -m "Merge subtree-repo as a subdirectory."
+{% endhighlight %}
 	
 	<p>Now when the other repository changes we can pull those changes into your main repository by using a subtree merge strategy:</p>
 	
-	{% highlight bash %}
-	$ git pull -s subtree subtree-repo master
-	{% endhighlight %}
+{% highlight bash %}
+$ git pull -s subtree subtree-repo master
+{% endhighlight %}
 	
 	<p>And here is a GitHub Gist for your reference and bookmarking pleasure:</p>
 	{% gist 8657578 %}

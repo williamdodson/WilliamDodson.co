@@ -118,9 +118,6 @@ a.button,
 		color: $color-pale-gray;
 		margin-bottom: 0.5em;
 		text-shadow: 3px 3px 0 $color-black;
-		/*@include media($bp-lg-val) {
-			margin-bottom: 1em;
-		}*/
 	}
 	a {
 		color: $color-white;
