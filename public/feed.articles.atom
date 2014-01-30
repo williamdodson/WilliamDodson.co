@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>William Dodson - Articles</title>
+		<description>Posts categorized as 'Articles'</description>
+		<link>http://williamdodson.co</link>
+		<atom:link href="http://williamdodson.co/feed.category.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Alternative to Git Submodules with Git Subtree Merging</title>
+				<description>We all find ourselves using separately maintained Git projects inside of our own personal projects.</description>
+				<pubDate>Tue, 28 Jan 2014 07:30:00 -0500</pubDate>
+				<link>http://williamdodson.co/articles/git-subtree</link>
+				<guid isPermaLink="true">http://williamdodson.co/articles/git-subtree</guid>
+			</item>
+		
+			<item>
+				<title>New Year, New Website</title>
+				<description>Too much time is spent on sweating every detail and herding pixels.</description>
+				<pubDate>Tue, 14 Jan 2014 07:00:00 -0500</pubDate>
+				<link>http://williamdodson.co/articles/new-year-new-website</link>
+				<guid isPermaLink="true">http://williamdodson.co/articles/new-year-new-website</guid>
+			</item>
+		
+	</channel>
+</rss>

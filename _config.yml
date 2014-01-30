@@ -9,3 +9,6 @@ permalink: /:categories/:title
 exclude: [sass, config.rb]
 tag_page_layout: tag_page
 tag_page_dir: tag
+
+# XML feed settings
+description: 'Creative Design & Development Services Made with Love'
