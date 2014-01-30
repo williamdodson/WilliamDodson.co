@@ -4,7 +4,7 @@
 		<title>William Dodson - Articles</title>
 		<description>Posts categorized as 'Articles'</description>
 		<link>http://williamdodson.co</link>
-		<atom:link href="http://williamdodson.co/feed.category.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="http://williamdodson.co/feed.articles.atom" rel="self" type="application/atom+xml" />
 		
 			<item>
 				<title>Alternative to Git Submodules with Git Subtree Merging</title>
