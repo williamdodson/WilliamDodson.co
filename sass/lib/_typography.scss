@@ -1,51 +1,51 @@
 // styles
 body {
-	background: $color-dark-gray;
+  background: $color-dark-gray;
   color: $color-black;
-	font-family: $font-sans;
-	font-size: 100%;
-	line-height: 1.5;
+  font-family: $font-sans;
+  font-size: 100%;
+  line-height: 1.5;
 }
 h1, h2, h3, h4 {
-	color: $color-dark-gray;
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
+  color: $color-dark-gray;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 h1 {
-	font-size: 1.5em;
-	font-weight: 800;
-	line-height: 1;
-	margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1em;
 }
 h2 {
-	color: $color-gray;
-	font-size: 1.125em;
-	line-height: 1.333333;
-	margin-bottom: 0.666667em;
+  color: $color-gray;
+  font-size: 1.125em;
+  line-height: 1.333333;
+  margin-bottom: 0.666667em;
 }
 p, dl, ol, ul {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 a, a:link, a:visited {
-	color: $color-dark-purple;
-	text-decoration: underline;
-	@include transition_color;
+  color: $color-dark-purple;
+  text-decoration: underline;
+  @include transition_color;
 }
 a:active, a:focus, a:hover {
-	color: $color-purple;
+  color: $color-purple;
 }
 a[href*="tel:"] {
-	text-decoration: none;
+  text-decoration: none;
 }
 em {
-	font-style: italic;
+  font-style: italic;
 }
 small {
-	font-size: 0.75em;
+  font-size: 0.75em;
 }
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 /*neat trick by Jeremy Keith: http://adactio.com/journal/1612/*/
 abbr[title='and'] {
@@ -55,432 +55,432 @@ abbr[title='and'] {
 }
 
 code, pre {
-	font-family: 'ubuntu mono', 'anonymous pro', 'andale mono', 'courier new', monospace;
+  font-family: 'ubuntu mono', 'anonymous pro', 'andale mono', 'courier new', monospace;
 }
 
 // media
 img, object, iframe {
-	height: auto;
-	max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 // classes
 a.button,
 .button {
-	background: $color-dark-purple;
+  background: $color-dark-purple;
   @include background(linear-gradient(left top, $color-purple, $color-dark-purple));
-	border: 1px solid lighten($color-dark-purple, 3);
-	@include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0));
-	border-right: none;
-	border-bottom: none;
-	color: $color-white !important;
-	display: block;
-	font-weight: bold;
-	line-height: 1;
-	padding: 0.5em 1em;
-	text-align: center;
-	text-decoration: none;
-	text-shadow: 0 0 0 transparent;
-	@include transition-property(all);
-	@include transition-duration(0.2s);
-	&:active,
-	&:focus,
-	&:hover {
-		@include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0.12));
-		text-shadow: 3px 3px 0 $color-dark-purple;
-	}
+  border: 1px solid lighten($color-dark-purple, 3);
+  @include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0));
+  border-right: none;
+  border-bottom: none;
+  color: $color-white !important;
+  display: block;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 0 transparent;
+  @include transition-property(all);
+  @include transition-duration(0.2s);
+  &:active,
+  &:focus,
+  &:hover {
+    @include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0.12));
+    text-shadow: 3px 3px 0 $color-dark-purple;
+  }
 }
 
 .ie-warning {
-	text-align: center;
-	p {
-		font-weight: bold;
-		margin-bottom: 0;
-	}
+  text-align: center;
+  p {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
 }
 
 .intro {
-	abbr[title='and'] {
-	 color: $color-light-gray;
-	}
+  abbr[title='and'] {
+   color: $color-light-gray;
+  }
 }
 
 .leader {
-	color: $color-dark-gray;
-	font-size: 1em;
-	font-weight: bold;
-	line-height: 1.5;
-	margin: 0 0 1.5em 0;
+  color: $color-dark-gray;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0 0 1.5em 0;
 }
 
 .intro {
-	h1 {
-		color: $color-pale-gray;
-		margin-bottom: 0.5em;
-		text-shadow: 3px 3px 0 $color-black;
-	}
-	a {
-		color: $color-white;
-	}
-	.leader {
-		color: $color-light-gray;
-		margin-bottom: 0;
-		text-shadow: 3px 3px 0 $color-black;
-	}
+  h1 {
+    color: $color-pale-gray;
+    margin-bottom: 0.5em;
+    text-shadow: 3px 3px 0 $color-black;
+  }
+  a {
+    color: $color-white;
+  }
+  .leader {
+    color: $color-light-gray;
+    margin-bottom: 0;
+    text-shadow: 3px 3px 0 $color-black;
+  }
 }
 
 .love {
-	color: $color-red;
+  color: $color-red;
 }
 
 .meta {
-	background: $color-pale-gray;
-	@include background(linear-gradient(left top, $color-white, $color-pale-gray));
-	border-bottom: 0.0625em solid $color-pale-gray;
-	margin-bottom: 1.5em;
-	@include pad(0.75em default 0.75em default);
-	vertical-align: middle;
-	p {
-		margin-bottom: 0;
-	}
-	span {
-		display: block;
-	}
-	.subtle {
-		color: $color-light-gray;
-		display: none;
-		margin: 0 1em;
-	}
+  background: $color-pale-gray;
+  @include background(linear-gradient(left top, $color-white, $color-pale-gray));
+  border-bottom: 0.0625em solid $color-pale-gray;
+  margin-bottom: 1.5em;
+  @include pad(0.75em default 0.75em default);
+  vertical-align: middle;
+  p {
+    margin-bottom: 0;
+  }
+  span {
+    display: block;
+  }
+  .subtle {
+    color: $color-light-gray;
+    display: none;
+    margin: 0 1em;
+  }
 }
 
 .panel {
-	background: $color-pale-gray;
-	border: 1px solid $color-light-gray;
-	padding: 0.75em;
-	@include clearfix;
+  background: $color-pale-gray;
+  border: 1px solid $color-light-gray;
+  padding: 0.75em;
+  @include clearfix;
 }
 
 // pinboard feed styles
 .pin-item {
-	a {
-		color: $color-dark-gray;
-		text-decoration: none;
-		&:focus,
-		&:hover,
-		&:active {
-			color: $color-black;
-		}
-	}
-	.pin-title {
-		font-weight: bold;
-	}
-	.pin-tag {
-		font-size: 0.75em;
-	}
+  a {
+    color: $color-dark-gray;
+    text-decoration: none;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-black;
+    }
+  }
+  .pin-title {
+    font-weight: bold;
+  }
+  .pin-tag {
+    font-size: 0.75em;
+  }
 }
 
 .posts {
-	li {
-		border-bottom: 0.0625em dotted $color-pale-gray;
-		margin-bottom: 0.25em;
-		padding-bottom: 0.25em;
-		&:last-child {
-			border-bottom: none;
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
-	}
+  li {
+    border-bottom: 0.0625em dotted $color-pale-gray;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.25em;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 .post-title {
-	font-size: 1.5em;
-	line-height: 1;
-	margin-bottom: 0;
-	a {
-		color: $color-dark-gray;
-		text-decoration: none;
-		&:focus,
-		&:hover,
-		&:active {
-			color: $color-dark-purple;
-		}
-	}
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0;
+  a {
+    color: $color-dark-gray;
+    text-decoration: none;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-dark-purple;
+    }
+  }
 }
 
 // projects, recent, thumbs
 .projects,
 .recent,
 .thumbs {
-	li {
-		a {
-			background: $color-pale-gray;
-			display: block;
-			line-height: 0.8;
-			margin: 0;
-			padding: 0.25em;
-			@include transition-property(all);
-			@include transition-duration(0.2s);
-			&:focus,
-			&:hover,
-			&:active {
-				background: darken($color-pale-gray, 7);
-				img {
-					opacity: 1;
-				}
-			}
-			img {
-				border: 1px solid $color-light-gray;
-				opacity: 0.8;
-				@include transition-property(opacity);
-				@include transition-duration(0.2s);
-			}
-		}
-	}// end li
+  li {
+    a {
+      background: $color-pale-gray;
+      display: block;
+      line-height: 0.8;
+      margin: 0;
+      padding: 0.25em;
+      @include transition-property(all);
+      @include transition-duration(0.2s);
+      &:focus,
+      &:hover,
+      &:active {
+        background: darken($color-pale-gray, 7);
+        img {
+          opacity: 1;
+        }
+      }
+      img {
+        border: 1px solid $color-light-gray;
+        opacity: 0.8;
+        @include transition-property(opacity);
+        @include transition-duration(0.2s);
+      }
+    }
+  }// end li
 }
 .projects {
-	li {
-		a {
-			overflow: hidden;
-			position: relative;
-			font-size: 0.75em;
-			@include media($bp-lg-val) {
-				font-size: 1em;
-			}
-			img {
-				border: 1px solid $color-white;
-			}
-			.caption {
-				background: $color-pale-gray;
-				bottom: 0;
-				color: $color-dark-gray;
-				left: 0;
-				padding: 0.75em 0.25em;
-				position: absolute;
-				text-align: center;
-				text-decoration: none;
-				text-shadow: 0.0625em 0.0625em 0 $color-white;
-				@include transition-property(all);
-				@include transition-duration(0.2s);
-				width: 100%;
-				z-index: 3;
-			}
-			&:focus,
-			&:hover,
-			&:active {
-				.caption {
-					background: darken($color-pale-gray, 7);
-					color: $color-black;
-				}
-			}
-		}// end a
-	}
+  li {
+    a {
+      overflow: hidden;
+      position: relative;
+      font-size: 0.75em;
+      @include media($bp-lg-val) {
+        font-size: 1em;
+      }
+      img {
+        border: 1px solid $color-white;
+      }
+      .caption {
+        background: $color-pale-gray;
+        bottom: 0;
+        color: $color-dark-gray;
+        left: 0;
+        padding: 0.75em 0.25em;
+        position: absolute;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 0.0625em 0.0625em 0 $color-white;
+        @include transition-property(all);
+        @include transition-duration(0.2s);
+        width: 100%;
+        z-index: 3;
+      }
+      &:focus,
+      &:hover,
+      &:active {
+        .caption {
+          background: darken($color-pale-gray, 7);
+          color: $color-black;
+        }
+      }
+    }// end a
+  }
 }
 // result
 .result {
-	img {
-		border: 1px solid $color-light-gray;
-	}
+  img {
+    border: 1px solid $color-light-gray;
+  }
 }
 
 .separate {
-	border-bottom: 1px solid $color-pale-gray;
-	margin-bottom: 1.5em;
-	padding-bottom: 1.5em;
-	@include clearfix;
-	&.separate-top {
-		border-top: 1px solid $color-pale-gray;
-		border-bottom: none;
-		margin-bottom: 0;
-		padding-top: 1.5em;
-		padding-bottom: 0;
-	}
+  border-bottom: 1px solid $color-pale-gray;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  @include clearfix;
+  &.separate-top {
+    border-top: 1px solid $color-pale-gray;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-top: 1.5em;
+    padding-bottom: 0;
+  }
 }
 
 .share-links {
-	padding: 0.75em 0;
+  padding: 0.75em 0;
 }
 .share {
-	display: inline-block;
-	margin-right: 0.375em;
-	vertical-align: middle;
-	&:last-child {
-		margin-right: 0;
-	}
+  display: inline-block;
+  margin-right: 0.375em;
+  vertical-align: middle;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social {
-	li {
-		border-bottom: 1px solid $color-pale-gray;
-		margin-bottom: 0.75em;
-		padding-bottom: 0.75em;
-	}
-	a {
-		color: $color-dark-gray;
-		text-decoration: none;
-		&:focus,
-		&:hover,
-		&:active {
-			color: $color-black;
-		}
-		b {
-			font-weight: bold;
-		}
-	}
+  li {
+    border-bottom: 1px solid $color-pale-gray;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.75em;
+  }
+  a {
+    color: $color-dark-gray;
+    text-decoration: none;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-black;
+    }
+    b {
+      font-weight: bold;
+    }
+  }
 }
 
 .subtle {
-	color: $color-pale-gray;
+  color: $color-pale-gray;
 }
 
 .tag-cloud {
-	.set-1 {
-		font-size: 0.75em;
-	}
-	.set-2 {
-		font-size: 0.875em;
-	}
-	.set-3 {
-		font-size: 1em;
-	}
-	.set-4 {
-		font-size: 1.125em;
-	}
-	.set-5 {
-		font-size: 1.25em;
-	}
+  .set-1 {
+    font-size: 0.75em;
+  }
+  .set-2 {
+    font-size: 0.875em;
+  }
+  .set-3 {
+    font-size: 1em;
+  }
+  .set-4 {
+    font-size: 1.125em;
+  }
+  .set-5 {
+    font-size: 1.25em;
+  }
 }
 
 // specifics
 .masthead {
-	h1 {
-		color: $color-black;
-		font-size: 2.25em;
-		line-height: 0.666667;
-		margin-bottom: 0.75em;
-		text-align: center;
-	}
+  h1 {
+    color: $color-black;
+    font-size: 2.25em;
+    line-height: 0.666667;
+    margin-bottom: 0.75em;
+    text-align: center;
+  }
 }
 
 .menu-main {
-	ul {
-		margin-bottom: 0;
-		li {
-			margin-bottom: 0.25em;
-			overflow: hidden;
-			&.active {
-				a {
-					background: $color-light-gray;
-					@include background(linear-gradient(left top, $color-white, $color-light-gray));
-					border-bottom: 1px solid $color-light-gray;
-					color: $color-black;
-					text-shadow: 0.0625em 0.0625em 0 $color-pale-gray;
-				}
-			}
-		}
-		a {
-			@include background(transparent);
-			border-bottom: 0.0625em solid $color-light-gray;
-			@include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0));
-			color: $color-gray;
-			display: block;
-			font-size: 1.5em;
-			font-weight: bold;
-			line-height: 1;
-			padding: 0.25em 1em;
-			text-align: center;
-			text-shadow: 0 0 0 transparent;
-			@include transition-property(all);
-			@include transition-duration(0.2s);
-			&:active,
-			&:focus,
-			&:hover {
-				@include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0.12));
-				color: $color-black;
-				text-shadow: 0.0625em 0.0625em 0 $color-white;
-			}
-		}
-	}
+  ul {
+    margin-bottom: 0;
+    li {
+      margin-bottom: 0.25em;
+      overflow: hidden;
+      &.active {
+        a {
+          background: $color-light-gray;
+          @include background(linear-gradient(left top, $color-white, $color-light-gray));
+          border-bottom: 1px solid $color-light-gray;
+          color: $color-black;
+          text-shadow: 0.0625em 0.0625em 0 $color-pale-gray;
+        }
+      }
+    }
+    a {
+      @include background(transparent);
+      border-bottom: 0.0625em solid $color-light-gray;
+      @include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0));
+      color: $color-gray;
+      display: block;
+      font-size: 1.5em;
+      font-weight: bold;
+      line-height: 1;
+      padding: 0.25em 1em;
+      text-align: center;
+      text-shadow: 0 0 0 transparent;
+      @include transition-property(all);
+      @include transition-duration(0.2s);
+      &:active,
+      &:focus,
+      &:hover {
+        @include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0.12));
+        color: $color-black;
+        text-shadow: 0.0625em 0.0625em 0 $color-white;
+      }
+    }
+  }
 }
 
 .ancillary {
-	h2 {
-		color: $color-dark-gray;
-		font-size: 1.5em;
-		line-height: 1;
-		margin-bottom: 1em;
-	}
+  h2 {
+    color: $color-dark-gray;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 1em;
+  }
 }
 
 .copyright {
-	color: $color-white;
+  color: $color-white;
 }
 
 // medium
 @media only screen and ($bp-med) {
-	// base HTML
-	h1 {
-		font-size: 1.875em;
-		line-height: 1;
-		margin-bottom: 1em;
-	}
-	h2 {
-		color: $color-gray;
-		font-size: 1.5em;
-		line-height: 1;
-		margin-bottom: 0.666667em;
-	}
-	
-	// classes
-	.leader {
-		color: $color-dark-gray;
-		font-size: 1.125em;
-		font-weight: bold;
-		line-height: 1.333333;
-		margin: 0 0 1.333333em 0;
-	}
-	
-	.projects {
-		margin-bottom: 1.5em;
-	}
-	
-	// specifics
-	.masthead {
-		h1 {
-			text-align: left;
-		}
-	}
-	
-	.menu-main {
-		ul {
-			a {
-				text-align: left;
-			}
-		}
-	}
+  // base HTML
+  h1 {
+    font-size: 1.875em;
+    line-height: 1;
+    margin-bottom: 1em;
+  }
+  h2 {
+    color: $color-gray;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 0.666667em;
+  }
+  
+  // classes
+  .leader {
+    color: $color-dark-gray;
+    font-size: 1.125em;
+    font-weight: bold;
+    line-height: 1.333333;
+    margin: 0 0 1.333333em 0;
+  }
+  
+  .projects {
+    margin-bottom: 1.5em;
+  }
+  
+  // specifics
+  .masthead {
+    h1 {
+      text-align: left;
+    }
+  }
+  
+  .menu-main {
+    ul {
+      a {
+        text-align: left;
+      }
+    }
+  }
 }
 
 // large
 @media only screen and ($bp-lg) {
-	// base HTML
-	h1 {
-		font-size: 2.25em;
-		font-weight: 800;
-		line-height: 1;
-		margin-bottom: 0.333333em;
-	}
-	h2 {
-		color: $color-gray;
-		font-size: 1.875em;
-		line-height: 0.8;
-		margin-bottom: 0.4em;
-	}
-	
-	// classes
-	.meta {
-		span {
-			display: inline;
-		}
-		.subtle {
-			display: inline;
-		}
-	}
+  // base HTML
+  h1 {
+    font-size: 2.25em;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.333333em;
+  }
+  h2 {
+    color: $color-gray;
+    font-size: 1.875em;
+    line-height: 0.8;
+    margin-bottom: 0.4em;
+  }
+  
+  // classes
+  .meta {
+    span {
+      display: inline;
+    }
+    .subtle {
+      display: inline;
+    }
+  }
 }

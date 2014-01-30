@@ -1,32 +1,32 @@
 // medium screen layout
 
 .title {
-	@include span-columns(6);
+  @include span-columns(6);
 }
 
 .menu-main {
-	@include span-columns(6);
+  @include span-columns(6);
 }
 
 .main {
-	@include span-columns(8);
+  @include span-columns(8);
 }
 body#home .main,
 body#portfolio .main {
-	@include span-columns(12);
+  @include span-columns(12);
 }
 .ancillary {
-	@include span-columns(4);
+  @include span-columns(4);
 }
 body#home .ancillary,
 body#portfolio .ancillary {
-	@include span-columns(12);
+  @include span-columns(12);
 }
 
 // classes
 .callout {
-	@include span-columns(4);
-	&:last-child {
-		@include omega;
-	}
+  @include span-columns(4);
+  &:last-child {
+    @include omega;
+  }
 }

@@ -2,42 +2,42 @@
 
 // containers
 .container {
-	background: $color-white;
-	padding: 1.5em 5%;
+  background: $color-white;
+  padding: 1.5em 5%;
 }
 
 .ie-warning {
-	background: $color-dark-red;
-	color: $color-white;
-	p {
-		@include outer-container;
-	}
+  background: $color-dark-red;
+  color: $color-white;
+  p {
+    @include outer-container;
+  }
 }
 
 .top {
-	background: darken($color-white, 10);
-	@include background(
-		linear-gradient(left top, $color-white, darken($color-white, 10))
-	);
-	a {
-		text-decoration: none;
-	}
+  background: darken($color-white, 10);
+  @include background(
+    linear-gradient(left top, $color-white, darken($color-white, 10))
+  );
+  a {
+    text-decoration: none;
+  }
 }
 
 .intro {
-	background: $color-black;
-	@include background(
-		linear-gradient(left top, lighten($color-black, 10), $color-black)
-	);
-	border-top: 0.75em solid lighten($color-black, 10);
-	border-bottom: 0.75em solid $color-black;
+  background: $color-black;
+  @include background(
+    linear-gradient(left top, lighten($color-black, 10), $color-black)
+  );
+  border-top: 0.75em solid lighten($color-black, 10);
+  border-bottom: 0.75em solid $color-black;
 }
 
 .masthead,
 .content,
 .copyright {
-	@include outer-container;
-	@include clearfix;
+  @include outer-container;
+  @include clearfix;
 }
 
 // .menu-main has issues with responsive nav -- see other layout files for references
@@ -45,91 +45,91 @@
 .menu-main,
 .main,
 .ancillary {
-	@include span-columns(12);
+  @include span-columns(12);
 }
 body#home .ancillary {
-	margin-top: 1.5em;
-	padding-bottom: 1.5em;
+  margin-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .bottom {
-	background: $color-dark-gray;
+  background: $color-dark-gray;
 }
 
 // classes
 .callout {
-	background: $color-white;
-	@include background(
-		linear-gradient(left top, $color-pale-gray, $color-white)
-	);
-	@include pad(0.75em default);
-	margin-bottom: 1.5em;
-	@include span-columns(12);
+  background: $color-white;
+  @include background(
+    linear-gradient(left top, $color-pale-gray, $color-white)
+  );
+  @include pad(0.75em default);
+  margin-bottom: 1.5em;
+  @include span-columns(12);
 }
 
 .hero {
-	background: $color-white;
-	border-top: 0.75em solid $color-pale-gray;
-	overflow: hidden;
-	padding-bottom: 38%;
-	position: relative;
-	img {
-		left: 0;
+  background: $color-white;
+  border-top: 0.75em solid $color-pale-gray;
+  overflow: hidden;
+  padding-bottom: 38%;
+  position: relative;
+  img {
+    left: 0;
     position: absolute;
     right: 0;
     top: 0;
     width: 120%;
-	}
+  }
 }
 
 // projects
 .projects {
-	@include span-columns(12 of 12);
-	li {
-		@include span-columns(6 of 12);
-		@include omega(2n);
-		margin-bottom: 1.5em;
-		@include media($bp-med-val, 12) {
-			@include omega-reset(2n);
-			@include span-columns(4 of 12);
-			@include omega(3n);
-		}
-		a {
-			.caption {
-				margin-left: -100%;
-				@include media($bp-med-val) {
-					margin-left: 0;
-				}
-			}
-		}
-	}// end li
+  @include span-columns(12 of 12);
+  li {
+    @include span-columns(6 of 12);
+    @include omega(2n);
+    margin-bottom: 1.5em;
+    @include media($bp-med-val, 12) {
+      @include omega-reset(2n);
+      @include span-columns(4 of 12);
+      @include omega(3n);
+    }
+    a {
+      .caption {
+        margin-left: -100%;
+        @include media($bp-med-val) {
+          margin-left: 0;
+        }
+      }
+    }
+  }// end li
 }
 
 // recent projects
 .recent {
-	@include span-columns(12 of 12);
-	margin-bottom: 0;
-	li {
-		@include span-columns(3 of 12);
-		@include omega(4n);
-		margin-bottom: 0;
-	}
+  @include span-columns(12 of 12);
+  margin-bottom: 0;
+  li {
+    @include span-columns(3 of 12);
+    @include omega(4n);
+    margin-bottom: 0;
+  }
 }
 
 // project thumbnails
 .thumbs {
-	@include span-columns(12 of 12);
-	padding-bottom: 0;
-	@include media($bp-med-val) {
-		@include span-columns(4 of 4);
-	}
-	li {
-		@include span-columns(4 of 12);
-		@include omega(3n);
-		margin-bottom: 1.5em;
-		@include media($bp-med-val) {
-			@include span-columns(2 of 4);
-			@include omega(2n);
-		}
-	}
+  @include span-columns(12 of 12);
+  padding-bottom: 0;
+  @include media($bp-med-val) {
+    @include span-columns(4 of 4);
+  }
+  li {
+    @include span-columns(4 of 12);
+    @include omega(3n);
+    margin-bottom: 1.5em;
+    @include media($bp-med-val) {
+      @include span-columns(2 of 4);
+      @include omega(2n);
+    }
+  }
 }

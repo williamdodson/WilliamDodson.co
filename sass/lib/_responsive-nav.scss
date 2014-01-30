@@ -31,10 +31,10 @@
 }
 
 .nav-toggle {
-	background-color: darken($color-white, 10);
+  background-color: darken($color-white, 10);
   @include background(
-		linear-gradient(left top, $color-white, darken($color-white, 10))
-	);
+    linear-gradient(left top, $color-white, darken($color-white, 10))
+  );
   border-bottom: 0.0625em solid $color-light-gray;
   clear: both;
   color: $color-gray !important;

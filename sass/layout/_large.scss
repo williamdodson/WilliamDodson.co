@@ -1,16 +1,16 @@
 // large screen layout
 
 .title {
-	@include span-columns(8);
+  @include span-columns(8);
 }
 
 .menu-main {
-	@include span-columns(4);
+  @include span-columns(4);
 }
 
 .intro {
-	padding-top: 3em;
-	padding-bottom: 3em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 // classes
