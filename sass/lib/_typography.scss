@@ -60,8 +60,15 @@ code, pre {
 
 // media
 img, object, iframe {
-  height: auto;
   max-width: 100%;
+}
+img, object {
+  height: auto;
+}
+// codepen iframes
+.cp_embed_iframe {
+  margin-bottom: 1.5em;
+  min-height: 100%;
 }
 
 // classes
