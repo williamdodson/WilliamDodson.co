@@ -11,47 +11,48 @@ slug: sitemap
   <p class="leader">Looking for something in particular? Here is where you can find everything on this site:</p>
   <!-- pages -->
   <section class="pages" aria-labelledby="section-heading-pages">
-		<h2 id="section-heading-pages">Pages</h2>
-		<ul class="separate">
-			{% for page in site.pages %}
-			{% if page.shortname != 'Error 404' %}
-			<li>
-				<a href="{{ page.url }}">
-					{{ page.shortname }}
-				</a>
-			</li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-	</section>
-	
-	<!-- projects -->
-	<section class="project-pages" aria-labelledby="section-heading-projects">
-		<h2 id="section-heading-projects">Projects</h2>
-		<ul class="separate">
-			{% for post in site.categories['projects'] %}
-			<li>
-				<a href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</li>
-			{% endfor %}
-		</ul>
-	</section>
-	
-	{% if site.categories['articles'] %}
-	<!-- article -->
-	<section class="articles" aria-labelledby="section-heading-articles">
-		<h2 id="section-heading-articles">Articles</h2>
-		<ul>
-			{% for post in site.categories['articles'] %}
-			<li>
-				<a href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</li>
-			{% endfor %}
-		</ul>
-	</section>
-	{% endif %}
+    <h2 id="section-heading-pages">Pages</h2>
+    <ul class="separate">
+    {% for page in site.pages %}
+      {% assign url = page.url | remove:'index.html' %}
+      {% if page.shortname != 'Error 404' %}
+      <li>
+        <a href="{{ url }}">
+          {{ page.shortname }}
+        </a>
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </section>
+  
+  <!-- projects -->
+  <section class="project-pages" aria-labelledby="section-heading-projects">
+    <h2 id="section-heading-projects">Projects</h2>
+    <ul class="separate">
+      {% for post in site.categories['projects'] %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  
+  {% if site.categories['articles'] %}
+  <!-- article -->
+  <section class="articles" aria-labelledby="section-heading-articles">
+    <h2 id="section-heading-articles">Articles</h2>
+    <ul>
+      {% for post in site.categories['articles'] %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </article>
