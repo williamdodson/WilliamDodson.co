@@ -2,7 +2,7 @@
 		<div class="container bottom">
 			<footer class="copyright">
 				<p>
-					<small>&#169;{{ site.time | date: "%Y" }} {{ site.name }}. All Rights Reserved.</small>
+					<small>&#169;{{ site.time | date: "%Y" }} {% if page.author == 'William Dodson' %}<span class="p-author">{% endif %}{{ site.name }}{% if page.author == 'William Dodson' %}</span>{% endif %}. All Rights Reserved.</small>
 				</p>
 			</footer>
 		</div>

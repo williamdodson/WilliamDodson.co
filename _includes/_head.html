@@ -26,7 +26,7 @@
 		    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
 		<![endif]-->
 	</head>
-	<body id="{{ page.slug }}">
+	<body{% if page.author == 'William Dodson' %} class="h-entry"{% endif %} id="{{ page.slug }}">
 		<!--[if lte IE 8]>
 			<div class="container ie-warning">
 				<p>Looks like you are using an old version of Internet Explorer. Certain elements of this site will not be available to you and require a modern browser in order to function.</p>

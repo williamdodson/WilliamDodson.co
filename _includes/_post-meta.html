@@ -1,8 +1,8 @@
 <div class="meta">
 	<p>
 		<small>
-			<span>Posted on: {{ page.date | date: '%B %d, %Y' }}</span> <span class="subtle">|</span> 
-			<span>Tags: {{ page | tags }}</span> <span class="subtle">|</span> 
+			<span>Posted on: <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d %H:%M:%S' }}">{{ page.date | date: '%B %d, %Y' }}</time></span> <span class="subtle">|</span> 
+			<span>Tags: <span class="p-category">{{ page | tags }}</span></span> <span class="subtle">|</span> 
 			<span class="share-links">
 				<a class="share" href="http://twitter.com/home?status={{ site.url }}{{ page.url }}" title="Share on Twitter"><img alt="Twitter" src="/a/i/icons/icon-twitter.png"></a> 
 				<a class="share" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook"><img alt="Facebook" src="/a/i/icons/icon-facebook.png"></a> 
