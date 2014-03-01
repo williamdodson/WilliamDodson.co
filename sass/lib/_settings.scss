@@ -1,4 +1,5 @@
 // Bourbon
+//////////////////////////////////////////////////
 $prefix-for-webkit:    true;
 $prefix-for-mozilla:   true;
 $prefix-for-microsoft: true;
@@ -6,11 +7,14 @@ $prefix-for-opera:     true;
 $prefix-for-spec:      true;
 
 // variables
-$bp-med-val: "40em";//640px
-$bp-med: "min-width: #{$bp-med-val}";
-$bp-lg-val: "55em";//880px
-$bp-lg: "min-width: #{$bp-lg-val}";
+//////////////////////////////////////////////////
+$bp-med-val: '40em';//640px
+$bp-med: 'min-width: #{$bp-med-val}';
+$bp-lg-val: '55em';//880px
+$bp-lg: 'min-width: #{$bp-lg-val}';
 
 // font stack
-$font-sans: 'helvetica neue', helvetica, arial, sans-serif;
-$font-serif: georgia, garamond, baskerville, palatino, serif;
+//////////////////////////////////////////////////
+$font-sans: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;
+$font-sans-condensed: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Geneva', 'Arial Narrow', sans-serif;
+//$font-serif: georgia, garamond, baskerville, palatino, serif;

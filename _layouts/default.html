@@ -1,4 +1,4 @@
-{% include _head.html %}
+{% include structure/_head.html %}
 		
 		<div class="container intro">
 			<div class="content">
@@ -12,14 +12,14 @@
 			<div class="content">
 				{{ content }}
 				{% if page.slug == 'home' %}
-					{% include _sidebar-home.html %}
+					{% include sidebar/_sidebar-home.html %}
 				{% else %}
 					{% if page.slug != 'portfolio' %}
-						{% include _sidebar.html %}
+						{% include sidebar/_sidebar.html %}
 					{% endif %}
 				{% endif %}
 			</div>
 			<!-- /.content -->
 		</div>
 		
-{% include _foot.html %}
+{% include structure/_foot.html %}

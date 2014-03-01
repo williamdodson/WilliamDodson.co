@@ -1,4 +1,5 @@
 // Transitions, Animations, and other visual effects
+//////////////////////////////////////////////////
 @mixin transition_color {
   @include transition-property(color);
   @include transition-duration(0.2s);

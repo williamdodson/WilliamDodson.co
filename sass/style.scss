@@ -1,3 +1,5 @@
+// Base Imports
+//////////////////////////////////////////////////
 @import "compass";
 @import "compass/reset";
 @import "compass/css3";
@@ -15,12 +17,13 @@
 @import "lib/effects";
 @import "lib/typography";
 @import "lib/responsive-nav";
+@import "lib/extensions";
 
 @import "layout";
 
 
-// Media Queries //
-
+// Media Queries
+//////////////////////////////////////////////////
 @media only screen and ($bp-med) {
   @import "layout/medium";
 }

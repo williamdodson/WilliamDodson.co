@@ -1,4 +1,5 @@
 // styles
+//////////////////////////////////////////////////
 body {
   background: $color-dark-gray;
   color: $color-black;
@@ -8,13 +9,15 @@ body {
 }
 h1, h2, h3, h4 {
   color: $color-dark-gray;
-  font-weight: bold;
+  font-family: $font-sans;
+  font-weight: normal;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 h1 {
+  font-family: $font-sans-condensed;
   font-size: 1.5em;
-  font-weight: 800;
   line-height: 1;
   margin-bottom: 1em;
 }
@@ -59,6 +62,7 @@ code, pre {
 }
 
 // media
+//////////////////////////////////////////////////
 img, object, iframe {
   max-width: 100%;
 }
@@ -66,12 +70,14 @@ img, object {
   height: auto;
 }
 // codepen iframes
+//////////////////////////////////////////////////
 .cp_embed_iframe {
   margin-bottom: 1.5em;
   min-height: 100%;
 }
 
 // classes
+//////////////////////////////////////////////////
 a.button,
 .button {
   background: $color-dark-purple;
@@ -107,33 +113,33 @@ a.button,
 }
 
 .intro {
-  abbr[title='and'] {
-   color: $color-light-gray;
-  }
-}
-
-.leader {
-  color: $color-dark-gray;
-  font-size: 1em;
-  font-weight: bold;
-  line-height: 1.5;
-  margin: 0 0 1.5em 0;
-}
-
-.intro {
   h1 {
     color: $color-pale-gray;
+    font-weight: 300;
     margin-bottom: 0.5em;
     text-shadow: 3px 3px 0 $color-black;
   }
   a {
     color: $color-white;
   }
+  abbr[title='and'] {
+   color: $color-light-gray;
+   font-style: normal;
+  }
   .leader {
     color: $color-light-gray;
+    font-weight: normal;
     margin-bottom: 0;
     text-shadow: 3px 3px 0 $color-black;
+    text-transform: none;
   }
+}
+
+.leader {
+  color: $color-dark-gray;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0 0 1.5em 0;
 }
 
 .love {
@@ -168,7 +174,10 @@ a.button,
 }
 
 // pinboard feed styles
+//////////////////////////////////////////////////
 .pin-item {
+  @extend %subtle-separate;
+  
   a {
     color: $color-dark-gray;
     text-decoration: none;
@@ -185,17 +194,15 @@ a.button,
     font-size: 0.75em;
   }
 }
+.pin-all-items {
+  margin-top: 1.5em;
+}
 
+// Posts
+//////////////////////////////////////////////////
 .posts {
   li {
-    border-bottom: 0.0625em dotted $color-pale-gray;
-    margin-bottom: 0.25em;
-    padding-bottom: 0.25em;
-    &:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
+    @extend %subtle-separate;
   }
 }
 .post-title {
@@ -214,6 +221,7 @@ a.button,
 }
 
 // projects, recent, thumbs
+//////////////////////////////////////////////////
 .projects,
 .recent,
 .thumbs {
@@ -293,12 +301,17 @@ a.button,
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
   @include clearfix;
+  
   &.separate-top {
     border-top: 1px solid $color-pale-gray;
     border-bottom: none;
     margin-bottom: 0;
     padding-top: 1.5em;
     padding-bottom: 0;
+  }
+  
+  & p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -357,6 +370,7 @@ a.button,
 }
 
 // specifics
+//////////////////////////////////////////////////
 .masthead {
   h1 {
     color: $color-black;
@@ -390,11 +404,11 @@ a.button,
       color: $color-gray;
       display: block;
       font-size: 1.5em;
-      font-weight: bold;
       line-height: 1;
       padding: 0.25em 1em;
       text-align: center;
       text-shadow: 0 0 0 transparent;
+      text-transform: uppercase;
       @include transition-property(all);
       @include transition-duration(0.2s);
       &:active,
@@ -422,8 +436,10 @@ a.button,
 }
 
 // medium
+//////////////////////////////////////////////////
 @media only screen and ($bp-med) {
   // base HTML
+  //////////////////////////////////////////////////
   h1 {
     font-size: 1.875em;
     line-height: 1;
@@ -437,6 +453,7 @@ a.button,
   }
   
   // classes
+  //////////////////////////////////////////////////
   .leader {
     color: $color-dark-gray;
     font-size: 1.125em;
@@ -450,6 +467,7 @@ a.button,
   }
   
   // specifics
+  //////////////////////////////////////////////////
   .masthead {
     h1 {
       text-align: left;
@@ -466,11 +484,12 @@ a.button,
 }
 
 // large
+//////////////////////////////////////////////////
 @media only screen and ($bp-lg) {
   // base HTML
+  //////////////////////////////////////////////////
   h1 {
     font-size: 2.25em;
-    font-weight: 800;
     line-height: 1;
     margin-bottom: 0.333333em;
   }
@@ -482,6 +501,7 @@ a.button,
   }
   
   // classes
+  //////////////////////////////////////////////////
   .meta {
     span {
       display: inline;
