@@ -373,15 +373,20 @@ a.button,
   }
 }
 
+.title {
+  margin-bottom: 0;
+}
+
 // specifics
 //////////////////////////////////////////////////
 .masthead {
   h1 {
-    color: $color-black;
-    font-size: 2.25em;
-    line-height: 0.666667;
-    margin-bottom: 0.75em;
-    text-align: center;
+    font-size: 1em;
+    line-height: 1;
+    
+    a {
+      color: $color-white;
+    }
   }
 }
 

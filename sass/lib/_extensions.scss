@@ -1,5 +1,18 @@
 // Extensions
 //////////////////////////////////////////////////
+%hero-image {
+  overflow: hidden;
+  padding-bottom: 38%;
+  position: relative;
+  img {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120%;
+  }
+}
+
 %nav-main-active {
   background: rgba($color-purple, 0.7);
   color: $color-white;

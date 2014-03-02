@@ -15,11 +15,7 @@
 }
 
 .top {
-  background: $color-blue url('https://dl.dropboxusercontent.com/u/126928/img/header-bg.jpg') no-repeat 50% 50%;//darken($color-white, 10);
-  background-size: cover;
-  /*@include background(
-    linear-gradient(left top, $color-white, darken($color-white, 10))
-  );*/
+  background: $color-gray;
   a {
     text-decoration: none;
   }
@@ -74,18 +70,9 @@ body#home .ancillary {
 }
 
 .hero {
+  @extend %hero-image;
   background: $color-white;
   border-top: 0.75em solid $color-pale-gray;
-  overflow: hidden;
-  padding-bottom: 38%;
-  position: relative;
-  img {
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 120%;
-  }
 }
 
 // projects
