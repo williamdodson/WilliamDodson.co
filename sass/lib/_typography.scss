@@ -83,6 +83,7 @@ a.button,
   background: $color-dark-purple;
   @include background(linear-gradient(left top, $color-purple, $color-dark-purple));
   border: 1px solid lighten($color-dark-purple, 3);
+  border-radius: $base-radius;
   @include box-shadow(inset 6px 6px 12px 0 rgba(255, 255, 255, 0));
   border-right: none;
   border-bottom: none;
@@ -229,6 +230,7 @@ a.button,
   li {
     a {
       background: $color-pale-gray;
+      border-radius: $base-radius;
       display: block;
       line-height: 0.8;
       margin: 0;
@@ -245,6 +247,7 @@ a.button,
       }
       img {
         border: 1px solid $color-light-gray;
+        border-radius: $base-radius;
         opacity: 0.8;
         @include transition-property(opacity);
         @include transition-duration(0.2s);
@@ -391,6 +394,7 @@ a.button,
       &.active {
         a {
           @extend %nav-main-active;
+          text-shadow: 0.0625em 0.0625em 0 rgba($color-black, 0.42);
         }
       }
     }
@@ -404,7 +408,7 @@ a.button,
       line-height: 1;
       padding: 0.25em 1em;
       text-align: center;
-      text-shadow: 0.0625em 0.0625em 0 rgba($color-black, 0.42);
+      text-shadow: 0 0 0 rgba($color-black, 0);
       text-transform: uppercase;
       @include transition-property(all);
       @include transition-duration(0.2s);
@@ -412,6 +416,7 @@ a.button,
       &:focus,
       &:hover {
         @extend %nav-main-active;
+        text-shadow: 0.0625em 0.0625em 0 rgba($color-black, 0.42);
       }
     }
   }
