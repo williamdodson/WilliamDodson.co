@@ -15,10 +15,11 @@
 }
 
 .top {
-  background: darken($color-white, 10);
-  @include background(
+  background: $color-blue url('https://dl.dropboxusercontent.com/u/126928/img/header-bg.jpg') no-repeat 50% 50%;//darken($color-white, 10);
+  background-size: cover;
+  /*@include background(
     linear-gradient(left top, $color-white, darken($color-white, 10))
-  );
+  );*/
   a {
     text-decoration: none;
   }
@@ -62,9 +63,14 @@ body#home .ancillary {
   @include background(
     linear-gradient(left top, $color-pale-gray, $color-white)
   );
-  @include pad(0.75em default);
+  border-radius: $base-radius;
+  @include pad(1.5em flex-gutter(4) 1.5em flex-gutter(4));
   margin-bottom: 1.5em;
   @include span-columns(12);
+  
+  & p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .hero {
