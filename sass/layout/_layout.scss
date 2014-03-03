@@ -15,7 +15,10 @@
 }
 
 .top {
-  background: $color-gray;
+  background-color: $color-dark-purple;
+  @include background(
+    linear-gradient(left top, $color-light-purple, $color-dark-purple)
+  );
   overflow: hidden;
   position: relative;
   
