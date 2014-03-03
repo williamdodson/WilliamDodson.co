@@ -12,6 +12,8 @@ $bp-med-val: '40em';//640px
 $bp-med: 'min-width: #{$bp-med-val}';
 $bp-lg-val: '55em';//880px
 $bp-lg: 'min-width: #{$bp-lg-val}';
+$bp-xlg-val: '68em';//1088px
+$bp-xlg: 'min-width: #{$bp-xlg-val}';
 
 // base sizes
 //////////////////////////////////////////////////
@@ -20,5 +22,5 @@ $base-radius: 0.25em;
 // font stack
 //////////////////////////////////////////////////
 $font-sans: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;
-$font-sans-condensed: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Geneva', 'Arial Narrow', sans-serif;
+$font-sans-condensed: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif;
 //$font-serif: georgia, garamond, baskerville, palatino, serif;

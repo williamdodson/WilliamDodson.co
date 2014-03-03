@@ -3,45 +3,45 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang='en'> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang='en'> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang='en'> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<title>{{ page.title | replace: '!PAGE_TAG!', page.tag }} | {{ site.name }}</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="description" content="{{ page.excerpt | replace: '!PAGE_TAG!', page.tag }}">
-		<meta name="viewport" content="width=device-width">
-		<link rel="alternate" type="application/atom+xml" title="William Dodson Articles" href="{{ site.url }}/feed.articles.atom" />
-		<meta name="author" content="/humans.txt">
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		
-		<link rel="stylesheet" href="/a/c/style.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
-		<link rel="stylesheet" href="/a/c/syntax.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
-		
-		<!--[if lt IE 9]>
-		    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-		<![endif]-->
-	</head>
-	<body id="{{ page.slug }}">
-		<!--[if lte IE 8]>
-			<div class="container ie-warning">
-				<p>Looks like you are using an old version of Internet Explorer. Certain elements of this site will not be available to you and require a modern browser in order to function.</p>
-			</div>
-		<![endif]-->
-		
-		<!-- .top -->
-		<div class="container top">
-			<!-- .masthead -->
-			<header class="masthead" role="banner">
-				<h1 class="title">
-					<a href="/">
-						<img alt="{{ site.name }}" src="/a/i/williamdodson-logo-2014.png">
-					</a>
-				</h1>
-				
-				{% include structure/_menu-main.html %}
-				
-			</header>
-			<!-- /.masthead -->
-		</div>
-		<!-- /.top -->
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title | replace: '!PAGE_TAG!', page.tag }} | {{ site.name }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="{{ page.excerpt | replace: '!PAGE_TAG!', page.tag }}">
+    <meta name="viewport" content="width=device-width">
+    <link rel="alternate" type="application/atom+xml" title="William Dodson Articles" href="{{ site.url }}/feed.articles.atom" />
+    <meta name="author" content="/humans.txt">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="/a/c/style.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
+    <link rel="stylesheet" href="/a/c/syntax.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
+    
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+  </head>
+  <body id="{{ page.slug }}">
+    <!--[if lte IE 8]>
+      <div class="container ie-warning">
+        <p>Looks like you are using an old version of Internet Explorer. Certain elements of this site will not be available to you and require a modern browser in order to function.</p>
+      </div>
+    <![endif]-->
+    
+    <!-- .top -->
+    <div class="container top">
+      <!-- .masthead -->
+      <header class="masthead" role="banner">
+        <h1 class="title">
+          <a href="/">
+            <img alt="{{ site.name }}" src="/a/i/williamdodson-logo-2014.png">
+          </a>
+        </h1>
+        
+        {% include structure/_menu-main.html %}
+        
+      </header>
+      <!-- /.masthead -->
+    </div>
+    <!-- /.top -->

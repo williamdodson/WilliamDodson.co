@@ -1,15 +1,22 @@
 // Extensions
 //////////////////////////////////////////////////
 %hero-image {
+  height: 100%;
+  left: 0;
   overflow: hidden;
-  padding-bottom: 38%;
-  position: relative;
+  padding-bottom: 25%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
   img {
+    height: auto;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     width: 120%;
+    z-index: 1;
   }
 }
 

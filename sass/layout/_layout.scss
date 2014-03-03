@@ -16,6 +16,9 @@
 
 .top {
   background: $color-gray;
+  overflow: hidden;
+  position: relative;
+  
   a {
     text-decoration: none;
   }
@@ -35,6 +38,10 @@
 .copyright {
   @include outer-container;
   @include clearfix;
+}
+.masthead {
+  position: relative;
+  z-index: 2;
 }
 
 // .menu-main has issues with responsive nav -- see other layout files for references
@@ -69,10 +76,9 @@ body#home .ancillary {
   }
 }
 
-.hero {
+.hero-main {
   @extend %hero-image;
-  background: $color-white;
-  border-top: 0.75em solid $color-pale-gray;
+  background: transparent;
 }
 
 // projects
