@@ -398,13 +398,27 @@ a.button,
       overflow: hidden;
       &.active {
         a {
-          @extend %nav-main-active;
+          //@extend %nav-main-active;
+          background-color: rgba($color-dark-purple, 0.7);
+          @include background(
+            linear-gradient(left top, rgba($color-dark-purple, 0.7), rgba($color-dark-purple, 0.21))
+          );
+          color: lighten($color-light-purple, 12);
           text-shadow: 0.0625em 0.0625em 0 rgba($color-black, 0.42);
+          
+          &:active,
+          &:focus,
+          &:hover {
+            color: $color-white;
+          }
         }
       }
     }
     a {
-      background: rgba($color-black, 0.7);
+      background-color: rgba($color-black, 0.7);
+      @include background(
+        linear-gradient(left top, rgba($color-black, 0.7), rgba($color-black, 0.42))
+      );
       border-radius: $base-radius;
       color: $color-pale-gray;
       display: block;
@@ -421,7 +435,7 @@ a.button,
       &:focus,
       &:hover {
         @extend %nav-main-active;
-        text-shadow: 0.0625em 0.0625em 0 rgba($color-black, 0.42);
+        text-shadow: 0.0625em 0.0625em 0 rgba($color-black, 0.77);
       }
     }
   }
