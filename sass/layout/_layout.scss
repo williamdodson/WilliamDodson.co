@@ -15,9 +15,9 @@
 }
 
 .top {
-  background-color: $color-dark-purple;
+  background-color: $color-gray;
   @include background(
-    linear-gradient(left top, $color-light-purple, $color-dark-purple)
+    linear-gradient(left top, lighten($color-light-purple, 12), $color-gray)
   );
   overflow: hidden;
   position: relative;
@@ -28,7 +28,7 @@
 }
 
 .intro {
-  background: $color-black;
+  background-color: $color-black;
   @include background(
     linear-gradient(left top, lighten($color-black, 10), $color-black)
   );
