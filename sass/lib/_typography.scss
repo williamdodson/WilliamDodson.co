@@ -391,6 +391,8 @@ a.button,
 }
 
 .menu-main {
+  margin: 1.5em 0 0 0;
+  
   ul {
     margin-bottom: 0;
     li {
@@ -407,30 +409,30 @@ a.button,
           }
         }
       }
-    }
+    }// end li
+    
     a {
-      background: $color-black;
-      background: rgba($color-black, 0.7);
-      border-radius: $base-radius;
-      color: $color-pale-gray;
-      display: block;
-      font-size: 1.5em;
-      font-family: $font-sans-condensed;
-      line-height: 1;
-      padding: 0.25em 1em;
+      @extend %nav-main;
       text-align: center;
-      text-shadow: 0 0 0 rgba($color-black, 0);
-      text-transform: uppercase;
       @include transition-property(all);
       @include transition-duration(0.2s);
+      
       &:active,
       &:focus,
       &:hover {
         @extend %nav-main-active;
       }
-    }
+      
+      @include media($bp-med-val) {
+        text-align: left;
+      }
+    }// end a
+  }// end ul
+  
+  @include media($bp-med-val) {
+    margin-top: 0;
   }
-}
+}// end menu-main
 
 .ancillary {
   h2 {
