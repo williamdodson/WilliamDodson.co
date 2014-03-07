@@ -3,7 +3,7 @@
 		<div class="container intro">
 			<div class="content">
 				<h1>{{ page.heading | replace: '!PAGE_TAG!', page.tag }}</h1>
-				{% if page.leader != '' %}<h2 class="leader">{{ page.leader }}</h2>{% endif %}
+				{% if page.leader %}<h2 class="leader">{{ page.leader }}</h2>{% endif %}
 			</div>
 		</div>
 		

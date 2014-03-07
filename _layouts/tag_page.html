@@ -1,15 +1,15 @@
 ---
 layout: tags
-title: Articles Tagged with !PAGE_TAG!
-heading: Articles Tagged with !PAGE_TAG!
-excerpt: Articles Tagged with !PAGE_TAG!
-
+title: 'Article tag: !PAGE_TAG!'
+heading: 'Article tag: !PAGE_TAG!'
+excerpt: 'Article tag: !PAGE_TAG!'
+leader: 'For that extra twist after the punchline'
 ---
 
 <article class="main" role="main">
 {% for post in page.posts %}
   <section class="separate">
-  	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  	<h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
   	<p>{{ post.date | date: '%B %d, %Y' }} <span class="subtle">|</span> Tags: {{ post | tags }}</p>
   	<p>{{ post.excerpt }}</p>
   </section>

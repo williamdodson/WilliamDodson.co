@@ -17,7 +17,7 @@
 .top {
   background-color: $color-gray;
   @include background(
-    linear-gradient(left top, lighten($color-light-purple, 12), $color-gray)
+    linear-gradient(left top, lighten($color-light-gray, 12), $color-gray)
   );
   overflow: hidden;
   position: relative;
