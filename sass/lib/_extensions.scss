@@ -21,12 +21,10 @@
 }
 
 %nav-main-active {
-  //background: rgba($color-purple, 0.7);
-  color: lighten($color-white, 12);
-  background-color: rgba($color-black, 0.90);
-  @include background(
-    linear-gradient(left top, rgba($color-black, 0.90), rgba($color-black, 0.64))
-  );
+  background: $color-purple;
+  background: rgba($color-purple, 0.7);
+  color: lighten($color-light-purple, 12);
+  text-shadow: 0.0625em 0.0625em 0 rgba($color-black, 0.42);
 }
 
 %subtle-separate {
