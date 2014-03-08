@@ -149,6 +149,7 @@ a.button,
   background: $color-pale-gray;
   @include background(linear-gradient(left top, $color-white, $color-pale-gray));
   border-bottom: 0.0625em solid $color-pale-gray;
+  border-radius: $base-radius;
   margin-bottom: 1.5em;
   @include pad(0.75em default 0.75em default);
   vertical-align: middle;
@@ -388,7 +389,7 @@ a.button,
 }
 
 .menu-main {
-  margin: 1.5em 0 0 0;
+  margin: 0.75em 0 0 0;
   
   ul {
     margin-bottom: 0;
