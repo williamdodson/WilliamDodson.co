@@ -25,9 +25,5 @@ body#portfolio .ancillary {
 
 // classes
 .callout {
-  @include span-columns(4);
-  @include pad(1.5em default 1.5em default);
-  &:last-child {
-    @include omega;
-  }
+  @include pad(1.5em flex-gutter(6) 1.5em flex-gutter(6));
 }

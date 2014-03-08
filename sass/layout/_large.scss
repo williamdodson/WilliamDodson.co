@@ -15,5 +15,13 @@
 
 // classes
 .callout {
+  @include span-columns(4);
   margin-bottom: 0;
+  @include pad(1.5em default 1.5em default);
+  &:last-child {
+    @include omega;
+  }
 }
+/*.callout {
+  margin-bottom: 0;
+}*/
