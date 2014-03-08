@@ -34,6 +34,10 @@
   );
   border-top: 0.75em solid lighten($color-black, 10);
   border-bottom: 0.75em solid $color-black;
+  
+  .button {
+    margin-top: 1.5em;
+  }
 }
 
 .masthead,

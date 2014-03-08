@@ -8,6 +8,22 @@
   @include span-columns(6);
 }
 
+.intro {
+  .button {
+    display: inline-block;
+    margin-top: 0;
+  }
+}
+
+.lt-ie8 {
+  .intro {
+    .button {
+      zoom: 1;
+      *display: inline;
+    }
+  }
+}
+
 .main {
   @include span-columns(8);
 }
