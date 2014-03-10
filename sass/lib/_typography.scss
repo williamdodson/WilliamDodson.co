@@ -33,7 +33,8 @@ p, dl, ol, ul {
 a, a:link, a:visited {
   color: $color-dark-purple;
   text-decoration: underline;
-  @include transition_color;
+  @include transition-property(color);
+  @include transition-duration($base-duration);
 }
 a:active, a:focus, a:hover {
   color: $color-purple;
@@ -92,7 +93,7 @@ a.button,
   text-decoration: none;
   text-shadow: 0 0 0 transparent;
   @include transition-property(all);
-  @include transition-duration(0.2s);
+  @include transition-duration($base-duration);
   
   &:active,
   &:focus,
@@ -226,6 +227,7 @@ a.button,
 .recent,
 .thumbs {
   li {
+    
     a {
       background: $color-pale-gray;
       border-radius: $base-radius;
@@ -234,7 +236,8 @@ a.button,
       margin: 0;
       padding: 0.25em;
       @include transition-property(all);
-      @include transition-duration(0.2s);
+      @include transition-duration($base-duration);
+      width: 100%;
       &:focus,
       &:hover,
       &:active {
@@ -248,7 +251,7 @@ a.button,
         border-radius: $base-radius;
         opacity: 0.8;
         @include transition-property(opacity);
-        @include transition-duration(0.2s);
+        @include transition-duration($base-duration);
       }
     }
   }// end li
@@ -276,7 +279,7 @@ a.button,
         text-decoration: none;
         text-shadow: 0.0625em 0.0625em 0 $color-white;
         @include transition-property(all);
-        @include transition-duration(0.2s);
+        @include transition-duration($base-duration);
         width: 100%;
         z-index: 3;
       }
@@ -413,7 +416,7 @@ a.button,
       @extend %nav-main;
       text-align: center;
       @include transition-property(all);
-      @include transition-duration(0.2s);
+      @include transition-duration($base-duration);
       
       &:active,
       &:focus,

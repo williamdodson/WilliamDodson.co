@@ -15,9 +15,10 @@ $bp-lg: 'min-width: #{$bp-lg-val}';
 $bp-xlg-val: '68em';//1088px
 $bp-xlg: 'min-width: #{$bp-xlg-val}';
 
-// base sizes
+// base settings
 //////////////////////////////////////////////////
 $base-radius: 0.25em;
+$base-duration: 0.3s;
 
 // font stack
 //////////////////////////////////////////////////
