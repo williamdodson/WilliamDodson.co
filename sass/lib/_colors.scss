@@ -3,19 +3,6 @@
 $_color-base-gray: #7a716a;
 
 $palettes: (
-  purple: (
-    base:   rgb(42,40,80),
-    light:  rgb(51,46,140),
-    dark:   rgb(40,38,65)
-  ),
-  gray: (
-    base:  $_color-base-gray,
-    light: lighten($_color-base-gray, 10%),
-    dark: darken($_color-base-gray, 10%)
-  )
-);
-
-/*$palettes: (
   gray: (
     base: $_color-base-gray,
     light: #B5AFAA,
@@ -27,7 +14,7 @@ $palettes: (
     light: #B59CC4,
     dark: #7A568F
   )
-);*/
+);
 
 
 $color-black: #1C1A17;

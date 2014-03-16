@@ -3,19 +3,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*$palettes: (
-  gray: (
-    base: $_color-base-gray,
-    light: #B5AFAA,
-    dark: #1C1A17,
-    
-  ),
-  purple: (
-    base: #9976AD,
-    light: #B59CC4,
-    dark: #7A568F
-  )
-);*/
 .highlight {
   background: #f1f0ef;
   border: 1px solid #e5e3e1;
