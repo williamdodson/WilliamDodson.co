@@ -667,7 +667,8 @@ a.button,
     line-height: 0.8;
     margin-bottom: 0.4em; }
 
-  .meta span {
+  .meta span,
+  .meta time {
     display: inline; }
   .meta .subtle {
     display: inline; } }
@@ -697,7 +698,6 @@ a.button,
   pointer-events: none !important; }
 
 .nav-toggle {
-  background: #1c1a17;
   background: rgba(28, 26, 23, 0.7);
   border-radius: 0.25em;
   color: #f1f0ef !important;
@@ -750,7 +750,7 @@ a.button,
 
 .menu-main ul a {
   background: #1c1a17;
-  background: rgba(28, 26, 23, 0.7);
+  background: rgba(28, 26, 23, 0.77);
   border-radius: 0.25em;
   color: #e5e3e1;
   display: block;
@@ -762,7 +762,6 @@ a.button,
   text-transform: uppercase; }
 
 .menu-main ul li.active a, .menu-main ul a:active, .menu-main ul a:focus, .menu-main ul a:hover {
-  background: #9976ad;
   background: rgba(153, 118, 173, 0.7);
   color: #e7dfec;
   text-shadow: 0.0625em 0.0625em 0 rgba(28, 26, 23, 0.42); }

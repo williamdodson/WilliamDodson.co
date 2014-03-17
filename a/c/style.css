@@ -667,7 +667,8 @@ a.button,
     line-height: 0.8;
     margin-bottom: 0.4em; }
 
-  .meta span {
+  .meta span,
+  .meta time {
     display: inline; }
   .meta .subtle {
     display: inline; } }
