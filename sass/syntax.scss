@@ -5,15 +5,15 @@
 @import "lib/settings";
 
 .highlight {
-  background: $color-white;
-  border: 1px solid $color-pale-gray;
+  background: palette(gray, xx-light);
+  border: 1px solid palette(gray, x-light);
   font-family: 'ubuntu mono', 'anonymous pro', 'andale mono', 'courier new', monospace;
   margin-bottom: 1.5em;
   overflow: scroll;
   @include pad(1.5em default 1.5em default);
 }
 .highlight .lineno {
-  color: $color-light-gray;
+  color: palette(gray, light);
 } /* Line numbers */
 
 .highlight .c {
@@ -22,8 +22,8 @@
 } /* Comment */
 
 .highlight .err {
-  color: $color-dark-red; 
-  background-color: $color-light-red;
+  color: palette(red, dark); 
+  background-color: palette(red, light);
 } /* Error */
 
 .highlight .k {
@@ -57,12 +57,12 @@
 
 .highlight .gd {
   color: palette(gray, x-dark); 
-  background-color: $color-light-red;
+  background-color: palette(red, light);
 } /* Generic.Deleted */
 
 .highlight .gd .x {
   color: palette(gray, x-dark); 
-  background-color: darken($color-light-red, 5);
+  background-color: darken(palette(red, light), 5);
 } /* Generic.Deleted.Specific */
 
 .highlight .ge {
@@ -70,7 +70,7 @@
 } /* Generic.Emph */
 
 .highlight .gr {
-  color: $color-dark-red;
+  color: palette(red, dark);
 } /* Generic.Error */
 
 .highlight .gh {
@@ -79,12 +79,12 @@
 
 .highlight .gi {
   color: palette(gray, x-dark); 
-  background-color: $color-light-green;
+  background-color: palette(green, light);
 } /* Generic.Inserted */
 
 .highlight .gi .x {
   color: palette(gray, x-dark); 
-  background-color: $color-green;
+  background-color: palette(green);
 } /* Generic.Inserted.Specific */
 
 .highlight .go {
@@ -104,7 +104,7 @@
 } /* Generic.Subheading */
 
 .highlight .gt {
-  color: $color-dark-red;
+  color: palette(red, dark);
 } /* Generic.Traceback */
 
 .highlight .kc {
@@ -124,46 +124,46 @@
 } /* Keyword.Reserved */
 
 .highlight .kt {
-  color: $color-dark-blue; 
+  color: palette(blue, dark); 
   font-weight: bold;
 } /* Keyword.Type */
 
 .highlight .m {
-  color: $color-aqua;
+  color: palette(aqua);
 } /* Literal.Number */
 
 .highlight .s {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String */
 
 .highlight .na {
-  color: $color-dark-aqua;
+  color: palette(aqua, dark);
 } /* Name.Attribute */
 
 .highlight .nb {
-  color: $color-blue;
+  color: palette(blue);
 } /* Name.Builtin */
 
 .highlight .nc {
-  color: $color-dark-blue; 
+  color: palette(blue, dark); 
   font-weight: bold;
 } /* Name.Class */
 
 .highlight .no {
-  color: $color-dark-aqua;
+  color: palette(aqua, dark);
 } /* Name.Constant */
 
 .highlight .ni {
-  color: $color-dark-purple;
+  color: palette(purple, dark);
 } /* Name.Entity */
 
 .highlight .ne {
-  color: $color-dark-red; 
+  color: palette(red, dark); 
   font-weight: bold;
 } /* Name.Exception */
 
 .highlight .nf {
-  color: $color-dark-red; 
+  color: palette(red, dark); 
   font-weight: bold;
 } /* Name.Function */
 
@@ -172,11 +172,11 @@
 } /* Name.Namespace */
 
 .highlight .nt {
-  color: $color-navy-blue;
+  color: palette(blue, x-dark);
 } /* Name.Tag */
 
 .highlight .nv {
-  color: $color-dark-aqua;
+  color: palette(aqua, dark);
 } /* Name.Variable */
 
 .highlight .ow {
@@ -188,63 +188,63 @@
 } /* Text.Whitespace */
 
 .highlight .mf {
-  color: $color-aqua;
+  color: palette(aqua);
 } /* Literal.Number.Float */
 
 .highlight .mh {
-  color: $color-aqua;
+  color: palette(aqua);
 } /* Literal.Number.Hex */
 
 .highlight .mi {
-  color: $color-aqua;
+  color: palette(aqua);
 } /* Literal.Number.Integer */
 
 .highlight .mo {
-  color: $color-aqua;
+  color: palette(aqua);
 } /* Literal.Number.Oct */
 
 .highlight .sb {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Backtick */
 
 .highlight .sc {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Char */
 
 .highlight .sd {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Doc */
 
 .highlight .s2 {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Double */
 
 .highlight .se {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Escape */
 
 .highlight .sh {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Heredoc */
 
 .highlight .si {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Interpol */
 
 .highlight .sx {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Other */
 
 .highlight .sr {
-  color: $color-dark-green;
+  color: palette(green, dark);
 } /* Literal.String.Regex */
 
 .highlight .s1 {
-  color: $color-red;
+  color: palette(red);
 } /* Literal.String.Single */
 
 .highlight .ss {
-  color: $color-purple;
+  color: palette(purple);
 } /* Literal.String.Symbol */
 
 .highlight .bp {
@@ -252,17 +252,17 @@
 } /* Name.Builtin.Pseudo */
 
 .highlight .vc {
-  color: $color-dark-aqua;
+  color: palette(aqua, dark);
 } /* Name.Variable.Class */
 
 .highlight .vg {
-  color: $color-dark-aqua;
+  color: palette(aqua, dark);
 } /* Name.Variable.Global */
 
 .highlight .vi {
-  color: $color-dark-aqua;
+  color: palette(aqua, dark);
 } /* Name.Variable.Instance */
 
 .highlight .il {
-  color: $color-aqua;
+  color: palette(aqua);
 } /* Literal.Number.Integer.Long */

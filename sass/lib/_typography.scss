@@ -31,13 +31,13 @@ p, dl, ol, ul {
   margin-bottom: 1.5em;
 }
 a, a:link, a:visited {
-  color: $color-dark-purple;
+  color: palette(purple, dark);
   text-decoration: underline;
   @include transition-property(color);
   @include transition-duration($base-duration);
 }
 a:active, a:focus, a:hover {
-  color: $color-purple;
+  color: palette(purple);
 }
 a[href*="tel:"] {
   text-decoration: none;
@@ -53,7 +53,7 @@ strong {
 }
 /*neat trick by Jeremy Keith: http://adactio.com/journal/1612/*/
 abbr[title='and'] {
- color: $color-light-gray;
+ color: palette(gray, light);
  font-style: italic;
  font-weight: normal;
 }
@@ -81,9 +81,9 @@ img, object {
 //////////////////////////////////////////////////
 a.button,
 .button {
-  background: $color-purple;
+  background: palette(purple);
   border-radius: $base-radius;
-  color: $color-white !important;
+  color: palette(gray, xx-light) !important;
   display: block;
   font-family: $font-sans;
   font-weight: normal;
@@ -98,8 +98,8 @@ a.button,
   &:active,
   &:focus,
   &:hover {
-    background: $color-dark-purple;
-    text-shadow: 0.125em 0.125em 0 darken($color-dark-purple, 12);
+    background: palette(purple, dark);
+    text-shadow: 0.125em 0.125em 0 darken(palette(purple, dark), 12);
   }
 }
 
@@ -113,20 +113,20 @@ a.button,
 
 .intro {
   h1 {
-    color: $color-pale-gray;
+    color: palette(gray, x-light);
     font-weight: 300;
     margin-bottom: 0.5em;
     text-shadow: 3px 3px 0 palette(gray, x-dark);
   }
   a {
-    color: $color-white;
+    color: palette(gray, xx-light);
   }
   abbr[title='and'] {
-   color: $color-light-gray;
+   color: palette(gray, light);
    font-style: normal;
   }
   .leader {
-    color: $color-light-gray;
+    color: palette(gray, light);
     font-family: $font-sans;
     font-weight: normal;
     margin-bottom: 0;
@@ -143,13 +143,13 @@ a.button,
 }
 
 .love {
-  color: $color-red;
+  color: palette(red);
 }
 
 .meta {
-  background: $color-pale-gray;
-  @include background(linear-gradient(left top, $color-white, $color-pale-gray));
-  border-bottom: 0.0625em solid $color-pale-gray;
+  background: palette(gray, x-light);
+  @include background(linear-gradient(left top, palette(gray, xx-light), palette(gray, x-light)));
+  border-bottom: 0.0625em solid palette(gray, x-light);
   border-radius: $base-radius;
   margin-bottom: 1.5em;
   @include pad(0.75em default 0.75em default);
@@ -161,15 +161,15 @@ a.button,
     display: block;
   }
   .subtle {
-    color: $color-light-gray;
+    color: palette(gray, light);
     display: none;
     margin: 0 1em;
   }
 }
 
 .panel {
-  background: $color-pale-gray;
-  border: 1px solid $color-light-gray;
+  background: palette(gray, x-light);
+  border: 1px solid palette(gray, light);
   padding: 0.75em;
   @include clearfix;
 }
@@ -216,7 +216,7 @@ a.button,
     &:focus,
     &:hover,
     &:active {
-      color: $color-dark-purple;
+      color: palette(purple, dark);
     }
   }
 }
@@ -229,7 +229,7 @@ a.button,
   li {
     
     a {
-      background: $color-pale-gray;
+      background: palette(gray, x-light);
       border-radius: $base-radius;
       display: block;
       line-height: 0.8;
@@ -241,13 +241,13 @@ a.button,
       &:focus,
       &:hover,
       &:active {
-        background: darken($color-pale-gray, 7);
+        background: darken(palette(gray, x-light), 7);
         img {
           opacity: 1;
         }
       }
       img {
-        border: 1px solid $color-light-gray;
+        border: 1px solid palette(gray, light);
         border-radius: $base-radius;
         opacity: 0.8;
         @include transition-property(opacity);
@@ -266,10 +266,10 @@ a.button,
         font-size: 1em;
       }
       img {
-        border: 1px solid $color-white;
+        border: 1px solid palette(gray, xx-light);
       }
       .caption {
-        background: $color-pale-gray;
+        background: palette(gray, x-light);
         bottom: 0;
         color: palette(gray, dark);
         left: 0;
@@ -277,7 +277,7 @@ a.button,
         position: absolute;
         text-align: center;
         text-decoration: none;
-        text-shadow: 0.0625em 0.0625em 0 $color-white;
+        text-shadow: 0.0625em 0.0625em 0 palette(gray, xx-light);
         @include transition-property(all);
         @include transition-duration($base-duration);
         width: 100%;
@@ -287,7 +287,7 @@ a.button,
       &:hover,
       &:active {
         .caption {
-          background: darken($color-pale-gray, 7);
+          background: darken(palette(gray, x-light), 7);
           color: palette(gray, x-dark);
         }
       }
@@ -297,18 +297,18 @@ a.button,
 // result
 .result {
   img {
-    border: 1px solid $color-light-gray;
+    border: 1px solid palette(gray, light);
   }
 }
 
 .separate {
-  border-bottom: 1px solid $color-pale-gray;
+  border-bottom: 1px solid palette(gray, x-light);
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
   @include clearfix;
   
   &.separate-top {
-    border-top: 1px solid $color-pale-gray;
+    border-top: 1px solid palette(gray, x-light);
     border-bottom: none;
     margin-bottom: 0;
     padding-top: 1.5em;
@@ -334,7 +334,7 @@ a.button,
 
 .social {
   li {
-    border-bottom: 1px solid $color-pale-gray;
+    border-bottom: 1px solid palette(gray, x-light);
     margin-bottom: 0.75em;
     padding-bottom: 0.75em;
   }
@@ -353,7 +353,7 @@ a.button,
 }
 
 .subtle {
-  color: $color-pale-gray;
+  color: palette(gray, x-light);
 }
 
 .tag-cloud {
@@ -386,7 +386,7 @@ a.button,
     line-height: 1;
     
     a {
-      color: $color-white;
+      color: palette(gray, xx-light);
     }
   }
 }
@@ -406,7 +406,7 @@ a.button,
           &:active,
           &:focus,
           &:hover {
-            color: $color-white;
+            color: palette(gray, xx-light);
           }
         }
       }
@@ -445,7 +445,7 @@ a.button,
 }
 
 .copyright {
-  color: $color-white;
+  color: palette(gray, xx-light);
 }
 
 // medium

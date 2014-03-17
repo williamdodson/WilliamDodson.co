@@ -761,7 +761,6 @@ a.button,
   text-transform: uppercase; }
 
 .menu-main ul li.active a, .menu-main ul a:active, .menu-main ul a:focus, .menu-main ul a:hover {
-  background: #9976ad;
   background: rgba(153, 118, 173, 0.7);
   color: #e7dfec;
   text-shadow: 0.0625em 0.0625em 0 rgba(28, 26, 23, 0.42); }

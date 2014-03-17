@@ -31,9 +31,11 @@ $base-duration: 0.3s;
   }
 }
 
-$_color-base-gray: #7a716a;
+$_color-base-gray: #7a716a; // our base color gray
 
+// color palettes map
 $palettes: (
+  // gray
   gray: (
     base:   $_color-base-gray,
     xx-light: #F1F0EF, // white
@@ -43,40 +45,41 @@ $palettes: (
     x-dark:   #1C1A17, // black
     
   ),
+  
+  // purple
   purple: (
     base: #9976AD,
     light: #B59CC4,
     dark: #7A568F
+  ),
+  
+  // green
+  green: (
+    base: #8AAD76,
+    light: #ABC49C,
+    dark: #6B8F56
+  ),
+  
+  // blue
+  blue: (
+    base: #768AAD,
+    dark: #566B8F,
+    x-dark: #465875
+  ),
+  
+  // red
+  red: (
+    base: #AD768B,
+    light: #DBC2CC,
+    dark: #965A71
+  ),
+  
+  // aqua
+  aqua: (
+    base: #76A6AD,
+    dark: #56888F
   )
 );
-$_color-black: palette(gray, x-dark);
-
-
-$color-black: #1C1A17;
-$color-white: #F1F0EF;
-$color-gray: #7a716a;
-$color-pale-gray: #e5e3e1;
-$color-light-gray: #B5AFAA;
-$color-dark-gray: #37332F;
-
-$color-green: #8AAD76;
-$color-light-green: #ABC49C;
-$color-dark-green: #6B8F56;
-
-$color-purple: #9976AD;
-$color-light-purple: #B59CC4;
-$color-dark-purple: #7A568F;
-
-$color-blue: #768AAD;
-$color-dark-blue: #566B8F;
-$color-navy-blue: darken($color-dark-blue, 10);
-
-$color-red: #AD768B;
-$color-light-red: #DBC2CC;
-$color-dark-red: #965A71;
-
-$color-aqua: #76A6AD;
-$color-dark-aqua: #56888F;
 
 // font stack
 //////////////////////////////////////////////////
