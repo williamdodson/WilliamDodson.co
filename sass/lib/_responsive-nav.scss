@@ -31,8 +31,7 @@
 }
 
 .nav-toggle {
-  background: $color-black;
-  background: rgba($color-black, 0.7);
+  background: palette(gray, x-dark, 0.7);
   border-radius: $base-radius;
   color: $color-white !important;
   display: block;
@@ -42,7 +41,7 @@
   margin-top: 0.375em;
   padding: 0.25em 1em;
   text-align: center;
-  text-shadow: 0 0 0 rgba($color-black, 0.77);
+  text-shadow: 0 0 0 palette(gray, x-dark, 0.77);
   text-transform: uppercase;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
@@ -53,7 +52,7 @@
   user-select: none;
   
   &:after {
-    color: $color-gray;
+    color: palette(gray);
     font-size: 1em;
     vertical-align: baseline;
   }

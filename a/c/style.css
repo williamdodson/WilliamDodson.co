@@ -697,7 +697,6 @@ a.button,
   pointer-events: none !important; }
 
 .nav-toggle {
-  background: #1c1a17;
   background: rgba(28, 26, 23, 0.7);
   border-radius: 0.25em;
   color: #f1f0ef !important;
@@ -750,7 +749,7 @@ a.button,
 
 .menu-main ul a {
   background: #1c1a17;
-  background: rgba(28, 26, 23, 0.7);
+  background: rgba(28, 26, 23, 0.77);
   border-radius: 0.25em;
   color: #e5e3e1;
   display: block;

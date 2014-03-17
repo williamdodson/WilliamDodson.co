@@ -20,6 +20,64 @@ $bp-xlg: 'min-width: #{$bp-xlg-val}';
 $base-radius: 0.25em;
 $base-duration: 0.3s;
 
+// Colors
+//////////////////////////////////////////////////
+// palette function reads a palette and a tone and returns the result
+@function palette($palette, $tone: 'base', $opacity: false) {
+  @if $opacity {
+    @return rgba(map-get(map-get($palettes, $palette), $tone), $opacity);
+  } @else {
+    @return map-get(map-get($palettes, $palette), $tone);
+  }
+}
+
+$_color-base-gray: #7a716a;
+
+$palettes: (
+  gray: (
+    base:   $_color-base-gray,
+    xx-light: #F1F0EF, // white
+    x-light:  #e5e3e1, // pale gray
+    light:    #B5AFAA, // light gray
+    dark:     #37332F, // dark gray
+    x-dark:   #1C1A17, // black
+    
+  ),
+  purple: (
+    base: #9976AD,
+    light: #B59CC4,
+    dark: #7A568F
+  )
+);
+$_color-black: palette(gray, x-dark);
+
+
+$color-black: #1C1A17;
+$color-white: #F1F0EF;
+$color-gray: #7a716a;
+$color-pale-gray: #e5e3e1;
+$color-light-gray: #B5AFAA;
+$color-dark-gray: #37332F;
+
+$color-green: #8AAD76;
+$color-light-green: #ABC49C;
+$color-dark-green: #6B8F56;
+
+$color-purple: #9976AD;
+$color-light-purple: #B59CC4;
+$color-dark-purple: #7A568F;
+
+$color-blue: #768AAD;
+$color-dark-blue: #566B8F;
+$color-navy-blue: darken($color-dark-blue, 10);
+
+$color-red: #AD768B;
+$color-light-red: #DBC2CC;
+$color-dark-red: #965A71;
+
+$color-aqua: #76A6AD;
+$color-dark-aqua: #56888F;
+
 // font stack
 //////////////////////////////////////////////////
 $font-sans: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;

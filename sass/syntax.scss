@@ -2,7 +2,7 @@
 @import "bourbon/bourbon";
 @import "bourbon/bourbon-deprecated-upcoming";
 @import "neat/neat";
-@import "lib/colors";
+@import "lib/settings";
 
 .highlight {
   background: $color-white;
@@ -17,7 +17,7 @@
 } /* Line numbers */
 
 .highlight .c {
-  color: $color-gray; 
+  color: palette(gray); 
   font-style: italic;
 } /* Comment */
 
@@ -35,33 +35,33 @@
 } /* Operator */
 
 .highlight .cm {
-  color: $color-gray; 
+  color: palette(gray); 
   font-style: italic;
 } /* Comment.Multiline */
 
 .highlight .cp {
-  color: $color-gray; 
+  color: palette(gray); 
   font-weight: bold;
 } /* Comment.Preproc */
 
 .highlight .c1 {
-  color: $color-gray; 
+  color: palette(gray); 
   font-style: italic;
 } /* Comment.Single */
 
 .highlight .cs {
-  color: $color-gray; 
+  color: palette(gray); 
   font-weight: bold; 
   font-style: italic;
 } /* Comment.Special */
 
 .highlight .gd {
-  color: $color-black; 
+  color: palette(gray, x-dark); 
   background-color: $color-light-red;
 } /* Generic.Deleted */
 
 .highlight .gd .x {
-  color: $color-black; 
+  color: palette(gray, x-dark); 
   background-color: darken($color-light-red, 5);
 } /* Generic.Deleted.Specific */
 
@@ -74,25 +74,25 @@
 } /* Generic.Error */
 
 .highlight .gh {
-  color: $color-gray;
+  color: palette(gray);
 } /* Generic.Heading */
 
 .highlight .gi {
-  color: $color-black; 
+  color: palette(gray, x-dark); 
   background-color: $color-light-green;
 } /* Generic.Inserted */
 
 .highlight .gi .x {
-  color: $color-black; 
+  color: palette(gray, x-dark); 
   background-color: $color-green;
 } /* Generic.Inserted.Specific */
 
 .highlight .go {
-  color: $color-gray;
+  color: palette(gray);
 } /* Generic.Output */
 
 .highlight .gp {
-  color: $color-dark-gray;
+  color: palette(gray, dark);
 } /* Generic.Prompt */
 
 .highlight .gs {
@@ -100,7 +100,7 @@
 } /* Generic.Strong */
 
 .highlight .gu {
-  color: $color-gray;
+  color: palette(gray);
 } /* Generic.Subheading */
 
 .highlight .gt {
@@ -168,7 +168,7 @@
 } /* Name.Function */
 
 .highlight .nn {
-  color: $color-dark-gray;
+  color: palette(gray, dark);
 } /* Name.Namespace */
 
 .highlight .nt {
@@ -184,7 +184,7 @@
 } /* Operator.Word */
 
 .highlight .w {
-  color: $color-gray;
+  color: palette(gray);
 } /* Text.Whitespace */
 
 .highlight .mf {
@@ -248,7 +248,7 @@
 } /* Literal.String.Symbol */
 
 .highlight .bp {
-  color: $color-gray;
+  color: palette(gray);
 } /* Name.Builtin.Pseudo */
 
 .highlight .vc {

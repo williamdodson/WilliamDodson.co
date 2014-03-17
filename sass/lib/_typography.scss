@@ -1,14 +1,14 @@
 // styles
 //////////////////////////////////////////////////
 body {
-  background: $color-dark-gray;
-  color: $color-black;
+  background: palette(gray, dark);
+  color: palette(gray, x-dark);
   font-family: $font-sans;
   font-size: 100%;
   line-height: 1.5;
 }
 h1, h2, h3, h4 {
-  color: $color-dark-gray;
+  color: palette(gray, dark);
   font-family: $font-sans-condensed;
   font-weight: normal;
   margin: 0;
@@ -22,7 +22,7 @@ h1 {
   margin-bottom: 1em;
 }
 h2 {
-  color: $color-gray;
+  color: palette(gray);
   font-size: 1.125em;
   line-height: 1.333333;
   margin-bottom: 0.666667em;
@@ -116,7 +116,7 @@ a.button,
     color: $color-pale-gray;
     font-weight: 300;
     margin-bottom: 0.5em;
-    text-shadow: 3px 3px 0 $color-black;
+    text-shadow: 3px 3px 0 palette(gray, x-dark);
   }
   a {
     color: $color-white;
@@ -130,13 +130,13 @@ a.button,
     font-family: $font-sans;
     font-weight: normal;
     margin-bottom: 0;
-    text-shadow: 3px 3px 0 $color-black;
+    text-shadow: 3px 3px 0 palette(gray, x-dark);
     text-transform: none;
   }
 }
 
 .leader {
-  color: $color-dark-gray;
+  color: palette(gray, dark);
   font-size: 1em;
   line-height: 1.5;
   margin: 0 0 1.5em 0;
@@ -180,12 +180,12 @@ a.button,
   @extend %subtle-separate;
   
   a {
-    color: $color-dark-gray;
+    color: palette(gray, dark);
     text-decoration: none;
     &:focus,
     &:hover,
     &:active {
-      color: $color-black;
+      color: palette(gray, x-dark);
     }
   }
   .pin-title {
@@ -211,7 +211,7 @@ a.button,
   line-height: 1;
   margin-bottom: 0;
   a {
-    color: $color-dark-gray;
+    color: palette(gray, dark);
     text-decoration: none;
     &:focus,
     &:hover,
@@ -271,7 +271,7 @@ a.button,
       .caption {
         background: $color-pale-gray;
         bottom: 0;
-        color: $color-dark-gray;
+        color: palette(gray, dark);
         left: 0;
         padding: 0.75em 0.25em;
         position: absolute;
@@ -288,7 +288,7 @@ a.button,
       &:active {
         .caption {
           background: darken($color-pale-gray, 7);
-          color: $color-black;
+          color: palette(gray, x-dark);
         }
       }
     }// end a
@@ -339,12 +339,12 @@ a.button,
     padding-bottom: 0.75em;
   }
   a {
-    color: $color-dark-gray;
+    color: palette(gray, dark);
     text-decoration: none;
     &:focus,
     &:hover,
     &:active {
-      color: $color-black;
+      color: palette(gray, x-dark);
     }
     b {
       font-weight: bold;
@@ -437,7 +437,7 @@ a.button,
 
 .ancillary {
   h2 {
-    color: $color-dark-gray;
+    color: palette(gray, dark);
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: 1em;
@@ -459,7 +459,7 @@ a.button,
     margin-bottom: 1em;
   }
   h2 {
-    color: $color-gray;
+    color: palette(gray);
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: 0.666667em;
@@ -468,7 +468,7 @@ a.button,
   // classes
   //////////////////////////////////////////////////
   .leader {
-    color: $color-dark-gray;
+    color: palette(gray, dark);
     font-size: 1.125em;
     font-weight: bold;
     line-height: 1.333333;
@@ -507,7 +507,7 @@ a.button,
     margin-bottom: 0.333333em;
   }
   h2 {
-    color: $color-gray;
+    color: palette(gray);
     font-size: 1.875em;
     line-height: 0.8;
     margin-bottom: 0.4em;
