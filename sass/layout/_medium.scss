@@ -41,5 +41,5 @@ body#portfolio .ancillary {
 
 // classes
 .callout {
-  @include pad(1.5em flex-gutter(6) 1.5em flex-gutter(6));
+  @include pad(1.5rem flex-gutter(6) 1.5rem flex-gutter(6));
 }

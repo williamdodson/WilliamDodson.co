@@ -53,20 +53,6 @@ $palettes: (
     dark: #7A568F
   ),
   
-  // green
-  green: (
-    base: #8AAD76,
-    light: #ABC49C,
-    dark: #6B8F56
-  ),
-  
-  // blue
-  blue: (
-    base: #768AAD,
-    dark: #566B8F,
-    x-dark: #465875
-  ),
-  
   // red
   red: (
     base: #AD768B,
@@ -74,15 +60,134 @@ $palettes: (
     dark: #965A71
   ),
   
+  // green
+  green: (
+    base: #8AAD76,
+    light: #ABC49C,
+    dark: #6B8F56
+  ),
+  
   // aqua
   aqua: (
     base: #76A6AD,
     dark: #56888F
+  ),
+  
+  // blue
+  blue: (
+    base: #768AAD,
+    dark: #566B8F,
+    x-dark: #465875
   )
 );
 
-// font stack
+// fonts and typography
 //////////////////////////////////////////////////
 $font-sans: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;
 $font-sans-condensed: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif;
-//$font-serif: georgia, garamond, baskerville, palatino, serif;
+
+// base rem to px
+//$base-font-size: 16;
+@function rem($px, $base: 16) {
+  @return (($px / $base) * 1)+rem;
+}
+
+// fontset feature function
+@function _fontset-feature($feature, $family: $font-default, $set: 'base', $unit: null){
+  $result: map-get(map-get($family, $set), $feature);
+  
+  @if $unit {
+    @return ($result * 1+$unit);
+  } @else {
+    @return ($result * 1);
+  }
+}
+
+// fontset family
+@function _fontset-family($family) {
+  $result: map-get($family, stack);
+  @return unquote($result);
+}
+
+// calculate font size
+@function calc-font-size($set, $family: $font-default) {
+  @return _fontset-feature(font-size, $family, $set, $unit: px);
+}
+
+// calculate line height
+@function calc-line-height($set, $family: $font-default) {
+  @return _fontset-feature(line-height, $family, $set);
+}
+
+$font-roboto: (
+  stack: "'Roboto', 'helvetica neue', helvetica, arial, sans-serif",
+  
+  x-small: (
+    font-size: 12,
+    line-height: 2
+  ),
+  small: (
+    font-size: 14,
+    line-height: 1.714286
+  ),
+  base: (
+    font-size: 16,
+    line-height: 1.5
+  ),
+  mid: (
+    font-size: 18,
+    line-height: 1.333333
+  ),
+  mid-large: (
+    font-size: 24,
+    line-height: 1
+  ),
+  large: (
+    font-size: 30,
+    line-height: 1.6
+  ),
+  x-large: (
+    font-size: 48,
+    line-height: 1
+  )
+);
+
+$font-roboto-condensed: (
+  stack: "'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif",
+  
+  x-small: (
+    font-size: 12,
+    line-height: 2
+  ),
+  small: (
+    font-size: 14,
+    line-height: 1.714286
+  ),
+  base: (
+    font-size: 16,
+    line-height: 1.5
+  ),
+  mid: (
+    font-size: 18,
+    line-height: 1.333333
+  ),
+  mid-large: (
+    font-size: 24,
+    line-height: 1
+  ),
+  large: (
+    font-size: 30,
+    line-height: 1.6
+  ),
+  x-large: (
+    font-size: 36,
+    line-height: 1.333333
+  ),
+  xx-large: (
+    font-size: 48,
+    line-height: 1
+  )
+);
+
+$font-default: $font-roboto;
+$font-default-condensed: $font-roboto-condensed;

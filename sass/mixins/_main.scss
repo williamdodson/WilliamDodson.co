@@ -4,3 +4,16 @@
   &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
   &:nth-child(#{$nth}+1) { clear: none }
 }
+
+// Font Scale Mixin
+//////////////////////////////////////////////////
+@mixin font-scale($font-size, $family: $font-default, $line-height: $font-size) {
+  $size: map-get(map-get($family, $font-size), font-size);
+  @if $family != $font-default {
+    font-family: _fontset-family($family);
+  }
+  font-size: calc-font-size($font-size, $family);
+  /* font-size: #{map-get(map-get($family, $font-size), font-size)} */
+  font-size: rem($size);
+  line-height: calc-line-height($line-height, $family);
+}

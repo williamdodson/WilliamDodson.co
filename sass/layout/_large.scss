@@ -9,15 +9,15 @@
 }
 
 .intro {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 // classes
 .callout {
   @include span-columns(4);
   margin-bottom: 0;
-  @include pad(1.5em default 1.5em default);
+  @include pad(1.5rem default 1.5rem default);
   &:last-child {
     @include omega;
   }

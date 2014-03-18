@@ -1,0 +1,18 @@
+{% include structure/_head.html %}
+		
+		<div class="container intro">
+			<div class="content">
+				<h1>{{ page.heading }}</h1>
+				{% if page.leader != '' %}<h2 class="leader">{{ page.leader }}</h2>{% endif %}
+			</div>
+		</div>
+		
+		<div class="container">
+			<!-- .content -->
+			<div class="content">
+				{{ content }}
+			</div>
+			<!-- /.content -->
+		</div>
+		
+{% include structure/_foot.html %}

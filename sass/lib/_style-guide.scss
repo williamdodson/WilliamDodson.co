@@ -1,0 +1,180 @@
+// Style Guide Custom Styles
+//////////////////////////////////////////////////
+
+// color blocks
+.colors {
+  @include clearfix;
+  margin-top: 1.5rem;
+  
+  .colors--swatch {
+    background: palette(gray);
+    border: 0.25rem solid palette(gray);
+    border-radius: $base-radius;
+    color: palette(gray, xx-light);
+    float: left;
+    height: 4.5rem;
+    margin: 0 2% 1.5rem 0;
+    position: relative;
+    width: 25%;
+    
+    &:after {
+      display: none;
+      @include font-scale(x-small);
+      height: 100%;
+      text-align: center;
+      white-space: pre;
+      width: 100%;
+    }
+    
+    // gray
+    &__black {
+      background: palette(gray, x-dark);
+      &:after {
+        content: "rgb(#{red(palette(gray, x-dark)), green(palette(gray, x-dark)), blue(palette(gray, x-dark))}) \A #{palette(gray, x-dark)}";
+      }
+    }
+    &__dark-gray {
+      background: palette(gray, dark);
+      &:after {
+        content: "rgb(#{red(palette(gray, dark)), green(palette(gray, dark)), blue(palette(gray, dark))}) \A #{palette(gray, dark)}";
+      }
+    }
+    &__gray {
+      background: palette(gray);
+      border-color: palette(gray, light);
+      &:after {
+        content: "rgb(#{red(palette(gray)), green(palette(gray)), blue(palette(gray))}) \A #{palette(gray)}";
+      }
+    }
+    &__light-gray {
+      background: palette(gray, light);
+      color: palette(gray, x-dark);
+      &:after {
+        content: "rgb(#{red(palette(gray, light)), green(palette(gray, light)), blue(palette(gray, light))}) \A #{palette(gray, light)}";
+      }
+    }
+    &__pale-gray {
+      background: palette(gray, x-light);
+      color: palette(gray, x-dark);
+      &:after {
+        content: "rgb(#{red(palette(gray, x-light)), green(palette(gray, x-light)), blue(palette(gray, x-light))}) \A #{palette(gray, x-light)}";
+      }
+    }
+    &__white {
+      background: palette(gray, xx-light);
+      color: palette(gray, x-dark);
+      &:after {
+        content: "rgb(#{red(palette(gray, xx-light)), green(palette(gray, xx-light)), blue(palette(gray, xx-light))}) \A #{palette(gray, xx-light)}";
+      }
+    }
+    // purple
+    &__dark-purple {
+      background: palette(purple, dark);
+      &:after {
+        content: "rgb(#{red(palette(purple, dark)), green(palette(purple, dark)), blue(palette(purple, dark))}) \A #{palette(purple, dark)}";
+      }
+    }
+    &__purple {
+      background: palette(purple);
+      &:after {
+        content: "rgb(#{red(palette(purple)), green(palette(purple)), blue(palette(purple))}) \A #{palette(purple)}";
+      }
+    }
+    &__light-purple {
+      background: palette(purple, light);
+      color: palette(gray, x-dark);;
+      &:after {
+        content: "rgb(#{red(palette(purple, light)), green(palette(purple, light)), blue(palette(purple, light))}) \A #{palette(purple, dark)}";
+      }
+    }
+    
+    // red
+    &__dark-red {
+      background: palette(red, dark);
+      &:after {
+        content: "rgb(#{red(palette(red, dark)), green(palette(red, dark)), blue(palette(red, dark))}) \A #{palette(red, dark)}";
+      }
+    }
+    &__red {
+      background: palette(red);
+      &:after {
+        content: "rgb(#{red(palette(red)), green(palette(red)), blue(palette(red))}) \A #{palette(red)}";
+      }
+    }
+    &__light-red {
+      background: palette(red, light);
+      color: palette(gray, x-dark);
+      &:after {
+        content: "rgb(#{red(palette(red, light)), green(palette(red, light)), blue(palette(red, light))}) \A #{palette(red, light)}";
+      }
+    }
+    
+    // green
+    &__dark-green {
+      background: palette(green, dark);
+      &:after {
+        content: "rgb(#{red(palette(green, dark)), green(palette(green, dark)), blue(palette(green, dark))}) \A #{palette(green, dark)}";
+      }
+    }
+    &__green {
+      background: palette(green);
+      &:after {
+        content: "rgb(#{red(palette(green)), green(palette(green)), blue(palette(green))}) \A #{palette(green)}";
+      }
+    }
+    &__light-green {
+      background: palette(green, light);
+      color: palette(gray, x-dark);
+      &:after {
+        content: "rgb(#{red(palette(green, light)), green(palette(green, light)), blue(palette(green, light))}) \A #{palette(green, light)}";
+      }
+    }
+    
+    // aqua
+    &__dark-aqua {
+      background: palette(aqua, dark);
+      &:after {
+        content: "rgb(#{red(palette(aqua, dark)), green(palette(aqua, dark)), blue(palette(aqua, dark))}) \A #{palette(aqua, dark)}";
+      }
+    }
+    &__aqua {
+      background: palette(aqua);
+      &:after {
+        content: "rgb(#{red(palette(aqua)), green(palette(aqua)), blue(palette(aqua))}) \A #{palette(aqua)}";
+      }
+    }
+    
+    // blue
+    &__navy-blue {
+      background: palette(blue, x-dark);
+      &:after {
+        content: "rgb(#{red(palette(blue, x-dark)), green(palette(blue, x-dark)), blue(palette(blue, x-dark))}) \A #{palette(blue, x-dark)}";
+      }
+    }
+    &__dark-blue {
+      background: palette(blue, dark);
+      &:after {
+        content: "rgb(#{red(palette(blue, dark)), green(palette(blue, dark)), blue(palette(blue, dark))}) \A #{palette(blue, dark)}";
+      }
+    }
+    &__blue {
+      background: palette(blue);
+      &:after {
+        content: "rgb(#{red(palette(blue)), green(palette(blue)), blue(palette(blue))}) \A #{palette(blue)}";
+      }
+    }
+    
+    @include media($bp-med-val) {
+      height: 6rem;
+      width: 20%;
+      
+      &:after {
+        display: block;
+      }
+    }
+    @include media($bp-lg-val) {
+      height: 9rem;
+      width: 18%;
+    }
+  } // end colors--swatch
+}

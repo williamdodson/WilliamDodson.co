@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js is-ie lt-ie9 lt-ie8 lt-ie7" lang='en'> <![endif]-->
+<!--[if IE 7]>         <html class="no-js is-ie lt-ie9 lt-ie8" lang='en'> <![endif]-->
+<!--[if IE 8]>         <html class="no-js is-ie lt-ie9" lang='en'> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang='en'> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.name }}</title>
+    <meta name="description" content="{{ page.excerpt }}">
+    <meta name="viewport" content="width=device-width">
+    <link rel="alternate" type="application/atom+xml" title="William Dodson Articles" href="{{ site.url }}/feed.articles.atom" />
+    <meta name="author" content="/humans.txt">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="/a/c/style.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
+    <link rel="stylesheet" href="/a/c/syntax.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
+    
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="/a/j/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+    <script src="/a/j/picturefill/external/matchmedia.js"></script>
+    <script src="/a/j/picturefill/picturefill.js"></script>
+    
+  </head>
+  <body{% if page.author == 'William Dodson' %} class="h-entry"{% endif %} id="{{ page.slug }}">
+    <!--[if lte IE 8]>
+      <div class="container ie-warning">
+        <p>Looks like you are using an old version of Internet Explorer. Certain elements of this site will not be available to you and require a modern browser in order to function.</p>
+      </div>
+    <![endif]-->

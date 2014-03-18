@@ -3,7 +3,7 @@
 // containers
 .container {
   background: palette(gray, xx-light);
-  padding: 1.5em 5%;
+  padding: 1.5rem 5%;
 }
 
 .ie-warning {
@@ -36,7 +36,7 @@
   border-bottom: 0.75em solid palette(gray, x-dark);
   
   .button {
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
   }
 }
 
@@ -59,8 +59,8 @@
   @include span-columns(12);
 }
 body#home .ancillary {
-  margin-top: 1.5em;
-  padding-bottom: 1.5em;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .bottom {
@@ -74,8 +74,8 @@ body#home .ancillary {
     linear-gradient(left top, palette(gray, x-light), palette(gray, xx-light))
   );
   border-radius: $base-radius;
-  @include pad(1.5em flex-gutter(4) 1.5em flex-gutter(4));
-  margin-bottom: 1.5em;
+  @include pad(1.5rem flex-gutter(4) 1.5rem flex-gutter(4));
+  margin-bottom: 1.5rem;
   @include span-columns(12);
   
   & p:last-child {
@@ -94,7 +94,7 @@ body#home .ancillary {
   li {
     @include span-columns(6 of 12);
     @include omega(2n);
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     @include media($bp-med-val, 12) {
       @include omega-reset(2n);
       @include span-columns(4 of 12);
@@ -132,7 +132,7 @@ body#home .ancillary {
   li {
     @include span-columns(4 of 12);
     @include omega(3n);
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     @include media($bp-med-val) {
       @include span-columns(2 of 4);
       @include omega(2n);
