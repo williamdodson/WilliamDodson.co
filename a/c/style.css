@@ -254,8 +254,8 @@ body {
   speak: none;
   display: inline-block;
   text-decoration: none;
-  width: 1em;
-  margin-right: 0.5em;
+  width: 1.5rem;
+  margin-right: 0.5rem;
   text-align: center;
   /* opacity: .8; */
   /* For safety - reset parent styles, that can break glyph codes*/
@@ -265,9 +265,8 @@ body {
   line-height: 1;
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
   /* you can be more comfortable with increased icons size */
-  font-size: 150%;
+  font-size: 1.5rem;
   vertical-align: middle;
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
@@ -336,40 +335,103 @@ body {
 h1, h2, h3, h4, h5 {
   color: #37332f;
   font-family: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
 }
 
 h1, .alpha {
-  font-family: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif;
-  font-size: 36px;
-  /* font-size: 36 */
-  font-size: 2.25rem;
-  line-height: 1.33333;
-}
-
-h2, .beta {
-  color: #7a716a;
-  font-size: 30px;
-  /* font-size: 30 */
-  font-size: 1.875rem;
-  line-height: 1.6;
-}
-
-h3, .gamma {
   font-size: 24px;
   /* font-size: 24 */
   font-size: 1.5rem;
   line-height: 1;
 }
+@media screen and (min-width: 40em) {
+  h1, .alpha {
+    font-size: 36px;
+    /* font-size: 36 */
+    font-size: 2.25rem;
+    line-height: 1.33333;
+  }
+}
+@media screen and (min-width: 55em) {
+  h1, .alpha {
+    font-size: 48px;
+    /* font-size: 48 */
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
 
-h4, .delta {
+h2, .beta {
+  color: #7a716a;
   font-size: 18px;
   /* font-size: 18 */
   font-size: 1.125rem;
   line-height: 1.33333;
+}
+@media screen and (min-width: 40em) {
+  h2, .beta {
+    font-size: 24px;
+    /* font-size: 24 */
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 55em) {
+  h2, .beta {
+    font-size: 36px;
+    /* font-size: 36 */
+    font-size: 2.25rem;
+    line-height: 1.33333;
+  }
+}
+
+h3, .gamma {
+  font-size: 18px;
+  /* font-size: 18 */
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+@media screen and (min-width: 40em) {
+  h3, .gamma {
+    font-size: 18px;
+    /* font-size: 18 */
+    font-size: 1.125rem;
+    line-height: 1.33333;
+  }
+}
+@media screen and (min-width: 55em) {
+  h3, .gamma {
+    font-size: 24px;
+    /* font-size: 24 */
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+
+h4, .delta {
+  font-size: 16px;
+  /* font-size: 16 */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media screen and (min-width: 40em) {
+  h4, .delta {
+    font-size: 18px;
+    /* font-size: 18 */
+    font-size: 1.125rem;
+    line-height: 1.33333;
+  }
+}
+@media screen and (min-width: 55em) {
+  h4, .delta {
+    font-size: 18px;
+    /* font-size: 18 */
+    font-size: 1.125rem;
+    line-height: 1.33333;
+  }
 }
 
 h5, .epsilon {
@@ -498,6 +560,11 @@ form, input, textarea, button {
   font-family: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;
 }
 
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
 textarea {
   min-height: 12em;
 }
@@ -529,10 +596,12 @@ button.button,
   border-radius: 0.25em;
   color: #f1f0ef !important;
   display: block;
-  font-family: "Roboto", "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 16px;
+  /* font-size: 16 */
+  font-size: 1rem;
+  line-height: 1.5;
   font-weight: normal;
-  line-height: 1;
-  padding: 0.5em 1em;
+  padding: 0.75rem 2rem;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 0 0 transparent;
@@ -542,6 +611,7 @@ button.button,
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  vertical-align: middle;
 }
 a.button:active, a.button:focus, a.button:hover,
 input.button:active,
@@ -568,11 +638,30 @@ ul.default {
 }
 
 .giga {
-  font-size: 48px;
-  /* font-size: 48 */
-  font-size: 3rem;
-  line-height: 1;
+  font-family: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif;
+  font-size: 30px;
+  /* font-size: 30 */
+  font-size: 1.875rem;
+  line-height: 1.6;
   margin: 0;
+}
+@media screen and (min-width: 40em) {
+  .giga {
+    font-family: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif;
+    font-size: 36px;
+    /* font-size: 36 */
+    font-size: 2.25rem;
+    line-height: 1.33333;
+  }
+}
+@media screen and (min-width: 55em) {
+  .giga {
+    font-family: 'Roboto Condensed', 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed',  'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'TeXGyreHerosCnRegular', 'Arial Narrow', 'Geneva', sans-serif;
+    font-size: 48px;
+    /* font-size: 48 */
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 .ie-warning {
@@ -585,9 +674,19 @@ ul.default {
 
 .intro h1 {
   color: #e5e3e1;
-  font-weight: 300;
-  margin-bottom: 0.5em;
+  font-size: 24px;
+  /* font-size: 24 */
+  font-size: 1.5rem;
+  line-height: 1;
   text-shadow: 3px 3px 0 #1c1a17;
+}
+@media screen and (min-width: 40em) {
+  .intro h1 {
+    font-size: 36px;
+    /* font-size: 36 */
+    font-size: 2.25rem;
+    line-height: 1.33333;
+  }
 }
 .intro a {
   color: #f1f0ef;
@@ -598,9 +697,13 @@ ul.default {
 }
 .intro .leader {
   color: #b5afaa;
-  font-family: "Roboto", "helvetica neue", helvetica, arial, sans-serif;
+  font-family: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;
+  font-size: 18px;
+  /* font-size: 18 */
+  font-size: 1.125rem;
+  line-height: 1.33333;
   font-weight: normal;
-  margin-bottom: 0;
+  margin: 0;
   text-shadow: 3px 3px 0 #1c1a17;
   text-transform: none;
 }
@@ -811,12 +914,13 @@ ul.default {
 }
 
 .social li {
-  border-bottom: 1px solid #e5e3e1;
+  border-bottom: 0.0625rem solid #e5e3e1;
   margin-bottom: 0.75em;
   padding-bottom: 0.75em;
 }
 .social a {
   color: #37332f;
+  font-weight: normal;
   text-decoration: none;
 }
 .social a:focus, .social a:hover, .social a:active {
@@ -892,10 +996,17 @@ ul.default {
 }
 
 .ancillary h2 {
-  color: #37332f;
+  color: #1c1a17;
+  font-size: 24px;
+  /* font-size: 24 */
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: 1em;
+}
+.ancillary p {
+  font-size: 14px;
+  /* font-size: 14 */
+  font-size: 0.875rem;
+  line-height: 1.71429;
 }
 
 .copyright {
@@ -903,17 +1014,6 @@ ul.default {
 }
 
 @media only screen and (min-width: 40em) {
-  /*h1 {
-    font-size: 1.875em;
-    line-height: 1;
-    margin-bottom: 1em;
-  }
-  h2 {
-    color: palette(gray);
-    font-size: 1.5rem;
-    line-height: 1;
-    margin-bottom: 0.666667em;
-  }*/
   .leader {
     color: #37332f;
     font-size: 1.125em;
@@ -935,17 +1035,6 @@ ul.default {
   }
 }
 @media only screen and (min-width: 55em) {
-  /*h1 {
-    font-size: 2.25em;
-    line-height: 1;
-    margin-bottom: 0.333333rem;
-  }
-  h2 {
-    color: palette(gray);
-    font-size: 1.875em;
-    line-height: 0.8;
-    margin-bottom: 0.4em;
-  }*/
   .meta span,
   .meta time {
     display: inline;
@@ -1278,6 +1367,7 @@ ul.default {
   background-color: #7a716a;
   background: -webkit moz o ms spec-linear-gradient(left top, #7a716a, #37332f);
   background: linear-gradient(to right bottom, #7a716a, #37332f);
+  min-height: 13.5rem;
   overflow: hidden;
   position: relative;
 }
@@ -1289,8 +1379,8 @@ ul.default {
   background-color: #1c1a17;
   background: -webkit moz o ms spec-linear-gradient(left top, #38342e, #1c1a17);
   background: linear-gradient(to right bottom, #38342e, #1c1a17);
-  border-top: 0.75em solid #38342e;
-  border-bottom: 0.75em solid #1c1a17;
+  border-top: 0.75rem solid #38342e;
+  border-bottom: 0.75rem solid #1c1a17;
 }
 .intro .button {
   margin-top: 1.5rem;
@@ -1624,11 +1714,6 @@ body#home .ancillary {
     margin-right: 0;
   }
 
-  .intro {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
   .callout {
     float: left;
     display: block;
@@ -1643,8 +1728,4 @@ body#home .ancillary {
   .callout:last-child {
     margin-right: 0;
   }
-
-  /*.callout {
-    margin-bottom: 0;
-  }*/
 }

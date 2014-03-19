@@ -14,23 +14,51 @@ body {
 h1, h2, h3, h4, h5 {
   color: palette(gray, dark);
   font-family: unquote(map-get($font-roboto-condensed, stack));
-  font-weight: normal;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
 }
 h1, .alpha {
-  @include font-scale(x-large, $font-roboto-condensed);
+  @include font-scale(mid-large);
+  
+  @include media($bp-med-val) {
+    @include font-scale(large);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(x-large);
+  }
 }
 h2, .beta {
   color: palette(gray);
-  @include font-scale(large);
+  @include font-scale(mid);
+  
+  @include media($bp-med-val) {
+    @include font-scale(mid-large);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(large);
+  }
 }
 h3, .gamma {
-  @include font-scale(mid-large);
+  @include font-scale(mid);
+  
+  @include media($bp-med-val) {
+    @include font-scale(mid);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(mid-large);
+  }
 }
 h4, .delta {
-  @include font-scale(mid);
+  @include font-scale(base);
+  
+  @include media($bp-med-val) {
+    @include font-scale(mid);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(mid);
+  }
 }
 h5, .epsilon {
   @include font-scale(base);
@@ -133,6 +161,10 @@ table {
 form, input, textarea, button {
   font-family: unquote(map-get($font-roboto, stack));
 }
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 
 textarea {
   min-height: 12em;//192px
@@ -169,15 +201,15 @@ button.button,
   border-radius: $base-radius;
   color: palette(gray, xx-light) !important;
   display: block;
-  font-family: $font-sans;
+  @include font-scale(base);
   font-weight: normal;
-  line-height: 1;
-  padding: 0.5em 1em;
+  padding: 0.75rem 2rem;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 0 0 transparent;
   @include transition-property(all);
   @include transition-duration($base-duration);
+  vertical-align: middle;
   
   &:active,
   &:focus,
@@ -195,8 +227,15 @@ ul.default {
 }
 
 .giga {
-  @include font-scale(x-large);
+  @include font-scale(large, $font-roboto-condensed);
   margin: 0;
+  
+  @include media($bp-med-val) {
+    @include font-scale(x-large, $font-roboto-condensed);
+  }
+  @include media($bp-lg-val) {
+    @include font-scale(xx-large, $font-roboto-condensed);
+  }
 }
 
 .ie-warning {
@@ -210,9 +249,12 @@ ul.default {
 .intro {
   h1 {
     color: palette(gray, x-light);
-    font-weight: 300;
-    margin-bottom: 0.5em;
+    @include font-scale(mid-large);
     text-shadow: 3px 3px 0 palette(gray, x-dark);
+    
+    @include media($bp-med-val) {
+      @include font-scale(large);
+    }
   }
   a {
     color: palette(gray, xx-light);
@@ -223,9 +265,10 @@ ul.default {
   }
   .leader {
     color: palette(gray, light);
-    font-family: $font-sans;
+    font-family: unquote(map-get($font-roboto, stack));
+    @include font-scale(mid);
     font-weight: normal;
-    margin-bottom: 0;
+    margin: 0;
     text-shadow: 3px 3px 0 palette(gray, x-dark);
     text-transform: none;
   }
@@ -430,12 +473,13 @@ ul.default {
 
 .social {
   li {
-    border-bottom: 1px solid palette(gray, x-light);
+    border-bottom: 0.0625rem solid palette(gray, x-light);
     margin-bottom: 0.75em;
     padding-bottom: 0.75em;
   }
   a {
     color: palette(gray, dark);
+    font-weight: normal;
     text-decoration: none;
     &:focus,
     &:hover,
@@ -533,10 +577,11 @@ ul.default {
 
 .ancillary {
   h2 {
-    color: palette(gray, dark);
-    font-size: 1.5rem;
-    line-height: 1;
-    margin-bottom: 1em;
+    color: palette(gray, x-dark);
+    @include font-scale(mid-large);
+  }
+  p {
+    @include font-scale(small);
   }
 }
 
@@ -547,20 +592,6 @@ ul.default {
 // medium
 //////////////////////////////////////////////////
 @media only screen and ($bp-med) {
-  // base HTML
-  //////////////////////////////////////////////////
-  /*h1 {
-    font-size: 1.875em;
-    line-height: 1;
-    margin-bottom: 1em;
-  }
-  h2 {
-    color: palette(gray);
-    font-size: 1.5rem;
-    line-height: 1;
-    margin-bottom: 0.666667em;
-  }*/
-  
   // classes
   //////////////////////////////////////////////////
   .leader {
@@ -595,20 +626,6 @@ ul.default {
 // large
 //////////////////////////////////////////////////
 @media only screen and ($bp-lg) {
-  // base HTML
-  //////////////////////////////////////////////////
-  /*h1 {
-    font-size: 2.25em;
-    line-height: 1;
-    margin-bottom: 0.333333rem;
-  }
-  h2 {
-    color: palette(gray);
-    font-size: 1.875em;
-    line-height: 0.8;
-    margin-bottom: 0.4em;
-  }*/
-  
   // classes
   //////////////////////////////////////////////////
   .meta {

@@ -19,6 +19,7 @@
   @include background(
     linear-gradient(left top, palette(gray), palette(gray, dark))
   );
+  min-height: 13.5rem;
   overflow: hidden;
   position: relative;
   
@@ -32,8 +33,8 @@
   @include background(
     linear-gradient(left top, lighten(palette(gray, x-dark), 10), palette(gray, x-dark))
   );
-  border-top: 0.75em solid lighten(palette(gray, x-dark), 10);
-  border-bottom: 0.75em solid palette(gray, x-dark);
+  border-top: 0.75rem solid lighten(palette(gray, x-dark), 10);
+  border-bottom: 0.75rem solid palette(gray, x-dark);
   
   .button {
     margin-top: 1.5rem;

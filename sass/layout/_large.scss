@@ -8,11 +8,6 @@
   @include span-columns(4);
 }
 
-.intro {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 // classes
 .callout {
   @include span-columns(4);
@@ -22,6 +17,3 @@
     @include omega;
   }
 }
-/*.callout {
-  margin-bottom: 0;
-}*/
