@@ -581,6 +581,7 @@ img, object {
 
 .cp_embed_iframe {
   margin-bottom: 1.5rem;
+  min-height: 100%;
 }
 
 a.button,
@@ -697,7 +698,9 @@ ul.default {
 
 .leader {
   color: #37332f;
-  font-size: 1em;
+  font-size: 16px;
+  /* font-size: 16 */
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0 0 1.5rem 0;
 }
@@ -898,9 +901,9 @@ ul.default {
 }
 
 .social li {
-  /*border-bottom: 0.0625rem solid palette(gray, x-light);
-  margin-bottom: 0.75em;
-  padding-bottom: 0.75em;*/
+  border-bottom: 0.0625rem solid #e5e3e1;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.6875rem;
   font-size: 16px;
   /* font-size: 16 */
   font-size: 1rem;
@@ -922,23 +925,6 @@ ul.default {
   color: #e5e3e1;
 }
 
-.tag-cloud {
-  /*.set-1 {
-    @include font-scale(x-small);
-  }
-  .set-2 {
-    @include font-scale(small);
-  }
-  .set-3 {
-    @include font-scale(base);
-  }
-  .set-4 {
-    @include font-scale(mid);
-  }
-  .set-5 {
-    @include font-scale(mid-large);
-  }*/
-}
 .tag-cloud a {
   font-size: 14px;
   /* font-size: 14 */
@@ -993,10 +979,18 @@ ul.default {
 
 .ancillary h2 {
   color: #1c1a17;
-  font-size: 24px;
-  /* font-size: 24 */
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: 18px;
+  /* font-size: 18 */
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+@media screen and (min-width: 40em) {
+  .ancillary h2 {
+    font-size: 24px;
+    /* font-size: 24 */
+    font-size: 1.5rem;
+    line-height: 1;
+  }
 }
 .ancillary p {
   font-size: 14px;
@@ -1012,10 +1006,12 @@ ul.default {
 @media only screen and (min-width: 40em) {
   .leader {
     color: #37332f;
-    font-size: 1.125em;
+    font-size: 18px;
+    /* font-size: 18 */
+    font-size: 1.125rem;
+    line-height: 1.33333;
     font-weight: bold;
-    line-height: 1.333333;
-    margin: 0 0 1.333333rem 0;
+    margin: 0 0 1.5rem 0;
   }
 
   .projects {
