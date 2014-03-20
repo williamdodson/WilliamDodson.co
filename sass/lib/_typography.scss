@@ -249,12 +249,12 @@ ul.default {
 .intro {
   h1 {
     color: palette(gray, x-light);
-    @include font-scale(mid-large);
+    //@include font-scale(mid-large);
     text-shadow: 3px 3px 0 palette(gray, x-dark);
     
-    @include media($bp-med-val) {
+    /*@include media($bp-med-val) {
       @include font-scale(large);
-    }
+    }*/
   }
   a {
     color: palette(gray, xx-light);
@@ -317,6 +317,17 @@ ul.default {
 //////////////////////////////////////////////////
 .pin-item {
   @extend %subtle-separate;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  
+  p {
+    @include font-scale(small);
+    
+    br {
+      line-height: 0;
+    }
+  }
   
   a {
     color: palette(gray, dark);
@@ -331,7 +342,18 @@ ul.default {
     font-weight: bold;
   }
   .pin-tag {
-    font-size: 0.75em;
+    background: palette(gray, x-light);
+    border-radius: $base-radius;
+    padding: 0 0.25rem;
+    text-shadow: 0.0625rem 0.0625rem 0 palette(gray, xx-light);
+    @include transition-property(all);
+    @include transition-duration($base-duration);
+    
+    &:focus,
+    &:hover,
+    &:active {
+      background: rgba(red(palette(purple, light)), green(palette(purple, light)), blue(palette(purple, light)), 0.42);
+    }
   }
 }
 .pin-all-items {
@@ -441,22 +463,10 @@ ul.default {
 }
 
 .separate {
-  border-bottom: 1px solid palette(gray, x-light);
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  @include clearfix;
-  
-  &.separate-top {
-    border-top: 1px solid palette(gray, x-light);
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-top: 1.5rem;
-    padding-bottom: 0;
-  }
-  
-  & p:last-child {
-    margin-bottom: 0;
-  }
+  @extend %separate;
+}
+.separate-top {
+  @extend %separate-top;
 }
 
 .share-links {
@@ -472,6 +482,8 @@ ul.default {
 }
 
 .social {
+  @extend %separate;
+  
   li {
     /*border-bottom: 0.0625rem solid palette(gray, x-light);
     margin-bottom: 0.75em;
