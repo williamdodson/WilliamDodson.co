@@ -524,8 +524,7 @@ ul.default {
 //////////////////////////////////////////////////
 .masthead {
   h1 {
-    font-size: 1em;
-    line-height: 1;
+    @include font-scale(mid-large);
     
     a {
       color: palette(gray, xx-light);
