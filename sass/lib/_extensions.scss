@@ -71,3 +71,20 @@
     padding-bottom: 0;
   }
 }
+
+%tag {
+  background: palette(gray, x-light);
+  border-radius: $base-radius;
+  color: palette(gray, dark);
+  padding: 0 0.25rem;
+  text-decoration: none;
+  text-shadow: 0.0625rem 0.0625rem 0 palette(gray, xx-light);
+  @include transition-property(all);
+  @include transition-duration($base-duration);
+  
+  &:focus,
+  &:hover,
+  &:active {
+    background: rgba(red(palette(purple, light)), green(palette(purple, light)), blue(palette(purple, light)), 0.42);
+  }
+}

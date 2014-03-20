@@ -113,6 +113,9 @@ a:active, a:focus, a:hover {
 a[href*="tel:"] {
   text-decoration: none;
 }
+a[rel="tag"] {
+  @extend %tag;
+}
 
 em {
   font-style: italic;
@@ -187,7 +190,7 @@ img, object {
 //////////////////////////////////////////////////
 .cp_embed_iframe {
   margin-bottom: 1.5rem;
-  min-height: 100%;
+  //min-height: 100%;
 }
 
 // classes
@@ -288,21 +291,27 @@ ul.default {
 .meta {
   background: palette(gray, x-light);
   @include background(linear-gradient(left top, palette(gray, xx-light), palette(gray, x-light)));
-  border-bottom: 0.0625em solid palette(gray, x-light);
+  border-bottom: 0.0625rem solid palette(gray, x-light);
   border-radius: $base-radius;
-  margin-bottom: 1.5rem;
-  @include pad(0.75em default 0.75em default);
-  vertical-align: middle;
+  margin-bottom: 1.4375rem;
+  //min-height: 4.5rem;
+  @include pad(0.75rem default 0.75rem default);
+  
   p {
     margin-bottom: 0;
   }
+  small {
+    display: block;
+    line-height: 1;
+  }
   span {
     display: block;
+    //vertical-align: middle;
   }
   .subtle {
     color: palette(gray, light);
     display: none;
-    margin: 0 1em;
+    margin: 0 1rem;
   }
 }
 
@@ -342,18 +351,7 @@ ul.default {
     font-weight: bold;
   }
   .pin-tag {
-    background: palette(gray, x-light);
-    border-radius: $base-radius;
-    padding: 0 0.25rem;
-    text-shadow: 0.0625rem 0.0625rem 0 palette(gray, xx-light);
-    @include transition-property(all);
-    @include transition-duration($base-duration);
-    
-    &:focus,
-    &:hover,
-    &:active {
-      background: rgba(red(palette(purple, light)), green(palette(purple, light)), blue(palette(purple, light)), 0.42);
-    }
+    @extend %tag;
   }
 }
 .pin-all-items {
@@ -368,8 +366,7 @@ ul.default {
   }
 }
 .post-title {
-  font-size: 1.5rem;
-  line-height: 1;
+  @include font-scale(mid-large);
   margin-bottom: 0;
   a {
     color: palette(gray, dark);
@@ -422,9 +419,9 @@ ul.default {
     a {
       overflow: hidden;
       position: relative;
-      font-size: 0.75em;
+      @include font-scale(x-small);
       @include media($bp-lg-val) {
-        font-size: 1em;
+        @include font-scale(base);
       }
       img {
         border: 1px solid palette(gray, xx-light);
@@ -469,15 +466,17 @@ ul.default {
   @extend %separate-top;
 }
 
-.share-links {
-  padding: 0.75em 0;
-}
 .share {
-  display: inline-block;
   margin-right: 0.375em;
   vertical-align: middle;
+  
   &:last-child {
     margin-right: 0;
+  }
+  
+  img {
+    max-height: 1.5rem;
+    vertical-align: middle;
   }
 }
 
@@ -510,21 +509,28 @@ ul.default {
 }
 
 .tag-cloud {
-  .set-1 {
-    font-size: 0.75em;
+  @extend %separate;
+  
+  a {
+    @extend %tag;
+    @include font-scale(small);
+  }
+  
+  /*.set-1 {
+    @include font-scale(x-small);
   }
   .set-2 {
-    font-size: 0.875em;
+    @include font-scale(small);
   }
   .set-3 {
-    font-size: 1em;
+    @include font-scale(base);
   }
   .set-4 {
-    font-size: 1.125em;
+    @include font-scale(mid);
   }
   .set-5 {
-    font-size: 1.25em;
-  }
+    @include font-scale(mid-large);
+  }*/
 }
 
 .title {
