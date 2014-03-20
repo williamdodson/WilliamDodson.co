@@ -266,8 +266,6 @@ body {
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   /* you can be more comfortable with increased icons size */
-  font-size: 1.5rem;
-  vertical-align: middle;
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
@@ -278,45 +276,44 @@ body {
 }
 
 .icon-doc-text:before {
+  color: #7a716a;
   content: '\e806';
 }
 
-/* '' */
 .icon-phone:before {
+  color: #7a568f;
   content: '\e805';
 }
 
-/* '' */
-.icon-menu:before, .nav-toggle:after {
+.icon-menu:before,
+.nav-toggle:after {
   content: '\e807';
 }
 
-/* '' */
 .icon-github:before {
+  color: #4183c4;
   content: '\e800';
 }
 
-/* '' */
 .icon-linkedin:before {
+  color: #4875b4;
   content: '\e801';
 }
 
-/* '' */
 .icon-twitter:before {
+  color: #33ccff;
   content: '\e802';
 }
 
-/* '' */
 .icon-forrst:before {
+  color: #3b7140;
   content: '\e803';
 }
 
-/* '' */
 .icon-meetup:before {
   content: '\e804';
 }
 
-/* '' */
 :root {
   font-size: 1em;
   line-height: 1.5;
@@ -914,9 +911,13 @@ ul.default {
 }
 
 .social li {
-  border-bottom: 0.0625rem solid #e5e3e1;
+  /*border-bottom: 0.0625rem solid palette(gray, x-light);
   margin-bottom: 0.75em;
-  padding-bottom: 0.75em;
+  padding-bottom: 0.75em;*/
+  font-size: 16px;
+  /* font-size: 16 */
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .social a {
   color: #37332f;

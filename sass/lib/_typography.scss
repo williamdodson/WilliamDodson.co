@@ -473,9 +473,10 @@ ul.default {
 
 .social {
   li {
-    border-bottom: 0.0625rem solid palette(gray, x-light);
+    /*border-bottom: 0.0625rem solid palette(gray, x-light);
     margin-bottom: 0.75em;
-    padding-bottom: 0.75em;
+    padding-bottom: 0.75em;*/
+    @include font-scale(base);
   }
   a {
     color: palette(gray, dark);

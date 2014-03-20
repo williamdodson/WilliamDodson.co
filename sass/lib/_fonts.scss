@@ -51,9 +51,9 @@
   //margin-left: .2em;
  
   /* you can be more comfortable with increased icons size */
-  font-size: 1.5rem;
+  //font-size: 1.5rem;
   
-  vertical-align: middle;
+  //vertical-align: middle;
  
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
@@ -63,11 +63,34 @@
   margin-left: 0.5em;
 }
 
-.icon-doc-text:before { content: '\e806'; } /* '' */
-.icon-phone:before { content: '\e805'; } /* '' */
-.icon-menu:before, .nav-toggle:after { content: '\e807'; } /* '' */
-.icon-github:before { content: '\e800'; } /* '' */
-.icon-linkedin:before { content: '\e801'; } /* '' */
-.icon-twitter:before { content: '\e802'; } /* '' */
-.icon-forrst:before { content: '\e803'; } /* '' */
-.icon-meetup:before { content: '\e804'; } /* '' */
+.icon-doc-text:before {
+  color: palette(gray);
+  content: '\e806';
+}
+.icon-phone:before {
+  color: palette(purple, dark);
+  content: '\e805';
+}
+.icon-menu:before,
+.nav-toggle:after {
+  content: '\e807';
+}
+.icon-github:before {
+  color: palette(social, github);
+  content: '\e800';
+}
+.icon-linkedin:before {
+  color: palette(social, linkedin);
+  content: '\e801';
+}
+.icon-twitter:before {
+  color: palette(social, twitter);
+  content: '\e802';
+}
+.icon-forrst:before {
+  color: palette(social, forrst);
+  content: '\e803';
+}
+.icon-meetup:before {
+  content: '\e804';
+}
