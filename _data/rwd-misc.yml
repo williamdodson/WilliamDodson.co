@@ -1,0 +1,7 @@
+#Miscellaneous
+
+- title: 'Miscellaneous'
+  articles:
+  - title: 'This Is Responsive'
+    description: 'Brad Frost has collected a series of patterns, resources, and news for RWD. I put this one under Miscellaneous because it contains articles, resources, patterns, and tools in one place. Definitely worth bookmarking.'
+    link: http://bradfrost.github.io/this-is-responsive/

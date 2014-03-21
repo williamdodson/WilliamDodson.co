@@ -1,0 +1,19 @@
+#Books
+
+- title: 'Books'
+  articles:
+  - title: 'Responsive Web Design'
+    description: 'From the initial concepts outlined in the “Responsive Web Design” article on A List Apart, author Ethan Marcotte wrote a brief book that clearly explains how to get started with RWD. This book should be required reading for anyone doing modern web design.'
+    link: http://www.abookapart.com/products/responsive-web-design
+  
+  - title: 'Mobile First'
+    description: 'No discourse on RWD would be complete without a discussion of “Mobile First” design. Auhor Luke Wroblewski walks the reader through the underlying concepts behind mobile first design. If you’re doing RWD then you should be starting with the mobile user in mind at the beginning of the project and not as an afterthought.'
+    link: http://www.abookapart.com/products/mobile-first
+  
+  - title: 'Responsible Responsive Design'
+    description: 'This more advanced book on RWD from author Scott Jehl covers topics like bandwidth considerations and device capabilities. Highly recommended reading.'
+    link: http://www.abookapart.com/products/responsible-responsive-design
+  
+  - title: 'Adaptive Web Design'
+    description: 'Author Aaron Gustafson takes a conversational tone with this book and offers insight in both RWD techniques and Progressive Enhancement (PE). While I feel this book is more focused on PE than RWD I think both compliment each other and this book is certainly worth mentioning here.'
+    link: http://easy-readers.net/books/adaptive-web-design/

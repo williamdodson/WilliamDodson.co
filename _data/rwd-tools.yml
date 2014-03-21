@@ -1,0 +1,35 @@
+#Tools
+
+- title: 'Tools'
+  articles:
+  - title: 'The Top 25 Responsive Design Tools'
+    description: 'Brad Frost has curated a nice list of RWD tools here for your reading pleasure.'
+    link: http://bradfrostweb.com/blog/post/the-top-25-responsive-design-tools/
+  
+  - title: 'Multi-Device Layout Patterns'
+    description: 'Luke Wroblewski has a great set of patterns here to help with creating multi-device layouts.'
+    link: http://www.lukew.com/ff/entry.asp?1514
+  
+  - title: 'Gridset'
+    description: 'Create your own custom grids for responsive layouts. This is a paid service, but worth every penny if you do a lot of RWD and want custom grids.'
+    link: https://gridsetapp.com/
+  
+  - title: 'Neat'
+    description: 'For you Sass users out there I cannot overstate how much I love Neat. This is a great tool to help you create your own semantic grid systems. No fiddly classes to memorize (unless you’re into that sort of thing).'
+    link: http://neat.bourbon.io/
+  
+  - title: 'Opera Mobile Classic Emulator'
+    description: 'While nothing beats a true multi-device lab for testing, the Opera Mobile Emulator is great for quick testing purposes.'
+    link: http://www.opera.com/developer/mobile-emulator
+  
+  - title: 'Open Device Lab'
+    description: 'The Open Device Lab’s tagline reads “Access a variety of devices. Worldwide. For free.” This is one of those resource areas that is simply amazing to me.'
+    link: http://opendevicelab.com/
+  
+  - title: 'GuideGuide'
+    description: 'While not technically an RWD-specific tool, designing grids in Photoshop can be really frustrating. And with the advent of RWD this process became even more difficult. GuideGuide is a Photoshop plugin that makes it a bit easier for designers to create grids in their PSD comps.'
+    link: http://guideguide.me/
+  
+  - title: 'Firefox'
+    description: 'Yes, I know Firefox is a web browser. But Firefox has a neat built-in web developer tool called “Responsive Design View” that is extremely useful in developing RWD sites. You can define your own breakpoints and quickly access them with a simple keyboard shortcut. It also includes a simple button that allows you to take screen shots of the design at a chosen breakpoint. Huzzah!'
+    link: https://www.mozilla.org/en-US/firefox/new/

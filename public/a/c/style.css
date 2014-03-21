@@ -458,6 +458,9 @@ p, dl, ol, ul {
   margin-bottom: 1.5rem;
 }
 
+dl {
+  margin-top: 1.5rem;
+}
 dl dt {
   color: #7a716a;
   font-size: 24px;
@@ -567,7 +570,11 @@ textarea {
 }
 
 hr {
-  border-top: 0.0625rem solid #e5e3e1;
+  background: #1c1a17;
+  background: -webkit moz o ms spec-linear-gradient(left top, #b5afaa, #1c1a17);
+  background: linear-gradient(to right bottom, #b5afaa, #1c1a17);
+  border: none;
+  height: 0.0625rem;
   margin: 1.5rem 0 1.4375rem 0;
 }
 
@@ -672,9 +679,6 @@ ul.default {
 .intro h1 {
   color: #e5e3e1;
   text-shadow: 3px 3px 0 #1c1a17;
-  /*@include media($bp-med-val) {
-    @include font-scale(large);
-  }*/
 }
 .intro a {
   color: #f1f0ef;
@@ -703,6 +707,12 @@ ul.default {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 0 1.5rem 0;
+}
+
+.list-resources .last:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .love {
@@ -1146,20 +1156,20 @@ ul.default {
   text-shadow: 0.0625rem 0.0625rem 0 rgba(28, 26, 23, 0.42);
 }
 
-.separate, .social, .tag-cloud {
+.list-resources .last, .separate, .social, .tag-cloud {
   border-bottom: 0.0625rem solid #e5e3e1;
   margin-bottom: 1.5rem;
   padding-bottom: 1.4375rem;
   *zoom: 1;
 }
-.separate:before, .social:before, .tag-cloud:before, .separate:after, .social:after, .tag-cloud:after {
+.list-resources .last:before, .separate:before, .social:before, .tag-cloud:before, .list-resources .last:after, .separate:after, .social:after, .tag-cloud:after {
   content: " ";
   display: table;
 }
-.separate:after, .social:after, .tag-cloud:after {
+.list-resources .last:after, .separate:after, .social:after, .tag-cloud:after {
   clear: both;
 }
-.separate p:last-child, .social p:last-child, .tag-cloud p:last-child {
+.list-resources .last p:last-child, .separate p:last-child, .social p:last-child, .tag-cloud p:last-child {
   margin-bottom: 0;
 }
 

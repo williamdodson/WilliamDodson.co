@@ -13,6 +13,8 @@
 				{{ content }}
 				{% if page.slug == 'home' %}
 					{% include sidebar/_sidebar-home.html %}
+				{% elsif page.slug == 'rwd' %}
+				  {% include sidebar/_sidebar-rwd.html %}
 				{% else %}
 					{% if page.slug != 'portfolio' %}
 						{% include sidebar/_sidebar.html %}

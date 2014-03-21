@@ -1,0 +1,146 @@
+---
+layout: default
+title: 'Responsive Web Design Resources'
+heading: 'Responsive Web Design Resources'
+leader: 'A continually updated list of all things responsive'
+excerpt: 'A continually updated list of all things responsive'
+slug: rwd
+---
+
+<article class="main" role="main">
+  <p class="leader">Responsive Web Design (RWD) is an ingenious technique devised by <a href="http://unstoppablerobotninja.com">Ethan Marcotte</a> to help modern web designers and developers cope with the vast number of screen sizes available to consumers today.</p>
+  
+  <p>On a few occasions when I mentioned or noted this technique to colleagues there were some folks who didn’t know about RWD at all. I decided to curate a list of resources both for my own reference and with the intent to help others make sense of RWD.</p>
+  
+  <p>What follows is incomplete at best. RWD is changing and evolving nearly every day just like the web itself. This list may remain in flux indefinitely as we move forward.</p>
+  
+  <!-- articles -->
+  <section class="pages" aria-labelledby="section-heading-articles">
+  {% for ar in site.data.rwd-articles %}
+    <h2 id="section-heading-articles">Articles</h2>
+    
+    <dl class="list-resources">
+      {% for a in ar.articles %}
+      <dt>{{ a.title }}</dt>
+      <dd>
+        {{ a.description }}
+      </dd>
+      <dd class="last">
+        Link: <a href="{{ a.link }}">{{ a.link }}</a>
+      </dd>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+  <p><a class="button inline" href="#{{ page.slug }}">Back to the top</a></p>
+  </section>
+  
+  <hr>
+  
+  <!-- resources -->
+  <section class="pages" aria-labelledby="section-heading-resources">
+  {% for ar in site.data.rwd-articles %}
+    <h2 id="section-heading-resources">Resources</h2>
+    
+    <dl class="list-resources">
+      {% for r in ar.resources %}
+      <dt>{{ r.title }}</dt>
+      <dd>
+        {{ r.description }}
+      </dd>
+      <dd class="last">
+        Link: <a href="{{ r.link }}">{{ r.link }}</a>
+      </dd>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+  <p><a class="button inline" href="#{{ page.slug }}">Back to the top</a></p>
+  </section>
+  
+  <hr>
+  
+  <!-- books -->
+  <section class="pages" aria-labelledby="section-heading-books">
+    {% for books in site.data.rwd-books %}
+    <h2 id="section-heading-books">{{ books.title }}</h2>
+    
+    <dl class="list-resources">
+      {% for b in books.articles %}
+      <dt>{{ b.title }}</dt>
+      <dd>
+        {{ b.description }}
+      </dd>
+      <dd class="last">
+        Link: <a href="{{ b.link }}">{{ b.link }}</a>
+      </dd>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+  <p><a class="button inline" href="#{{ page.slug }}">Back to the top</a></p>
+  </section>
+  
+  <hr>
+  
+  <!-- tools -->
+  <section class="pages" aria-labelledby="section-heading-tools">
+    {% for tools in site.data.rwd-tools %}
+    <h2 id="section-heading-tools">{{ tools.title }}</h2>
+    
+    <dl class="list-resources">
+      {% for t in tools.articles %}
+      <dt>{{ t.title }}</dt>
+      <dd>
+        {{ t.description }}
+      </dd>
+      <dd class="last">
+        Link: <a href="{{ t.link }}">{{ t.link }}</a>
+      </dd>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+  <p><a class="button inline" href="#{{ page.slug }}">Back to the top</a></p>
+  </section>
+  
+  <hr>
+  
+  <!-- specs -->
+  <section class="pages" aria-labelledby="section-heading-specs">
+    {% for specs in site.data.rwd-specs %}
+    <h2 id="section-heading-specs">{{ specs.title }}</h2>
+    
+    <dl class="list-resources">
+      {% for s in specs.articles %}
+      <dt>{{ s.title }}</dt>
+      <dd>
+        {{ s.description }}
+      </dd>
+      <dd class="last">
+        Link: <a href="{{ s.link }}">{{ s.link }}</a>
+      </dd>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+  <p><a class="button inline" href="#{{ page.slug }}">Back to the top</a></p>
+  </section>
+  
+  <hr>
+  
+  <!-- misc -->
+  <section class="pages" aria-labelledby="section-heading-misc">
+    {% for misc in site.data.rwd-misc %}
+    <h2 id="section-heading-misc">{{ misc.title }}</h2>
+    
+    <dl class="list-resources">
+      {% for m in misc.articles %}
+      <dt>{{ m.title }}</dt>
+      <dd>
+        {{ m.description }}
+      </dd>
+      <dd class="last">
+        Link: <a href="{{ s.link }}">{{ m.link }}</a>
+      </dd>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+  <p><a class="button inline" href="#{{ page.slug }}">Back to the top</a></p>
+  </section>
+</article>

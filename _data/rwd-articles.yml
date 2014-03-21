@@ -1,0 +1,47 @@
+#Articles & Resources
+#Tools
+#Specifications
+#Miscellaneous
+
+- title: 'Articles & Resources'
+  articles:
+  - title: 'Fluid Grids'
+    description: 'This is the article that for many created the foundation of modern RWD concepts. In this article, author Ethan Marcotte describes his work for W3C where the <code>target ÷ context = result</code> formula took shape to create fluid grids. Some of the work describe in this article set the foundation for Ethan’s seminal article the following year, “Responsive Web Design.”'
+    link: http://alistapart.com/article/fluidgrids
+  
+  - title: 'Responsive Web Design'
+    description: 'Here is where the term “Responsive Web Design” was most likely first coined by author Ethan Marcotte. In this article Ethan describes the concepts for the basis of RWD. This is the article that started many down the road to building RWD websites. A must-read for understanding the initial concepts which underpin creating responsive web designs.'
+    link: http://alistapart.com/article/responsive-web-design
+  
+  - title: 'Beginner’s Guide to Responsive Web Design'
+    description: 'Treehouse has a great introductory article on getting started with RWD.'
+    link: http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design
+  
+  - title: 'What We Mean When We Say “responsive”'
+    description: 'There seems to be some confusion about what RWD actually means; the terms get used in different ways by different people. This is a great article from Lyza Danger Gardner that tries to help explain what “responsive” is for most of us and concludes with the notion that it may become redundant in the near future (e.g. it’s all simply “web design”).'
+    link: http://alistapart.com/column/what-we-mean-when-we-say-responsive
+  
+  - title: 'Defining Responsiveness'
+    description: 'A great article from Jason Grigsby that tries to define “responsiveness” in relation to RWD.'
+    link: http://blog.cloudfour.com/defining-responsiveness/
+  
+  - title: 'Evolving Responsive Web Design'
+    description: 'Jeffrey Zeldman offers some valuable insight and words of wisdom regarding the ever-evolving use of the term, “Responsive Web Design.” I tend to agree with Jeffrey on this one and I stick to Ethan Marcotte’s original definition: fluid grids, flexible media, and media queries.'
+    link: http://www.zeldman.com/2014/03/09/evolving-responsive-web-design/
+# ===========================
+  resources:
+  - title: 'Wikipedia: Responsive web design'
+    description: 'The Wikipedia entry on the concepts and basic tenets of RWD.'
+    link: https://en.wikipedia.org/wiki/Responsive_web_design
+  
+  - title: 'The Ultimate Responsive Web Design Beginners Resource List'
+    description: 'The name says it all. This is a great place to start if you’re new to RWD.'
+    link: http://www.targetlocal.co.uk/responsive-web-design-resources/
+  
+  - title: 'Video: Why Use Responsive Web Design?'
+    description: 'Treehouse has created an introductory video explaining the basics of RWD and why you should be using it in your projects.'
+    link: http://youtu.be/iSY38POjLYc
+  
+  - title: 'Course: Build a Responsive Website'
+    description: 'This is a Treehouse course to help you learn how to build responsive websites.'
+    link: http://teamtreehouse.com/library/websites/build-a-responsive-website/introduction-to-responsive-web-design

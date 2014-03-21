@@ -78,6 +78,8 @@ p, dl, ol, ul {
   margin-bottom: 1.5rem;
 }
 dl {
+  margin-top: 1.5rem;
+  
   dt {
     color: palette(gray);
     @include font-scale(mid-large);
@@ -174,7 +176,10 @@ textarea {
 }
 
 hr {
-  border-top: 0.0625rem solid palette(gray, x-light);
+  background: palette(gray, x-dark);
+  @include background(linear-gradient(left top, palette(gray, light), palette(gray, x-dark)));
+  border: none;
+  height: 0.0625rem;
   margin: 1.5rem 0 1.4375rem 0;
 }
 
@@ -252,12 +257,7 @@ ul.default {
 .intro {
   h1 {
     color: palette(gray, x-light);
-    //@include font-scale(mid-large);
     text-shadow: 3px 3px 0 palette(gray, x-dark);
-    
-    /*@include media($bp-med-val) {
-      @include font-scale(large);
-    }*/
   }
   a {
     color: palette(gray, xx-light);
@@ -281,6 +281,19 @@ ul.default {
   color: palette(gray, dark);
   @include font-scale(base);
   margin: 0 0 1.5rem 0;
+}
+
+.list-resources {
+  
+  .last {
+    @extend %separate;
+    
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .love {

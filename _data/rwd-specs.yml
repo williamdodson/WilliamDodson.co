@@ -1,0 +1,15 @@
+#Specifications
+
+- title: 'Specifications'
+  articles:
+  - title: 'W3C: Media Queries'
+    description: 'The W3C Media Queries recommendation provides the specification that enables us to use RWD techniques.'
+    link: http://www.w3.org/TR/css3-mediaqueries/
+  
+  - title: 'W3C: The picture element'
+    description: 'The W3C Picture HTML extension recommendation is meant to help provide a means to serve context-appropriate images to the end user based on screen size and other considerations. Probably a little verbose for the casual reader. However, with RWD becoming more prevalent this extension will (hopefully) become the standard way we serve images to the end user in our web design projects.'
+    link: http://www.w3.org/TR/html-picture-element/
+  
+  - title: 'Responsive Images Community Group: The picture element'
+    description: 'The Responsive Images Community Group (RICG) maintain a separate recommendation for the HTML <code>&lt;picture&gt;</code> element. I believe their work is in tandem with the W3C, but it appears that more activity takes place in moving the spec toward recommendation within the RICG.'
+    link: http://picture.responsiveimages.org/
