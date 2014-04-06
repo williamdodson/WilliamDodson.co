@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://williamdodson.co/projects/web/catering-company-hatteras-website</loc>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://williamdodson.co/projects/web/korn-design-website</loc>
         <lastmod>2014-03-07T19:56:44-05:00</lastmod>
     </url>
@@ -54,15 +58,15 @@
     </url>
     <url>
         <loc>http://williamdodson.co/about/</loc>
-        <lastmod>2014-03-21T13:14:30-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
     <url>
         <loc>http://williamdodson.co/articles/</loc>
-        <lastmod>2014-03-20T19:16:40-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
     <url>
         <loc>http://williamdodson.co/errors/404/</loc>
-        <lastmod>2014-03-21T13:14:30-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
     <url>
         <loc>http://williamdodson.co/feed.articles.atom</loc>
@@ -70,22 +74,22 @@
     </url>
     <url>
         <loc>http://williamdodson.co/</loc>
-        <lastmod>2014-03-21T13:14:30-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
     <url>
         <loc>http://williamdodson.co/portfolio/</loc>
-        <lastmod>2014-03-21T13:14:30-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
     <url>
         <loc>http://williamdodson.co/rwd/</loc>
-        <lastmod>2014-03-21T17:23:40-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
     <url>
         <loc>http://williamdodson.co/sitemap/</loc>
-        <lastmod>2014-03-21T13:14:30-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
     <url>
         <loc>http://williamdodson.co/styleguide/</loc>
-        <lastmod>2014-03-20T19:16:40-04:00</lastmod>
+        <lastmod>2014-04-06T17:44:54-04:00</lastmod>
     </url>
 </urlset>
