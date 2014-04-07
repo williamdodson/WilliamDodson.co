@@ -6,7 +6,7 @@ destination: public
 relative_permalinks: true
 encoding: UTF-8
 permalink: /:categories/:title
-exclude: [sass, config.rb, rsync.sh]
+exclude: [sass, config.rb, rsync.sh, README.md]
 tag_page_layout: tag_page
 tag_page_dir: tag
 
