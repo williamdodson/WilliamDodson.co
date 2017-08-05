@@ -1,0 +1,28 @@
+{% include structure/_head.html %}
+    
+    <div class="container intro">
+      <div class="content">
+        <h1>{{ page.heading }}</h1>
+        {% if page.leader != '' %}<h2 class="leader">{{ page.leader }}</h2>{% endif %}
+      </div>
+    </div>
+    
+    <div class="container">
+      <!-- .content -->
+      <div class="content">
+        {% if page.slug == 'home' %}
+          {% include sidebar/_sidebar-home.html %}
+        {% elsif page.slug == 'rwd' %}
+          {% include sidebar/_sidebar-rwd.html %}
+        {% else %}
+          {% if page.slug != 'portfolio' %}
+            {% include sidebar/_sidebar.html %}
+          {% endif %}
+        {% endif %}
+        
+        {{ content }}
+      </div>
+      <!-- /.content -->
+    </div>
+    
+{% include structure/_foot.html %}

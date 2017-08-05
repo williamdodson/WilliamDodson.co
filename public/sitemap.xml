@@ -1,99 +1,147 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-    <url>
-        <loc>http://williamdodson.co/projects/web/catering-company-hatteras-website</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/brand/pacific-networks-international-logo</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/web/korn-design-website</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/web/sfa-website</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/web/blend-design-website</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/print/nancy-holtz-brochure</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/brand/hashtag-studios-logo</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/brand/tangled-words-comedy-logo</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/print/botbaked-bizcards</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/brand/botbaked-logo</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/articles/new-year-new-website</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/articles/git-subtree</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/articles/please-just-let-me-go</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/projects/web/souls-harbor-website</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/articles/welcome-to-version-2dot2</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/about/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/articles/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/errors/404/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/feed.articles.atom</loc>
-        <lastmod>2014-04-08T15:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/portfolio/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/rwd/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/sitemap/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://williamdodson.co/styleguide/</loc>
-        <lastmod>2014-04-08T15:52:10-04:00</lastmod>
-    </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>http://williamdodson.co/rwd/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/errors/404/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/portfolio/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/articles/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/styleguide/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/about/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/sitemap/</loc>
+    
+    <priority>1.0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>http://williamdodson.co/projects/web/catering-company-hatteras-website/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/brand/pacific-networks-international-logo/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/web/korn-design-website/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/web/sfa-website/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/web/blend-design-website/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/print/nancy-holtz-brochure/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/brand/hashtag-studios-logo/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/brand/tangled-words-comedy-logo/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/brand/botbaked-logo/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/print/botbaked-bizcards/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/articles/new-year-new-website/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/articles/git-subtree/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/articles/please-just-let-me-go/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/projects/web/souls-harbor-website/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://williamdodson.co/articles/welcome-to-version-2dot2/</loc>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  
 </urlset>

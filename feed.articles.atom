@@ -1,20 +1,21 @@
 ---
-layout: none
+layout: null
+site_url: http://williamdodson.co
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>{{ site.name | xml_escape }} - Articles</title>
 		<description>Posts categorized as 'Articles'</description>
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/feed.articles.atom" rel="self" type="application/atom+xml" />
+		<link>{{ page.site_url }}</link>
+		<atom:link href="{{ page.site_url }}/feed.articles.atom" rel="self" type="application/atom+xml" />
 		{% for post in site.categories.articles limit:10 %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				<description>{{ post.excerpt | xml_escape }}</description>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+				<link>{{ page.site_url }}{{ post.url }}</link>
+				<guid isPermaLink="true">{{ page.site_url }}{{ post.url }}</guid>
 			</item>
 		{% endfor %}
 	</channel>

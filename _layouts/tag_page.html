@@ -1,12 +1,8 @@
 ---
 layout: tags
-title: 'Article tag: !PAGE_TAG!'
-heading: 'Article tag: !PAGE_TAG!'
-excerpt: 'Article tag: !PAGE_TAG!'
-leader: 'For that extra twist after the punchline'
 ---
 
-<article class="main" role="main">
+<article class="main" role="main">{{ page.sitemap }}
 {% for post in page.posts %}
   <section class="separate">
   	<h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>

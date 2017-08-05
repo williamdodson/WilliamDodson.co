@@ -8,13 +8,13 @@
     <title>Alternative to Git Submodules with Git Subtree Merging | William Dodson</title>
     <meta name="description" content="We all find ourselves using separately maintained Git projects inside of our own personal projects.">
     <meta name="viewport" content="width=device-width">
-    <link rel="alternate" type="application/atom+xml" title="William Dodson Articles" href="http://williamdodson.co/feed.articles.atom" />
+    <link rel="alternate" type="application/atom+xml" title="William Dodson Articles" href="/feed.articles.atom" />
     <meta name="author" content="/humans.txt">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
-    <link rel="stylesheet" href="/a/c/style.css?v=201404081518">
-    <link rel="stylesheet" href="/a/c/syntax.css?v=201404081518">
+    <link rel="stylesheet" href="/a/c/style.css?v=201708051114">
+    <link rel="stylesheet" href="/a/c/syntax.css?v=201708051114">
     
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,7 +24,7 @@
     <script src="/a/j/picturefill/picturefill.js"></script>
     
   </head>
-  <body class="h-entry" id="article">
+  <body class="h-entry" id="git-subtree">
     <!--[if lte IE 8]>
       <div class="container ie-warning">
         <p>Looks like you are using an old version of Internet Explorer. Certain elements of this site will not be available to you and require a modern browser in order to function.</p>
@@ -48,11 +48,12 @@
       <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/portfolio/">Portfolio</a></li>
-      <li class="active"><a href="/articles/">Articles</a></li>
+      <li><a href="/articles/">Articles</a></li>
     </ul>
   </nav>
 </div>
 <!-- /.menu-main -->
+
         
       </header>
       <!-- /.masthead -->
@@ -69,6 +70,7 @@
 </div>
     </div>
     <!-- /.top -->
+
 		
 		<div class="container intro">
 			<div class="content">
@@ -84,12 +86,12 @@
   <div class="meta">
 	<p>
 		<small>
-			<span>Posted on: <a class="u-url" href="http://williamdodson.co/articles/git-subtree" rel="permalink"><time class="dt-published" datetime="2014-01-28 07:30:00">January 28, 2014</time></a></span> <span class="subtle">|</span> 
-			<span>Tags: <span class="p-category"><a href="/tag/git.html" rel="tag">git</a>, <a href="/tag/git-subtree.html" rel="tag">git-subtree</a>, <a href="/tag/git-submodule.html" rel="tag">git-submodule</a>, <a href="/tag/code-snips.html" rel="tag">code-snips</a></span></span> <span class="subtle">|</span> 
+			<span>Posted on: <a class="u-url" href="http://localhost:4000/articles/git-subtree/" rel="permalink"><time class="dt-published" datetime="2014-01-28 07:30:00">January 28, 2014</time></a></span> <span class="subtle">|</span> 
+			<span>Tags: <span class="p-category"><a href="/tag/git/" rel="tag">git</a>, <a href="/tag/git-subtree/" rel="tag">git-subtree</a>, <a href="/tag/git-submodule/" rel="tag">git-submodule</a>, <a href="/tag/code-snips/" rel="tag">code-snips</a></span></span> <span class="subtle">|</span> 
 			<span class="share-links">
-				<a class="share" href="http://twitter.com/home?status=http://williamdodson.co/articles/git-subtree" title="Share on Twitter"><img alt="Twitter" src="/a/i/icons/icon-twitter.png"></a> 
-				<a class="share" href="http://www.facebook.com/sharer.php?u=http://williamdodson.co/articles/git-subtree" title="Share on Facebook"><img alt="Facebook" src="/a/i/icons/icon-facebook.png"></a> 
-				<a class="share" href="https://plus.google.com/share?url=http://williamdodson.co/articles/git-subtree" title="Share on Google+"><img alt="Google+" src="/a/i/icons/icon-gplus.png"></a>
+				<a class="share" href="http://twitter.com/home?status=http://localhost:4000/articles/git-subtree/" title="Share on Twitter"><img alt="Twitter" src="/a/i/icons/icon-twitter.png"></a> 
+				<a class="share" href="http://www.facebook.com/sharer.php?u=http://localhost:4000/articles/git-subtree/" title="Share on Facebook"><img alt="Facebook" src="/a/i/icons/icon-facebook.png"></a> 
+				<a class="share" href="https://plus.google.com/share?url=http://localhost:4000/articles/git-subtree/" title="Share on Google+"><img alt="Google+" src="/a/i/icons/icon-gplus.png"></a>
 			</span>
 		</small>
 	</p>
@@ -102,50 +104,50 @@
   
   <p>Instead of dealing with submodule headaches I find it’s much easier (and preferable) to use subtree merging. First off, we create/clone our main repository the normal way. From within the main repository we can merge the master or another branch of a separate repository into specified subdirectory of the main repository:</p>
   
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git remote add -f subtree-repo /path/to/subtree-repo
-<span class="nv">$ </span>git merge -s ours --no-commit subtree-repo/master
-<span class="nv">$ </span>git <span class="nb">read</span>-tree --prefix<span class="o">=</span>subtree-repo/ -u subtree-repo/master
-<span class="nv">$ </span>git commit -m <span class="s2">&quot;Merge subtree-repo as a subdirectory.&quot;</span>
-</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git remote add -f subtree-repo /path/to/subtree-repo
+<span class="gp">$ </span>git merge -s ours --no-commit subtree-repo/master
+<span class="gp">$ </span>git <span class="nb">read</span>-tree --prefix<span class="o">=</span>subtree-repo/ -u subtree-repo/master
+<span class="gp">$ </span>git commit -m <span class="s2">"Merge subtree-repo as a subdirectory."</span></code></pre></figure>
 	
 	<p>Now when the other repository changes we can pull those changes into your main repository by using a subtree merge strategy:</p>
 	
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git pull -s subtree subtree-repo master
-</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git pull -s subtree subtree-repo master</code></pre></figure>
 	
 	<p>And here is a GitHub Gist for your reference and bookmarking pleasure:</p>
-	<script src="https://gist.github.com/8657578.js"> </script>
+	<noscript><pre>400: Invalid request
+</pre></noscript><script src="https://gist.github.com/8657578.js"> </script>
 	
-	<p>There are some caveats to this approach, not least of which would be squashing subtree commit messages to prevent updating our own project’s <code>HEAD</code> reference. I would recommend that you to read up on Subtree Merging to become familiar with this approach and to help avoid any potential merge hiccups that may arise: <a href="http://git-scm.com/book/en/Git-Tools-Subtree-Merging">http://git-scm.com/book/en/Git-Tools-Subtree-Merging</a>.</p>
+	<p>There are some caveats to this approach, not least of which would be squashing subtree commit messages to prevent updating our own project’s <code>HEAD</code> reference. I would recommend that you read up on Subtree Merging to become familiar with this approach and to help avoid any potential merge hiccups that may arise: <a href="http://git-scm.com/book/en/Git-Tools-Subtree-Merging">http://git-scm.com/book/en/Git-Tools-Subtree-Merging</a>.</p>
 	
 	<p>This approach works for me as I’m typically just grabbing external code to include in my own projects. An example would be a client website repository that relies on an external library such as <a href="http://responsive-nav.com/">Responsive Nav</a>. Using this approach has made me nearly forget why I ever used submodules.</p>
 	
 	<p>I am certainly no Git master and I’m always open to better approaches to how I work. If you have any suggestions please leave me a comment on the <a href="https://gist.github.com/obxdesignworks/8657578">GitHub Gist</a> I have posted to accompany this article. Cheers!</p>
 </article>
+
 				<aside class="ancillary" role="complementary">
 	<h2>Recent Articles</h2>
 	<ul class="separate posts">
 		
 		<li>
-			<a href="/articles/welcome-to-version-2dot2">
+			<a href="/articles/welcome-to-version-2dot2/">
 				Welcome to Version 2.2
 			</a>
 		</li>
 		
 		<li>
-			<a href="/articles/please-just-let-me-go">
+			<a href="/articles/please-just-let-me-go/">
 				Please Just Let Me Go!
 			</a>
 		</li>
 		
 		<li>
-			<a href="/articles/git-subtree">
+			<a href="/articles/git-subtree/">
 				Alternative to Git Submodules with Git Subtree Merging
 			</a>
 		</li>
 		
 		<li>
-			<a href="/articles/new-year-new-website">
+			<a href="/articles/new-year-new-website/">
 				New Year, New Website
 			</a>
 		</li>
@@ -154,7 +156,7 @@
 	
 	<h2>Tags</h2>
 	<div class="tag-cloud">
-	  <a href="/tag/announcements.html" class="set-5">announcements</a> <a href="/tag/code-snips.html" class="set-5">code-snips</a> <a href="/tag/git.html" class="set-1">git</a> <a href="/tag/git-submodule.html" class="set-1">git-submodule</a> <a href="/tag/git-subtree.html" class="set-1">git-subtree</a> <a href="/tag/ux.html" class="set-1">ux</a> <a href="/tag/web-design.html" class="set-5">web-design</a> <a href="/tag/web-development.html" class="set-5">web-development</a>
+	  <a href="/tag/announcements/" class="set-5">announcements</a> <a href="/tag/code-snips/" class="set-5">code-snips</a> <a href="/tag/git/" class="set-1">git</a> <a href="/tag/git-submodule/" class="set-1">git-submodule</a> <a href="/tag/git-subtree/" class="set-1">git-subtree</a> <a href="/tag/ux/" class="set-1">ux</a> <a href="/tag/web-design/" class="set-5">web-design</a> <a href="/tag/web-development/" class="set-5">web-development</a>
 	</div>
 	
 	<div class="separate">
@@ -171,7 +173,7 @@
     <div class="container bottom">
       <footer class="copyright">
         <p>
-          <small>&#169;2014 <span class="p-author h-card">William Dodson</span>. All Rights Reserved.</small>
+          <small>&#169;2017 <span class="p-author h-card">William Dodson</span>. All Rights Reserved.</small>
         </p>
       </footer>
     </div>
