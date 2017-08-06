@@ -22,4 +22,7 @@ group :jekyll_plugins do
    gem "jekyll-gist", "~> 1.4.1"
    gem "jekyll-paginate", "~> 1.1.0"
    gem "jekyll-sitemap", "~> 1.1.1"
+   gem 'jekyll-github-metadata', '~> 2.5.1'
+   gem 'netrc', '~> 0.11.0'
+   #gem 'jekyll-git_metadata', '~> 0.2.0'
 end

@@ -20,6 +20,16 @@
 						{% include sidebar/_sidebar.html %}
 					{% endif %}
 				{% endif %}
+
+				{% assign github_repos = site.github %}
+
+				{% comment %}
+				{% for repo in github_repos %}
+				<p><a href="{{ repo.html_url }}">{{ repo.name }}</a></p>
+				{% endfor %}
+				{% endcomment %}
+
+				{% comment %}<pre>{{ github_repos | xml_escape }}</pre>{% endcomment %}
 			</div>
 			<!-- /.content -->
 		</div>

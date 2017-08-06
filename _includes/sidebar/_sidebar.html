@@ -1,4 +1,9 @@
 <aside class="ancillary" role="complementary">
+	<h2>Website Version: {{ site_repo_version }}</h2>
+	<p><small>{{ site_last_update | date: "%A, %B %-d, %Y at %l:%M%P" }}</small><br>
+	{{ site_repo.body }}<br>
+	<small><em>This information provided by the <a href="https://developer.github.com/v3/">GitHub REST API v3</a> and <a href="https://github.com/jekyll/github-metadata">github-metadata</a></em>.</small></p>
+	
 	<h2>Say Hi!</h2>
 	<p>Phone me directly, download my résumé, or find places where you can learn more about me:</p>
 	<ul class="social">

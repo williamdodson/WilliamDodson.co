@@ -2,7 +2,10 @@
     <div class="container bottom">
       <footer class="copyright">
         <p>
-          <small>&#169;{{ site.time | date: "%Y" }} {% if page.author == 'William Dodson' %}<span class="p-author h-card">{% endif %}{{ site.name }}{% if page.author == 'William Dodson' %}</span>{% endif %}. All Rights Reserved.</small>
+          <small>
+            &#169;{{ site.time | date: "%Y" }} {% if page.author == 'William Dodson' %}<span class="p-author h-card">{% endif %}{{ site.name }}{% if page.author == 'William Dodson' %}</span>{% endif %}. All Rights Reserved. &middot; 
+            {% include partials/_site-repo-version.html %}
+          </small>
         </p>
       </footer>
     </div>
@@ -21,6 +24,10 @@
   
     ga('create', 'UA-47268098-1', 'williamdodson.co');
     ga('send', 'pageview');
+    </script>
+    <script>
+      var github_metadata = {{ site.github | jsonify }};
+      console.log(JSON.stringify(github_metadata));
     </script>
   </body>
 </html>
