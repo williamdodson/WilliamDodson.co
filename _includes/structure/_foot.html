@@ -3,8 +3,8 @@
       <footer class="copyright">
         <p>
           <small>
-            &#169;{{ site.time | date: "%Y" }} {% if page.author == 'William Dodson' %}<span class="p-author h-card">{% endif %}{{ site.name }}{% if page.author == 'William Dodson' %}</span>{% endif %}. All Rights Reserved. &middot; 
-            {% include partials/_site-repo-version.html %}
+            &#169;{{ site.time | date: "%Y" }} {% if page.author == 'William Dodson' %}<span class="p-author h-card">{% endif %}{{ site.name }}{% if page.author == 'William Dodson' %}</span>{% endif %}. All Rights Reserved <span class="hide">&middot;</span> 
+            <span class="site-version--footer">{% include partials/_site-repo-version.html %}</span>
           </small>
         </p>
       </footer>
