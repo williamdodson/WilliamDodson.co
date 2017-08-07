@@ -1,6 +1,6 @@
 name: William Dodson
 url: http://williamdodson.co
-markdown: redcarpet
+markdown: kramdown
 # pygments: true
 highlighter: rouge
 destination: public
