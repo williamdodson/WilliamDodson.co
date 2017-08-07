@@ -1,0 +1,4 @@
+#!/bin/sh
+# SAMPLE TEMPLATE FOR RSYNC PUSH: rename to rsync.sh and edit
+# the info below to match your credentials and server structure
+rsync -crz --delete webroot/ user@server.com:path/to/webroot/
