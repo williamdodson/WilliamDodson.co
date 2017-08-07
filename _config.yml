@@ -1,16 +1,12 @@
 name: William Dodson
 url: http://williamdodson.co
 markdown: kramdown
-# pygments: true
 highlighter: rouge
 destination: public
-# relative_permalinks: true
 encoding: UTF-8
 timezone: 'America/New_York'
-#paginate: 12
-#paginate_path: "/articles/page:num/"
 permalink: /:categories/:title/
-exclude: [sass, config.rb, rsync.sh, README.md, williamdodson.sublime-project, williamdodson.sublime-workspace]
+exclude: [sass, node_modules, rsync.sh, README.md]
 tag_page_layout: tag_page
 tag_page_dir: tag
 tag_permalink_style: pretty
