@@ -6,7 +6,7 @@ highlighter: rouge
 destination: public
 # relative_permalinks: true
 encoding: UTF-8
-timezone: '-0400'
+timezone: 'America/New_York'
 #paginate: 12
 #paginate_path: "/articles/page:num/"
 permalink: /:categories/:title/

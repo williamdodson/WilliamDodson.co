@@ -1,3 +1,4 @@
-{% assign site_repo = site.github.releases[0] %}
+{% assign github_repos = site.github %}
+{% assign site_repo = github_repos.releases[0] %}
 {% assign site_repo_version = site_repo.tag_name %}
-{% assign site_last_update = site_repo.created_at %}
+{% assign site_last_update = site_repo.published_at | date: '%Y-%m-%d %H:%M:%S %z' %}
