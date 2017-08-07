@@ -1,6 +1,0 @@
-# robotstxt.org/
-
-User-agent: *
-
-# Sitemap
-Sitemap: http://williamdodson.co/sitemap.xml

@@ -1,5 +1,6 @@
 .DS_Store
-_site
+public
 .sass-cache/
+rsync.sh
 williamdodson.sublime-project
 williamdodson.sublime-workspace
