@@ -1,18 +1,16 @@
 <aside class="ancillary" role="complementary">
-	<h2>Website Version: {{ site_repo_version }}</h2>
+	<h2>Website Version: <a class="js-blank-window" href="{{ site_releases_url }}">{{ site_repo_version }}</a></h2>
 	<p><small>{{ site_last_update | date: "%A, %B %-d, %Y at %l:%M%P" }}</small><br>
 	{{ site_repo.body }}<br>
-	<small><em>This information provided by the <a href="https://developer.github.com/v3/">GitHub REST API v3</a> and <a href="https://github.com/jekyll/github-metadata">github-metadata</a></em>.</small></p>
+	<small><em>Information provided by the <a href="https://developer.github.com/v3/">GitHub REST API v3</a> and <a href="https://github.com/jekyll/github-metadata">github-metadata</a></em>.</small></p>
 	
 	<h2>Say Hi!</h2>
 	<p>Phone me directly, download my résumé, or find places where you can learn more about me:</p>
 	<ul class="social">
 		<li><a class="icon-phone" href="tel:+17034738243" rel="me"><b>(703) 473-8243</b></a></li>
-		<li><a class="icon-doc-text" href="https://app.box.com/s/hxp114obb5mxu2qu5f8r"><b>Résumé (<abbr title="Adobe Portable Document Format">PDF</abbr>)</b></a></li>
-		<li><a class="icon-github" href="https://github.com/obxdesignworks" rel="me"><b>GitHub</b></a></li>
-		<li><a class="icon-meetup" href="http://meetups.jquery.com/profile/WilliamDodson" rel="me"><b>jQuery Meetups</b></a></li>
-		<li><a class="icon-linkedin" href="http://www.linkedin.com/in/williamdodson" rel="me"><b>LinkedIn</b></a></li>
-		<li><a class="icon-twitter" href="https://twitter.com/williamvdodson" rel="me"><b>Twitter</b></a></li>
+	{% for profile in site.data.social %}
+		<li><a class="{{ profile.css_class }}" href="{{ profile.link }}" rel="me"><b>{{ profile.title }}</b></a></li>
+	{% endfor %}
 	</ul>
 	
 	{% include partials/_pinboard-links.html %}

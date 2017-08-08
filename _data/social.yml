@@ -1,0 +1,24 @@
+# Social Links
+- title: 'Résumé'
+  css_class: 'icon-doc-text'
+  link: 'https://app.box.com/s/hxp114obb5mxu2qu5f8r'
+
+- title: 'GitHub'
+  css_class: 'icon-github'
+  link: 'https://github.com/obxdesignworks'
+
+- title: 'GitHub Gists'
+  css_class: 'icon-github'
+  link: 'https://gist.github.com/obxdesignworks'
+
+- title: 'jQuery Meetups'
+  css_class: 'icon-meetup'
+  link: 'http://meetups.jquery.com/profile/WilliamDodson'
+
+- title: 'LinkedIn'
+  css_class: 'icon-linkedin'
+  link: 'https://www.linkedin.com/in/williamdodson'
+
+- title: 'Twitter'
+  css_class: 'icon-twitter'
+  link: 'https://twitter.com/williamvdodson'

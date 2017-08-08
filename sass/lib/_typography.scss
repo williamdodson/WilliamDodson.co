@@ -232,6 +232,11 @@ button.button,
   &.inline {
     display: inline-block;
   }
+  &.small {
+    font-size: inherit;
+    padding: 0.0625rem 0.75rem;
+    vertical-align: baseline;
+  }
 }
 
 ul.default {
@@ -345,6 +350,14 @@ ul.default {
 .site-version--footer {
   display: inline-block;
   float: none;
+}
+.site-version__tag {
+  background: palette(gray, x-light);
+  border-radius: $base-radius;
+  color: palette(gray, dark);
+  padding: 0 0.25rem;
+  text-decoration: none;
+  text-shadow: 0.0625rem 0.0625rem 0 palette(gray, xx-light);
 }
 
 // pinboard feed styles
