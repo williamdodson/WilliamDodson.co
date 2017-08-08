@@ -6,7 +6,15 @@ destination: public
 encoding: UTF-8
 timezone: 'America/New_York'
 permalink: /:categories/:title/
-exclude: [sass, node_modules, rsync.sh, README.md]
+exclude: 
+  - sass
+  - node_modules
+  - rsync.sh
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
 tag_page_layout: tag_page
 tag_page_dir: tag
 tag_permalink_style: pretty
