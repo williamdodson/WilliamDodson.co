@@ -13,8 +13,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
-    <link rel="stylesheet" href="/a/c/style.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
-    <link rel="stylesheet" href="/a/c/syntax.css?v={{ site.time | date: "%Y%m%d%H%S" }}">
+    <link rel="stylesheet" href="/a/c/style.css?{{site.time | date: '%s%N'}}">
     
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
