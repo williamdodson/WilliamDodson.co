@@ -17,7 +17,9 @@
 				  {% include sidebar/_sidebar-rwd.html %}
 				{% else %}
 					{% if page.slug != 'portfolio' %}
-						{% include sidebar/_sidebar.html %}
+						{% if page.slug != 'start-a-project' %}
+							{% include sidebar/_sidebar.html %}
+						{% endif %}
 					{% endif %}
 				{% endif %}
 

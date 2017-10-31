@@ -1,0 +1,103 @@
+#{$all-text-inputs},
+textarea {
+  border: 0.0125rem solid $_color-base-gray;
+  border-radius: 0.25rem;
+  font-family: $font-sans;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  padding: 0.25rem 0.5rem;
+  transition: all ease-in-out 0.3s;
+  width: 100%;
+
+  &:focus {
+    border-color: palette(green, base);
+    box-shadow: 0 0 0.25rem 0 palette(green, base);
+  }
+}
+select {
+  font-family: $font-sans;
+}
+
+fieldset {
+  background-color: palette(gray, x-light);
+  border: 0.0125rem solid $_color-base-gray;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0.75rem 0 0.75rem;
+}
+legend {
+  background-color: $_color-base-gray;
+  border-radius: 0.25rem;
+  color: palette(gray, xx-light);
+  padding: 0.25rem 0.75rem;
+}
+
+label {
+  display: block;
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+// Custom IDs and classes
+.hidden {
+  display: none;
+}
+
+.label--inline {
+  display: inline;
+}
+
+// Custom slider
+.check-toggle {
+  width: 80px;
+  height: 26px;
+  background: palette(gray, x-dark);
+  display: block;
+  margin: 0.75rem 0;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+  &:after {
+    content: 'No';
+    color: palette(gray, light);
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+  }
+  &:before {
+    content: 'Yes';
+    color: palette(green, base);
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold;
+  }
+  label {
+    display: block;
+    width: 34px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+    background: palette(gray, light);
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label {
+      background: palette(gray, xx-light);
+      left: 43px;
+    }
+  }    
+}
