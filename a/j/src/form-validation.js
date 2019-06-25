@@ -52,31 +52,35 @@ function toggleDisplayCSS(itemsToToggle) {
  * the user selects the 'Website Design' option. If chosen, we will
  * display the hidden form fields specifically for web design
  */
-projectType.addEventListener('change', function (e) {
-  if(this.value === 'Website Design') {
-    toggleDisplayCSS([webSectionsField, contentField]);
-  }
-});
+if(!!projectType) {
+  projectType.addEventListener('change', function (e) {
+    if(this.value === 'Website Design') {
+      toggleDisplayCSS([webSectionsField, contentField]);
+    }
+  });
+}
 
 /**
  * fullName
  */
-fullName.addEventListener('input', function (e) {
-  if(fullName.validity.typeMismatch) {
-    fullName.setCustomValidity('Your full name is required');
-  } else {
-    fullName.setCustomValidity('');
-  }
-});
-
+if(!!fullName) {
+  fullName.addEventListener('input', function (e) {
+    if(fullName.validity.typeMismatch) {
+      fullName.setCustomValidity('Your full name is required');
+    } else {
+      fullName.setCustomValidity('');
+    }
+  });
+}
 /**
  * email
  */
-email.addEventListener('input', function (e) {
-  if(email.validity.typeMismatch) {
-    email.setCustomValidity('Please provide a valid email address');
-  } else {
-    email.setCustomValidity('');
-  }
-});
-
+if(!!email) {
+  email.addEventListener('input', function (e) {
+    if(email.validity.typeMismatch) {
+      email.setCustomValidity('Please provide a valid email address');
+    } else {
+      email.setCustomValidity('');
+    }
+  });
+}
