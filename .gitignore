@@ -1,5 +1,6 @@
 .DS_Store
 _site
 .sass-cache/
+*.code-workspace
 williamdodson.sublime-project
 williamdodson.sublime-workspace
