@@ -1,7 +1,7 @@
 <section class="separate separate-top content" aria-labelledby="section-heading-recent">
 	<h2 id="section-heading-recent">Recent Projects</h2>
 	<ul class="recent">
-		{% for post in site.categories['projects'] limit:4 %}
+		{% for post in site.categories.projects limit: 4 %}
 		<li>
 			<figure>
 				<a href="{{ post.url }}">

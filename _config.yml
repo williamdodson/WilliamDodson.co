@@ -1,14 +1,31 @@
 name: William Dodson
 url: http://williamdodson.co
-markdown: redcarpet
-pygments: true
+markdown: kramdown
+highlighter: rouge
 destination: public
-relative_permalinks: true
 encoding: UTF-8
-permalink: /:categories/:title
-exclude: [sass, config.rb, rsync.sh, README.md, williamdodson.sublime-project, williamdodson.sublime-workspace]
+timezone: 'America/New_York'
+permalink: /:categories/:title/
+exclude: 
+  - sass
+  - node_modules
+  - rsync.sh
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
 tag_page_layout: tag_page
 tag_page_dir: tag
+tag_permalink_style: pretty
 
 # XML feed settings
 description: 'Creative Design & Development Services Made with Love'
+feed:
+  path: feed.articles.atom
+
+# gems
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-github-metadata

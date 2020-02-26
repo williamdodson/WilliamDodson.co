@@ -1,0 +1,102 @@
+<form action="https://formspree.io/william.dodson@gmail.com" method="post">
+  <!-- contact info -->
+  <fieldset>
+    <legend>Contact Information</legend>
+    <!-- full-name -->
+    <p>
+      <label for="full-name">
+        Your Name:
+      </label>
+      <input id="full-name" name="full-name" type="text" required>
+    </p>
+
+    <!-- phone -->
+    <p>
+      <label for="phone">
+        Phone Number:
+      </label>
+      <input id="phone" name="phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required><br>
+      <small>Format: 123-456-7890</small>
+    </p>
+
+    <!-- email -->
+    <p>
+      <label for="email">
+        Email Address:
+      </label>
+      <input id="email" name="email" type="email" required>
+    </p>
+
+    <!-- company-name -->
+    <p>
+      <label for="company-name">
+        Company Name <small>(optional)</small>:
+      </label>
+      <input id="company-name" name="company-name" type="text">
+    </p>
+  </fieldset>
+
+  <!-- project details -->
+  <fieldset>
+    <legend>Project Details</legend>
+    <!-- project-type -->
+    <p>
+      <label for="project-type">
+        Project Type:
+      </label>
+
+      <select id="project-type" name="project-type" required>
+        <option value="" selected="selected">Choose a project type:</option>
+        <option value="Website Design">Website Design</option>
+        <option value="Print Design">Print Design</option>
+        <option value="Branding">Branding/Logo Design</option>
+      </select>
+    </p>
+
+    <!-- budget -->
+    <p>
+      <label for="budget">
+        Budget:
+      </label>
+      <input id="budget" name="budget" type="number" min="250" required><br>
+      <small>A minimum budget of $250 is required for logo design</small>
+    </p>
+
+    <!-- explanation -->
+    <p>
+      <label for="explanation">
+        Please briefly explain the purpose of your project:
+      </label>
+      <textarea name="explanation" id="explanation" cols="30" rows="10" required></textarea><br>
+      <small>This helps to outline what would make your project a success</small>
+    </p>
+
+    <!-- web-sections -->
+    <p class="hidden" id="web-sections-field" hidden>
+      <label for="web-sections">
+        Please outline the sections and functionality you need (only required for web projects):
+      </label>
+      <textarea name="web-sections" id="web-sections" cols="30" rows="10"></textarea><br>
+      <small>List the number of pages, the names of those pages, and any functionality like photo galleries</small>
+    </p>
+
+    <!-- content -->
+    <p class="hidden" id="content-field" hidden>
+      Do you have any content for your website? (only required for web projects):
+      <span class="check-toggle">  
+        <input type="checkbox" id="content" name="content">
+        <label for="content"></label>
+      </span>
+      <small>If you need content created for you please leave this unchecked</small>
+    </p>
+
+    <p>
+      <input class="button" type="submit" value="Submit Form">
+    </p>
+  </fieldset>
+
+  <!-- * -->
+  <input type="hidden" name="_format" value="plain">
+  <input type="hidden" name="_subject" value="Start a Project Form Submission">
+  <input type="hidden" name="_next" value="//williamdodson.co/thank-you/" />
+</form>

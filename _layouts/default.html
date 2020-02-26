@@ -17,9 +17,20 @@
 				  {% include sidebar/_sidebar-rwd.html %}
 				{% else %}
 					{% if page.slug != 'portfolio' %}
-						{% include sidebar/_sidebar.html %}
+						{% if page.slug != 'start-a-project' %}
+							{% include sidebar/_sidebar.html %}
+						{% endif %}
 					{% endif %}
 				{% endif %}
+
+				{% comment %}
+				{% for repo in github_repos %}
+				<p><a href="{{ repo.html_url }}">{{ repo.name }}</a></p>
+				{% endfor %}
+				{% endcomment %}
+
+				{% comment %}<pre>{{ github_repos | xml_escape }}</pre>{% endcomment %}
+
 			</div>
 			<!-- /.content -->
 		</div>

@@ -4,10 +4,9 @@ title: 'Alternative to Git Submodules with Git Subtree Merging'
 leader: 'Read up on Subtree Merging to become familiar with this approach'
 heading: 'Alternative to Git Submodules with Git Subtree Merging'
 date: 2014-01-28 7:30
-slug: article
 excerpt: 'We all find ourselves using separately maintained Git projects inside of our own personal projects.'
 author: 'William Dodson'
-categories: [articles]
+categories: articles
 tags: [git, git-subtree, git-submodule, code-snips]
 ---
 
@@ -34,7 +33,7 @@ $ git pull -s subtree subtree-repo master
 	<p>And here is a GitHub Gist for your reference and bookmarking pleasure:</p>
 	{% gist 8657578 %}
 	
-	<p>There are some caveats to this approach, not least of which would be squashing subtree commit messages to prevent updating our own project’s <code>HEAD</code> reference. I would recommend that you to read up on Subtree Merging to become familiar with this approach and to help avoid any potential merge hiccups that may arise: <a href="http://git-scm.com/book/en/Git-Tools-Subtree-Merging">http://git-scm.com/book/en/Git-Tools-Subtree-Merging</a>.</p>
+	<p>There are some caveats to this approach, not least of which would be squashing subtree commit messages to prevent updating our own project’s <code>HEAD</code> reference. I would recommend that you read up on Subtree Merging to become familiar with this approach and to help avoid any potential merge hiccups that may arise: <a href="http://git-scm.com/book/en/Git-Tools-Subtree-Merging">http://git-scm.com/book/en/Git-Tools-Subtree-Merging</a>.</p>
 	
 	<p>This approach works for me as I’m typically just grabbing external code to include in my own projects. An example would be a client website repository that relies on an external library such as <a href="http://responsive-nav.com/">Responsive Nav</a>. Using this approach has made me nearly forget why I ever used submodules.</p>
 	

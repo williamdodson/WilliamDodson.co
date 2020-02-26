@@ -128,6 +128,10 @@ small, .milli {
 strong {
   font-weight: bold;
 }
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
 /*neat trick by Jeremy Keith: http://adactio.com/journal/1612/*/
 abbr[title='and'] {
  color: palette(gray, light);
@@ -228,6 +232,11 @@ button.button,
   &.inline {
     display: inline-block;
   }
+  &.small {
+    font-size: inherit;
+    padding: 0.0625rem 0.75rem;
+    vertical-align: baseline;
+  }
 }
 
 ul.default {
@@ -244,6 +253,10 @@ ul.default {
   @include media($bp-lg-val) {
     @include font-scale(xx-large, $font-roboto-condensed);
   }
+}
+
+.hide {
+  @include hide-text;
 }
 
 .ie-warning {
@@ -332,6 +345,19 @@ ul.default {
   border: 1px solid palette(gray, light);
   padding: 0.75em;
   @include clearfix;
+}
+
+.site-version--footer {
+  display: inline-block;
+  float: none;
+}
+.site-version__tag {
+  background: palette(gray, x-light);
+  border-radius: $base-radius;
+  color: palette(gray, dark);
+  padding: 0 0.25rem;
+  text-decoration: none;
+  text-shadow: 0.0625rem 0.0625rem 0 palette(gray, xx-light);
 }
 
 // pinboard feed styles
@@ -637,6 +663,10 @@ ul.default {
         text-align: left;
       }
     }
+  }
+
+  .site-version--footer {
+    float: right;
   }
 }
 
