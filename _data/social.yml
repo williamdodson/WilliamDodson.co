@@ -5,11 +5,11 @@
 
 - title: 'GitHub'
   css_class: 'icon-github'
-  link: 'https://github.com/obxdesignworks'
+  link: 'https://github.com/williamdodson'
 
 - title: 'GitHub Gists'
   css_class: 'icon-github'
-  link: 'https://gist.github.com/obxdesignworks'
+  link: 'https://gist.github.com/williamdodson'
 
 - title: 'jQuery Meetups'
   css_class: 'icon-meetup'
