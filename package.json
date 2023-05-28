@@ -4,7 +4,7 @@
   "description": "Marketing website for William Dodson",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/obxdesignworks/WilliamDodson.co.git"
+    "url": "git+ssh://git@github.com/williamdodson/WilliamDodson.co.git"
   },
   "keywords": [
     "jekyll"
