@@ -19,6 +19,10 @@
   css_class: 'icon-linkedin'
   link: 'https://www.linkedin.com/in/williamdodson'
 
+- title: 'Mastodon'
+  css_class: 'icon-doc-text'
+  link: 'https://mastodon.social/@WilliamDodson'
+
 - title: 'Twitter'
   css_class: 'icon-twitter'
   link: 'https://twitter.com/williamvdodson'

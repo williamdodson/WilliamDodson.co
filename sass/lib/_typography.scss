@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5 {
 }
 h1, .alpha {
   @include font-scale(mid-large);
-  
+
   @include media($bp-med-val) {
     @include font-scale(large);
   }
@@ -32,7 +32,7 @@ h1, .alpha {
 h2, .beta {
   color: palette(gray);
   @include font-scale(mid);
-  
+
   @include media($bp-med-val) {
     @include font-scale(mid-large);
   }
@@ -42,7 +42,7 @@ h2, .beta {
 }
 h3, .gamma {
   @include font-scale(mid);
-  
+
   @include media($bp-med-val) {
     @include font-scale(mid);
   }
@@ -52,7 +52,7 @@ h3, .gamma {
 }
 h4, .delta {
   @include font-scale(base);
-  
+
   @include media($bp-med-val) {
     @include font-scale(mid);
   }
@@ -79,7 +79,7 @@ p, dl, ol, ul {
 }
 dl {
   margin-top: 1.5rem;
-  
+
   dt {
     color: palette(gray);
     @include font-scale(mid-large);
@@ -93,11 +93,11 @@ blockquote {
   color: palette(gray);
   @include font-scale(large, $font-roboto-condensed);
   margin-bottom: 1.5rem;
-  
+
   cite:before {
     content: '—';
   }
-  
+
   p:last-child {
     margin-bottom: 0;
   }
@@ -145,20 +145,20 @@ code, pre {
 
 table {
   width: 100%;
-  
+
   tr {
     border-bottom: 0.0625rem solid palette(gray, light);
-    
+
     &:nth-child(even) {
       background: palette(gray, x-light);
     }
   }
-  
+
   td,
   th {
     padding: 0.125rem;
   }
-  
+
   th {
     color: palette(gray);
     @include font-scale(mid-large);
@@ -222,7 +222,7 @@ button.button,
   @include transition-property(all);
   @include transition-duration($base-duration);
   vertical-align: middle;
-  
+
   &:active,
   &:focus,
   &:hover {
@@ -246,7 +246,7 @@ ul.default {
 .giga {
   @include font-scale(large, $font-roboto-condensed);
   margin: 0;
-  
+
   @include media($bp-med-val) {
     @include font-scale(x-large, $font-roboto-condensed);
   }
@@ -297,10 +297,10 @@ ul.default {
 }
 
 .list-resources {
-  
+
   .last {
     @extend %separate;
-    
+
     &:last-child {
       border: none;
       margin-bottom: 0;
@@ -321,7 +321,7 @@ ul.default {
   margin-bottom: 1.4375rem;
   //min-height: 4.5rem;
   @include pad(0.75rem default 0.75rem default);
-  
+
   p {
     margin-bottom: 0;
   }
@@ -367,15 +367,15 @@ ul.default {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  
+
   p {
     @include font-scale(small);
-    
+
     br {
       line-height: 0;
     }
   }
-  
+
   a {
     color: palette(gray, dark);
     text-decoration: none;
@@ -423,7 +423,7 @@ ul.default {
 .recent,
 .thumbs {
   li {
-    
+
     a {
       background: palette(gray, x-light);
       border-radius: $base-radius;
@@ -507,11 +507,11 @@ ul.default {
 .share {
   margin-right: 0.375em;
   vertical-align: middle;
-  
+
   &:last-child {
     margin-right: 0;
   }
-  
+
   img {
     max-height: 1.5rem;
     vertical-align: middle;
@@ -520,7 +520,7 @@ ul.default {
 
 .social {
   @extend %separate;
-  
+
   li {
     border-bottom: 0.0625rem solid palette(gray, x-light);
     margin-bottom: 0.75rem;
@@ -548,7 +548,7 @@ ul.default {
 
 .tag-cloud {
   @extend %separate;
-  
+
   a {
     @extend %tag;
     @include font-scale(small);
@@ -564,7 +564,7 @@ ul.default {
 .masthead {
   h1 {
     @include font-scale(mid-large);
-    
+
     a {
       color: palette(gray, xx-light);
     }
@@ -573,7 +573,7 @@ ul.default {
 
 .menu-main {
   margin: 0.75em 0 0 0;
-  
+
   ul {
     margin-bottom: 0;
     li {
@@ -582,7 +582,7 @@ ul.default {
       &.active {
         a {
           @extend %nav-main-active;
-          
+
           &:active,
           &:focus,
           &:hover {
@@ -591,25 +591,25 @@ ul.default {
         }
       }
     }// end li
-    
+
     a {
       @extend %nav-main;
       text-align: center;
       @include transition-property(all);
       @include transition-duration($base-duration);
-      
+
       &:active,
       &:focus,
       &:hover {
         @extend %nav-main-active;
       }
-      
+
       @include media($bp-med-val) {
         text-align: left;
       }
     }// end a
   }// end ul
-  
+
   @include media($bp-med-val) {
     margin-top: 0;
   }
@@ -619,7 +619,7 @@ ul.default {
   h2 {
     color: palette(gray, x-dark);
     @include font-scale(mid);
-    
+
     @include media($bp-med-val) {
       @include font-scale(mid-large);
     }
@@ -644,11 +644,11 @@ ul.default {
     font-weight: bold;
     margin: 0 0 1.5rem 0;
   }
-  
+
   .projects {
     margin-bottom: 1.5rem;
   }
-  
+
   // specifics
   //////////////////////////////////////////////////
   .masthead {
@@ -656,7 +656,7 @@ ul.default {
       text-align: left;
     }
   }
-  
+
   .menu-main {
     ul {
       a {
