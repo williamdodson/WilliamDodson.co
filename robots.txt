@@ -4,3 +4,25 @@ User-agent: *
 
 # Sitemap
 Sitemap: http://williamdodson.co/sitemap.xml
+
+# Prevent AI bots from scaping content
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
